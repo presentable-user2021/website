@@ -2,7 +2,7 @@
 command = "hugo"
 publish = "public"
 [build.environment]
-HUGO_VERSION = "0.54.0"
+HUGO_VERSION = "0.80.0"
 
 [context]
 [context.branch-deploy]
@@ -12,3 +12,10 @@ command = "hugo -F -b $DEPLOY_PRIME_URL"
 [context.production]
 [context.production.environment]
 HUGO_ENV = "production"
+
+# Specific branch context: all deploys from this specific branch will inherit
+# these settings.
+# https://community.netlify.com/t/deploy-branch-without-default-site-settings/22053/9
+[context.gh-pages] # 'gh-pages' is a branch name
+command = "true"
+publish = "."
