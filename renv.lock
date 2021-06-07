@@ -107,6 +107,13 @@
       "Repository": "CRAN",
       "Hash": "5346f76a33eb7417812c270b04a5581b"
     },
+    "callr": {
+      "Package": "callr",
+      "Version": "3.7.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "461aa75a11ce2400245190ef5d3995df"
+    },
     "class": {
       "Package": "class",
       "Version": "7.3-19",
@@ -142,12 +149,31 @@
       "Repository": "CRAN",
       "Hash": "019388fc48e48b3da0d3a76ff94608a8"
     },
+    "colorspace": {
+      "Package": "colorspace",
+      "Version": "2.0-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6cab523af06ac301e7a40c5529d45882"
+    },
     "commonmark": {
       "Package": "commonmark",
       "Version": "1.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0f22be39ec1d141fd03683c06f3a6e67"
+    },
+    "countdown": {
+      "Package": "countdown",
+      "Version": "0.3.5",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "countdown",
+      "RemoteRef": "master",
+      "RemoteSha": "a544fa48e2248996002e059ca07ad620d2aec3a8",
+      "Hash": "5820182bacf75cb710126bf7063689f9"
     },
     "crayon": {
       "Package": "crayon",
@@ -286,6 +312,13 @@
       "Repository": "CRAN",
       "Hash": "6efd734b14c6471cfe443345f3e35e29"
     },
+    "here": {
+      "Package": "here",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "24b224366f9c2e7534d2344d10d59211"
+    },
     "highr": {
       "Package": "highr",
       "Version": "0.9",
@@ -334,6 +367,18 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "5aab57a3bd297eee1c1d862735972182"
+    },
+    "js4shiny": {
+      "Package": "js4shiny",
+      "Version": "0.0.28",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "js4shiny",
+      "RemoteRef": "master",
+      "RemoteSha": "29bd23560d8f1c8ff39db08495f8eb6fe44e30bc",
+      "Hash": "37acced763443c72a2ccca3c6f4f47cb"
     },
     "jsonlite": {
       "Package": "jsonlite",
@@ -398,6 +443,18 @@
       "Repository": "CRAN",
       "Hash": "61e4a10781dd00d7d81dd06ca9b94e95"
     },
+    "metathis": {
+      "Package": "metathis",
+      "Version": "1.0.3.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "metathis",
+      "RemoteRef": "main",
+      "RemoteSha": "0e28c8f930e549c2cc80f6a536f2958400f22731",
+      "Hash": "c8d8d308ece66ecebec644f3596ee1db"
+    },
     "mgcv": {
       "Package": "mgcv",
       "Version": "1.8-35",
@@ -440,12 +497,26 @@
       "Repository": "CRAN",
       "Hash": "f4dbc5a47fd93d3415249884d31d6791"
     },
+    "processx": {
+      "Package": "processx",
+      "Version": "3.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0cbca2bc4d16525d009c4dbba156b37c"
+    },
     "promises": {
       "Package": "promises",
       "Version": "1.2.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "4ab2c43adb4d4699cf3690acd378d75d"
+    },
+    "ps": {
+      "Package": "ps",
+      "Version": "1.6.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "32620e2001c1dce1af49c49dccbb9420"
     },
     "purrr": {
       "Package": "purrr",
@@ -524,6 +595,13 @@
       "Repository": "CRAN",
       "Hash": "6e3b6ae7fe02b5859e4bb277f218b8ae"
     },
+    "shinyAce": {
+      "Package": "shinyAce",
+      "Version": "0.4.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "402073a8a045c9f5ea096ed94e01d9ce"
+    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7",
@@ -580,6 +658,13 @@
       "Repository": "CRAN",
       "Hash": "360e904f9e623286e1a0c6ca0a98c5f6"
     },
+    "uuid": {
+      "Package": "uuid",
+      "Version": "0.1-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e4169eb989a5d03ccb6b628cad1b1b50"
+    },
     "whisker": {
       "Package": "whisker",
       "Version": "0.4",
@@ -593,6 +678,37 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ad03909b44677f930fa156d47d7a3aeb"
+    },
+    "xaringan": {
+      "Package": "xaringan",
+      "Version": "0.21",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "dc0f5dfeb019f08b0f1b912e6385ad0c"
+    },
+    "xaringanExtra": {
+      "Package": "xaringanExtra",
+      "Version": "0.4.3",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "xaringanExtra",
+      "RemoteRef": "master",
+      "RemoteSha": "ae07ea7763c08b266a310c0bf3309aad36a3235e",
+      "Hash": "64e2037f57fbb71b42678a7b7c30be6e"
+    },
+    "xaringanthemer": {
+      "Package": "xaringanthemer",
+      "Version": "0.3.4.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "xaringanthemer",
+      "RemoteRef": "master",
+      "RemoteSha": "ce808c74f5facc69b8b789c4879d54f6338796df",
+      "Hash": "b700e3d9da04bf2f450ad64ef8ecc575"
     },
     "xfun": {
       "Package": "xfun",
