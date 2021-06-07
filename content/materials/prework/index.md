@@ -1,5 +1,6 @@
 ---
 title: "Prework"
+type: collection
 weight: 1
 subtitle: ""
 excerpt: "How to prepare ahead of time."

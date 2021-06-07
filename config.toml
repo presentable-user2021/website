@@ -25,7 +25,7 @@ enableEmoji = true
     ordered = false
   [markup.highlight]
     # one of: https://xyproto.github.io/splash/docs/
-    style = "github"
+    style = "colorful"
 
 [params]
   orgName = "Garrick & Silvia"
@@ -113,7 +113,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Materials"
     title = "Workshop Materials"
-    url = "/collection/"
+    url = "/materials/"
     weight = 3
   [[menu.header]]
     name = "Packages"

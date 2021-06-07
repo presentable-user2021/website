@@ -6,6 +6,7 @@ description: |
   meant to be read in sequence. This section is like a blog series, 
   minus the blog.
 author: Alison Hill
+type: collection
 show_post_thumbnail: true
 thumbnail_left: false # for list-sidebar only
 show_author_byline: false

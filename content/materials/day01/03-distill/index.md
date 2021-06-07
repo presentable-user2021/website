@@ -88,7 +88,7 @@ create_article(file = "about",         # future name of .Rmd file
                package = "postcards")
 ```
 
-[Reminder: templates]({{< ref "/02-postcards#templates" >}} "Postcards templates")
+[Reminder: templates]({{< ref "../02-postcards#templates" >}} "Postcards templates")
 
 
 ## Site navigation
