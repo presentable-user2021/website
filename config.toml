@@ -75,7 +75,7 @@ enableEmoji = true
   # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
   [[params.social]]
       title     = "presentable-user2021 on GitHub"
-      icon      = "github red" # icon name without the 'fa-'
+      icon      = "github navy" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://github.com/presentable-user2021"
   [[params.social]]
