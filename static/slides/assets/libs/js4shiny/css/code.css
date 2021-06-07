@@ -1,0 +1,187 @@
+pre {
+  font-family: var(--font-monospace);
+  padding: 0.8em;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.2em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-left: 3px solid var(--text-lighter);
+}
+
+pre code {
+  border: none;
+  color: var(--text);
+}
+
+pre::after {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.5;
+}
+
+pre.js {
+  border-color: var(--yellow);
+}
+
+pre.js::after {
+  content: 'js';
+  color: var(--yellow);
+  opacity: 1;
+}
+
+pre.r {
+  border-color: var(--blue);
+}
+
+pre.r::after {
+  content: 'r';
+  color: var(--blue);
+}
+
+pre.json {
+  border-color: var(--purple);
+}
+
+pre.json::after {
+  content: 'json';
+  color: var(--purple);
+}
+
+pre.node,
+pre.bash,
+pre.sh {
+  border-color: var(--green);
+}
+
+pre.node::after {
+  content: 'node';
+  color: var(--green);
+  opacity: 1;
+}
+
+pre.bash::after,
+pre.sh::after {
+  content: 'sh';
+  color: var(--green);
+  opacity: 1;
+}
+
+pre.md,
+pre.markdown,
+pre.yaml {
+  border-color: var(--red);
+}
+
+pre.yaml::after {
+  content: 'yaml';
+  color: var(--red);
+}
+
+pre.markdown::after,
+pre.md::after {
+  content: 'md';
+  color: var(--red);
+}
+
+pre.html {
+  border-color: #E34C26;
+}
+
+pre.html::after {
+  content: 'html';
+  color: #E34C26;
+}
+
+pre.css {
+  border-color: #264DE4;
+  position: relative;
+}
+pre.css::after {
+  content: 'css';
+  color: #264de4;
+}
+
+.pre-name {
+  margin-bottom: -1em;
+  border-bottom: 3px solid #00000010;
+  font-family: var(--font-monospace);
+  text-align: right;
+  padding-right: 1em;
+  color: var(--text-med);
+  z-index: -1;
+}
+
+p code,
+p kbd,
+p samp {
+  font-family: var(--font-monospace);
+  font-size: 1rem;
+}
+
+p code,
+p kbd {
+  border-radius: var(--border-radius);
+  padding: 0px 2px;
+}
+
+p code {
+  color: var(--dark-red);
+}
+
+pre.r,
+pre.js,
+pre.md,
+pre.markdown,
+pre.yaml,
+pre.json,
+pre.bash,
+pre.html,
+pre.css {
+  background: none;
+}
+
+pre.r::after,
+pre.js::after,
+pre.md::after,
+pre.markdown::after,
+pre.yaml::after,
+pre.json::after,
+pre.bash::after,
+pre.html::after,
+pre.css::after {
+  text-transform: uppercase;
+  font-family: var(--font-header);
+  left: -1.35em;
+  bottom: -1.1em;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+}
+
+pre.pre-hide-filetype,
+.pre-hide-filetype pre::after {
+  content: '';
+}
+
+pre.pre-hide-border,
+.pre-hide-border pre {
+  border-color: transparent;
+}
+
+div.sourceCode {
+  overflow: visible;
+}
+
+pre > code.sourceCode {
+ white-space: pre;
+ position: relative;
+ overflow: auto;
+ max-width: 100%;
+ display: inline-block;
+}
+
+/* don't show empty output divs */
+div[id^="out-"] > pre:empty {
+  display: none;
+}
