@@ -1,3 +1,7 @@
+Thumbs.db
+/public/
+/resources/
+
 # ---- Default .gitignore From grkmisc ----
 .Rproj.user
 .Rhistory
