@@ -2,7 +2,7 @@
 title: "Day 01"
 # list or single layouts are possible
 layout: single-series # list, list-sidebar, single-series
-weight: 2
+weight: 3
 publishDate: 2021-01-22
 date: 2021-01-25
 subtitle: "All about Day 01 of 'Introduce Yourself Online'."

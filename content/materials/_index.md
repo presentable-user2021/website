@@ -1,11 +1,9 @@
 ---
-title: "Create a Collection"
-subtitle: "A collection, minus the blog."
+title: "Professional, Polished, Presentable"
+subtitle: "Making Great Slides with xaringan."
 description: |
-  Sometimes you want a souped-up series- a bundle of related pages 
-  meant to be read in sequence. This section is like a blog series, 
-  minus the blog.
-author: Alison Hill
+  Materials for the Professional, Polished, Presentable tutorial created for useR!2021.
+author: Garrick Aden-Buie & Silvia Canelón
 type: collection
 show_post_thumbnail: true
 thumbnail_left: false # for list-sidebar only
@@ -18,12 +16,10 @@ layout: list-sidebar # list, list-sidebar
 cascade:
   layout: single-series 
   sidebar:
-    title: "Create a Collection"
-    author: Alison Hill
+    title: "Professional, Polished, Presentable"
+    author: Garrick Aden-Buie & Silvia Canelón
     description: |
-      Sometimes you want a souped-up series- a bundle of related pages 
-      meant to be read in sequence. This section is like a blog series, 
-      minus the blog.
+      Materials for the Professional, Polished, Presentable tutorial created for [useR!2021](https://user2021.r-project.org/).
     show_author_byline: true
     show_post_date: true
     text_link_label: ""
