@@ -3,7 +3,7 @@ title: "Communicating effectively with xaringan"
 weight: 2
 subtitle: "Part 2"
 excerpt: ""
-date: 2021-07-07
+date: 2021-06-08
 draft: false
 links:
 - icon: images

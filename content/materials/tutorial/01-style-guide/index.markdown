@@ -3,7 +3,7 @@ title: "Creating your own xaringan style guide"
 weight: 1
 subtitle: "Part 1"
 excerpt: ""
-date: 2021-07-07
+date: 2021-06-08
 draft: false
 links:
 - icon: images
