@@ -10,4 +10,4 @@ headline: |
 [xaringan]: https://slides.yihui.org/xaringan
 
 <!-- this is a subheadline -->
-A [useR!2021][user-2021] tutorial about making great slides with [xaringan]. 👔
+A [useR!2021][user-2021] tutorial about making great slides with [xaringan].
