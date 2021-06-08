@@ -2,8 +2,7 @@
 title: "Silvia Canelón"
 subtitle: "Postdoctoral Research Scientist"
 excerpt: >
-  Biomedical engineer turned informaticist, curious about all intersections of
-  data and society.
+  Biomedical informatics researcher at the [University of Pennsylvania](https://www.dbei.med.upenn.edu/), curious about all intersections of data and society.
 type: people
 show_post_image: true
 weight: 6
@@ -33,3 +32,11 @@ links:
 ---
 
 I am a researcher, community organizer, and R educator. My research leverages electronic health record data to study pregnancy-related outcomes, and my organizing values data literacy as a way to build power and effect change.
+
+I enjoy finding ways to communicate technical knowledge with a variety of audiences and love showing others how to leverage xaringan to create effective, reproducible, and beautiful presentations. I have taught xaringan workshops in both English and Spanish to R users across disciplines:
++ [Sharing Your Work with xaringan](https://silvia.rbind.io/project/xaringan-nhs-r/) is a four hour workshop created for the 2020 NHS-R Community Conference.
++ [Introducción al Paquete xaringan](https://silvia.rbind.io/talk/2020-12-17-introduccion-xaringan/) is a two hour workshop created for R-Ladies Xalapa
+
+I have also contributed a [custom NHS-R CSS theme](https://github.com/yihui/xaringan/pull/280) to the xaringan package. The theme was designed with input from the NHS-R Community to meet [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/).
+
+To find out what I'm up to lately you can find me online at https://silvia.rbind.io.
