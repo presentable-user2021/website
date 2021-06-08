@@ -3,7 +3,7 @@ title: "Tutorial"
 # list or single layouts are possible
 layout: single-series # list, list-sidebar, single-series
 weight: 2
-publishDate: 2021-07-07
+publishDate: 2021-06-08
 date: 2021-06-08
 subtitle: ''
 description: |
