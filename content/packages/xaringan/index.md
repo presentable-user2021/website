@@ -13,6 +13,10 @@ links:
   icon_pack: fas
   name: website
   url: https://slides.yihui.org/xaringan//#1
+- icon: book
+  icon_pack: fas
+  name: book
+  url: https://bookdown.org/yihui/rmarkdown/xaringan.html
 - icon: github
   icon_pack: fab
   name: code
