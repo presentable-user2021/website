@@ -21,16 +21,19 @@ This is an intermediate workshop designed for R learners already familiar with t
 
 ## Find your style guide
 
-We will be using the `xaringanthemer` package to create a style sheet to match the style guide preferred or required by your organization, institution, or company. 
+We will be using the `xaringanthemer` package to create a style sheet to match the style guide preferred or required by your organization, institution, or company.
+
 + Find your style guide by searching online for terms like "style guide," "design guide," and "branding" along with the name of your organization, institution, or company.
-+ Alternatively, you can find [examples of style guides](https://policyviz.com/2016/11/30/style-guides/) elsewhere online
+
++ **TODO: Pick 1-2 for learners to use:** Alternatively, you can find [examples of style guides](https://policyviz.com/2016/11/30/style-guides/) elsewhere online
+
 + Explore the style guide. What colors does it use? Does it say anything about typography (i.e. fonts)?
+
 + Have this style guide easily available during the workshop so you can refer to it as needed.
 
-Silvia: Reminder to talk about this:
-> ## Set up RStudio Cloud
+## Set up RStudio Cloud
 
-> Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. We recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). We want you to be able to work from your own computer and preferred IDE in this workshop, but Cloud is an important back-up plan should you run into troubles.
+Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. We recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). We want you to be able to work from your own computer and preferred IDE in this workshop, but Cloud is an important back-up plan should you run into troubles.
 
 ## Set up GitHub
 
@@ -64,4 +67,4 @@ Please bring a computer that has the following installed:
     + [xaringanthemer](/packages/xaringanthemer/)
     + [xaringanExtra](/packages/xaringanextra/)
     + [metathis](/packages/metathis/)
-    + [usethis](https://usethis.r-lib.org/) <-- Silvia: for usethis::use_github_pages() or do we want to go the Netlify route?
+    + [usethis](https://usethis.r-lib.org/)
