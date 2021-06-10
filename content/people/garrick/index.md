@@ -14,6 +14,10 @@ categories:
 # layout options: single or single-sidebar
 layout: single
 links:
+- icon: handshake
+  icon_pack: fas
+  name: he/him
+  url: https://pronoun.is/he
 - icon: home
   icon_pack: fas
   name: garrickadenbuie.com

@@ -13,6 +13,10 @@ categories:
 # layout options: single or single-sidebar
 layout: single
 links:
+- icon: handshake
+  icon_pack: fas
+  name: she/her
+  url: https://pronoun.is/she
 - icon: link
   icon_pack: fas
   name: silvia.rbind.io
