@@ -758,15 +758,15 @@
     },
     "xaringanExtra": {
       "Package": "xaringanExtra",
-      "Version": "0.4.3",
+      "Version": "0.5.2",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "gadenbuie",
       "RemoteRepo": "xaringanExtra",
       "RemoteRef": "master",
-      "RemoteSha": "ae07ea7763c08b266a310c0bf3309aad36a3235e",
-      "Hash": "64e2037f57fbb71b42678a7b7c30be6e"
+      "RemoteSha": "2dfa2e2c72d91761244d4ed3708cfb522de70a4d",
+      "Hash": "1c2d93bd0567c5500674af4c076b2af5"
     },
     "xaringanthemer": {
       "Package": "xaringanthemer",
