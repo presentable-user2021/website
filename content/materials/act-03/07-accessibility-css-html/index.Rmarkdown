@@ -1,0 +1,47 @@
+---
+title: "Accessibility with CSS & HTML"
+weight: 6
+subtitle: "Insert subtitle here"
+excerpt: ""
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: "/slides/01-why-online.html"
+- icon: theater-masks
+  icon_pack: fas
+  name: activity
+  url: "/materials/act-03/07-accessibility-css-html/#activity"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval=FALSE)
+
+xaringanExtra::use_clipboard()
+```
+
+```{r embed-xaringan, echo=FALSE, eval=TRUE}
+xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+```
+
+## Goal 
+
+Leverage CSS & HTML to make baseline theme more accessible
+
+## Material
+
+How to...
+
+- increase font size
+- style links
+- add alt-text to background images
+- describe an icon `<i>` with `aria-label`
+- use `text-transform` for UPPERCASE instead of hand-typing it out
+
+## Activity
+
+Time: `r emo::ji("stopwatch")` 10 minutes
+
+Open and preview this slide deck: materials/act-03/07-accessibility-css-html.Rmd
+
+- practice the new techniques shown

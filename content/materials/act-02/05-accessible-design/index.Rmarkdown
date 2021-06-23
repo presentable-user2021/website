@@ -1,0 +1,46 @@
+---
+title: "05: Accessible Design"
+weight: 2
+subtitle: "Insert subtitle here"
+excerpt: ""
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: "/slides/01-why-online.html"
+- icon: theater-masks
+  icon_pack: fas
+  name: activity
+  url: "/materials/act-02/05-accessible-design/#activity"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval=FALSE)
+
+xaringanExtra::use_clipboard()
+```
+
+```{r embed-xaringan, echo=FALSE, eval=TRUE}
+xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+```
+
+## Goal 
+
+Understand why accessibility is important and what to consider when designing slides
+- Structure text and graphical content to be cognitively and functionally accessible to the audience
+
+## Material
+
+- accessible products essential for some but useful for all
+- principles of inclusive design
+- inclusive & accessible design as pertaining to xaringan (alt-text, colors, markdown)
+
+## Activity
+
+Time: `r emo::ji("stopwatch")` 10 minutes
+
+Open and preview this slide deck: materials/act-02/05-accessible-design.Rmd
+
+- check color contrast and color independence of style guide colors, modify as appropriate
+- practice writing alt-text and/or improve ineffective alt-text
+- check at 200% magnification

@@ -1,10 +1,8 @@
 ---
 title: "Prework"
-type: collection
 weight: 1
 subtitle: ""
 excerpt: "How to prepare ahead of time."
-date: 2021-06-08
 draft: false
 ---
 <script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
@@ -35,16 +33,6 @@ We will be using the `xaringanthemer` package to create a style sheet to match t
 
 Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. We recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). We want you to be able to work from your own computer and preferred IDE in this workshop, but Cloud is an important back-up plan should you run into troubles.
 
-## Set up GitHub
-
-We will be using GitHub in this workshop for version control and publishing. Sign up for a free GitHub.com account at <https://github.com/join> if you don't already have one. Also:
-
-+ Complete these [installation instructions](https://happygitwithr.com/install-intro.html).
-    
-+ Test your connection between GitHub and RStudio following [these steps](https://happygitwithr.com/connect-intro.html). 
-    
-+ **NOTE:** We *strongly recommend* that if you are not already a fluent GitHub user you choose [HTTPS over SSH](https://happygitwithr.com/credential-caching.html).
-
 ## Review markdown
 
 Please complete this [10-minute interactive tutorial on Markdown](https://commonmark.org/help/tutorial/).
@@ -67,4 +55,3 @@ Please bring a computer that has the following installed:
     + [xaringanthemer](/packages/xaringanthemer/)
     + [xaringanExtra](/packages/xaringanextra/)
     + [metathis](/packages/metathis/)
-    + [usethis](https://usethis.r-lib.org/)
