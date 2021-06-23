@@ -1,6 +1,6 @@
 ---
-title: "Accessibility with CSS & HTML"
-weight: 6
+title: "07: Accessibility with CSS & HTML"
+weight: 1
 subtitle: "Insert subtitle here"
 excerpt: ""
 links:
