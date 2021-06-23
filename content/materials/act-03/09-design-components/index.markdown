@@ -1,6 +1,6 @@
 ---
-title: "Design Components"
-weight: 7
+title: "09: Design Components"
+weight: 3
 subtitle: "Insert subtitle here"
 excerpt: ""
 links:

@@ -1,5 +1,5 @@
 ---
-title: "More CSS"
+title: "08: More CSS"
 weight: 2
 subtitle: "Insert subtitle here"
 excerpt: ""
