@@ -18,6 +18,12 @@ links:
   name: code
   url: https://github.com/gadenbuie/xaringanExtra
 ---
+<script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+
+
 
 <div class="f2 i lh-title custom-heading-font">
 <a href="https://pkg.garricakdenbuie.com/xaringanExtra" target="_blank" rel="noopener">xaringanExtra</a> is a playground of enhancements and extensions for xaringan slides.
@@ -29,7 +35,11 @@ links:
 [GitHub](https://github.com/gadenbuie/xaringanExtra).
 
 ``` r
-install.packages("xaringanExtra", repos = "https://gadenbuie.r-universe.dev")
+options(repos = c(
+  gadenbuie = "https://gadenbuie.r-universe.dev", 
+  getOption("repos")
+))
+install.packages("xaringanExtra")
 
 # install.packages("remotes")
 remotes::install_github("gadenbuie/xaringanExtra")
