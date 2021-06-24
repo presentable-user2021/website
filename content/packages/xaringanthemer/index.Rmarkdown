@@ -23,23 +23,35 @@ links:
   url: https://cran.r-project.org/web/packages/xaringanthemer/
 ---
 
+```{r xe-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
 <div class="f2 i lh-title custom-heading-font">
 Give your <a href="https://github.com/yihui/xaringan" target="_blank" rel="noopener">xaringan</a> slides some style without (much) CSS.
 </div>
 
 ## Installation
 
-You can install **xaringanthemer** from CRAN
+You can install **xaringanthemer** from CRAN.
+Please ensure you have the latest version: **0.4.0**.
 
 ``` r
-install.packages("xaringanthemer")
+install.packages("xaringanthemer", dependencies = TRUE)
 ```
 
-or you can install the development version of xaringanthemer from [r-universe](https://gadenbuie.r-universe.dev) or
+Make sure you include `dependencies = TRUE` so that the suggested packages are also installed.
+In particular, we want to be sure you have the [showtext](https://github.com/yixuan/showtext) package since it's used by xaringanthemer for custom ggplot2 themes.
+
+Alternatively, you can install the development version of xaringanthemer from [r-universe](https://gadenbuie.r-universe.dev) or
 [GitHub](https://github.com/gadenbuie/xaringanthemer).
 
 ``` r
-install.packages("xaringanthemer", repos = "https://gadenbuie.r-universe.dev")
+options(repos = c(
+  gadenbuie = "https://gadenbuie.r-universe.dev", 
+  getOption("repos")
+))
+install.packages("xaringanthemer", dependencies = TRUE)
 
 # install.packages("remotes")
 remotes::install_github("gadenbuie/xaringanthemer")

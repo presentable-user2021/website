@@ -23,6 +23,10 @@ links:
   url: https://cran.r-project.org/web/packages/metathis/
 ---
 
+```{r xe-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
 <div class="f2 i lh-title custom-heading-font">
 <code>&lt;meta&gt;</code> tags and social media cards for R-made web things.
 </div>
@@ -39,7 +43,11 @@ or you can install the development version of metathis from [r-universe](https:/
 [GitHub](https://github.com/gadenbuie/metathis).
 
 ``` r
-install.packages("metathis", repos = "https://gadenbuie.r-universe.dev")
+options(repos = c(
+  gadenbuie = "https://gadenbuie.r-universe.dev", 
+  getOption("repos")
+))
+install.packages("metathis")
 
 # install.packages("remotes")
 remotes::install_github("gadenbuie/metathis")
