@@ -36,8 +36,8 @@ knitr::opts_chunk$set(
   message = FALSE
 )
 source(here::here("static", "slides", "R", "components.R"))
-use_placeholders(TRUE, TRUE)
-xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "editable"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "editable", "share_again"))
 ```
 
 ```{r js4shiny, echo=FALSE}
