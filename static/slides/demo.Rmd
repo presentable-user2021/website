@@ -1,4 +1,5 @@
 ---
+scene: 0
 title: "Demo Slides"
 subtitle: "A work in progress!"
 author: "Garrick Aden-Buie & Silvia Canelón"
