@@ -10,6 +10,8 @@ zap_tabs <- function(path = NULL) {
     path
   }
 
+  src_og <- src
+
   for (i in seq_along(src)) {
     line <- src[i]
     if (!grepl("^\\s*\t\\s*", line)) next
@@ -17,7 +19,7 @@ zap_tabs <- function(path = NULL) {
     start_new <- stringr::str_replace_all(start, "\t", "  ")
     src[i] <- sub(start, start_new, line, fixed = TRUE)
   }
-  if (is_path) {
+  if (is_path && !identical(src_og, src)) {
     writeLines(src, path)
   } else {
     src
