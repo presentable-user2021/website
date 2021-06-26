@@ -233,6 +233,7 @@ blockquote p:last-of-type {
 
 .title h1:first-of-type {
   margin-top: 0;
+  padding: 0 1em;
 }
 
 .title h1 {

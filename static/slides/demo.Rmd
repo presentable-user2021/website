@@ -1,4 +1,5 @@
 ---
+scene: 0
 title: "Demo Slides"
 subtitle: "A work in progress!"
 author: "Garrick Aden-Buie & Silvia Canelón"
@@ -35,8 +36,9 @@ knitr::opts_chunk$set(
   message = FALSE
 )
 source(here::here("static", "slides", "R", "components.R"))
-use_placeholders(TRUE, TRUE)
-xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "editable"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
 ```
 
 ```{r js4shiny, echo=FALSE}

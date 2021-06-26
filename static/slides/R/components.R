@@ -4,9 +4,13 @@
 title_slide <- function(
   title = rmarkdown::metadata$title,
   subtitle = rmarkdown::metadata$subtitle,
-  author = "Garrick Aden-Buie & Silvia Canelón"
+  author = "Garrick Aden-Buie & Silvia Canelón",
+  scene = rmarkdown::metadata$scene
 ) {
   htmltools::tagList(
+    if (!is.null(scene)) {
+      htmltools::div(class = "scene f2 absolute top-0 left-0 w-10 bg-red bg-blue", scene)
+    },
     htmltools::h1(title),
     if (!is.null(subtitle)) htmltools::h2(subtitle),
     htmltools::div(class = "conf-logo"),
