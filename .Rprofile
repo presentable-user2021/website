@@ -21,7 +21,11 @@ options(
     }
     changed <- blogdown:::filter_timestamp(blogdown:::list_rmds(c("content", "static")))
     if (length(changed)) {
-      blogdown::build_site(build_rmd = 'timestamp')
+      changed_content <- changed[grepl("content/", changed, fixed = TRUE)]
+      if (length(changed_content)) {
+        blogdown:::build_rmds(changed_content)
+      }
+      blogdown::build_site(build_rmd = "timestamp")
     }
     later::later(check_and_rebuild, delay = 5)
   }
