@@ -45,8 +45,10 @@ if (is.na(youngest_output) || youngest_input > youngest_output) {
     check_for(src) # placeholders
     check_for(src, "unsplash_bg\\(")
     check_for(src, "FIXME")
-    options(placeholder_enable = FALSE, js4shiny_repl_local = FALSE)
-    rmarkdown::render(slide, quiet = getOption("render_slides_quietly", TRUE), envir = new.env())
+    callr::r_safe(function(slide) {
+      options(placeholder_enable = FALSE, js4shiny_repl_local = FALSE)
+      rmarkdown::render(slide, quiet = TRUE, envir = new.env())
+    }, args = list(slide = slide))
   }
 
   fs::dir_delete(fs::dir_ls("assets/libs", regexp = "metathis", type = "directory"))
