@@ -17,7 +17,7 @@ assets <- c(assets, fs::dir_ls("R"))
 youngest_input <- max(fs::file_info(c(slides, assets))$change_time)
 youngest_output <- max(fs::file_info(slides_html)$change_time)
 
-if (youngest_input > youngest_output) {
+if (is.na(youngest_output) || youngest_input > youngest_output) {
   message("! rebuilding slides")
   source("R/utils.R")
 
