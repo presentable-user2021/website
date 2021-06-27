@@ -7,7 +7,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/03-xaringan-extras.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -20,7 +20,7 @@ links:
 <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="/slides/03-why-r.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="/slides/03-xaringan-extras.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
@@ -40,10 +40,167 @@ Use features from `xaringanExtra`, `xaringan`, and `rmarkdown` that strengthen c
 
 ## Activity
 
-Time: ⏱ 10 minutes
+<div class="activity-table">
 
-Open and preview this slide deck: materials/act-01/03-xaringan-extras.Rmd
+|           |                                |
+|:----------|:-------------------------------|
+| Time      | 6 minutes                      |
+| Materials | `03-xaringan-extras/start.Rmd` |
 
--   Start with slides that have code, a scatter plot and a line plot (scatter + regression)
--   Dress up slides with panelset to flip between the three
--   Add scribble and turn it into a guess-the-regression game
+</div>
+
+### Goal
+
+`start.Rmd` contains one slide with a plot and the code used to create it.
+Our goal is to present both the code and the plot.
+
+### Two Slides
+
+For our first configuration, split the presentation into two slides.
+First present the code, followed by the plot on a new slide.
+
+<i class="orange fas fa-hand-point-right"></i> **Use `knitr::fig_chunk()` or the `ref.label` option to separate the code and the plot.**
+
+<details>
+<summary>
+<code>knitr::fig\_chunk()</code>
+</summary>
+
+    ```{r lemur-weight, results="hide"}
+    # ggplot2 plotting code
+    ```
+
+    ---
+
+    ![Figure alt text](`r knitr::fig_chunk("lemur-weight", "png")`)
+
+</details>
+<details>
+<summary>
+<code>ref.label</code>
+</summary>
+
+    ```{r lemur-weight, eval=FALSE}
+    # ggplot2 plotting code
+    ```
+
+    ---
+
+    ```{r ref.label="lemur-weight", echo=FALSE}
+
+    ```
+
+</details>
+
+### Use Panelsets
+
+<i class="orange fas fa-hand-point-right"></i> **Reset the code in your slides to the original `lemur-weight` chunk.**
+
+<i class="orange fas fa-hand-point-right"></i> **Now, use [panelsets](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
+to place the code and output in the same slide:**
+
+1.  Add a new chunk to your slides to use panelsets
+
+        ```{r xaringanExtra, echo=FALSE}
+        xaringanExtra::use_xaringan_extra(c("panelset"))
+        ```
+
+2.  Wrap the `lemur-weight` chunk in a `.panelset[ ... ]`
+
+3.  Add `panelset=TRUE` to the `lemur-weight` chunk
+
+    -   ⚠️ If you’re using a xaringanExtra `< 0.5.4`,
+        you will also need to add the `results="hold"` chunk option.
+
+4.  Save and render the slides to preview!
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
+    .panelset[
+
+    ```{r lemur-weight, panelset=TRUE}
+    library(tidyverse)
+    lemurs <- readRDS("lemurs.rds")
+
+    lemurs %>%
+      filter(
+        common_name == "Ring-Tailed Lemur",
+        between(age_at_wt_y, 1, 5)
+      ) %>%
+      ggplot() +
+      aes(x = age_at_wt_y, y = weight) +
+      geom_point() +
+      labs(
+        x = "Age at Weight",
+        y = "Weight (g)",
+        title = "Weight Gain of Young Ring-Tailed Lemurs"
+      )
+    ```
+
+    ]
+
+</details>
+
+<i class="orange fas fa-hand-point-right"></i> **Add another panel with a regression line over the lemur weight plot.**
+
+1.  Inside the `.panelset[ ... ]`, add a new `.panel[ ... ]`
+
+2.  In the `.panel[ ]`, add `.panel-name[Regression]`
+
+3.  Add a new chunk that adds `geom_smooth()` to the lemur weight plot
+
+        ```{r echo=FALSE}
+        last_plot() + geom_smooth(method = "lm")
+        ```
+
+4.  Save and render your slides. Flip between each of the panels.
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
+    .panel[
+    .panel-name[Regression]
+
+    ```{r echo=FALSE}
+    last_plot() + geom_smooth(method = "lm")
+    ```
+    ]
+
+</details>
+
+### Add Scribble
+
+For our last trick,
+we’ll add the [scribble](https://pkg.garrickadenbuie.com/xaringanExtra/#/scribble)
+feature to our slides.
+Scribble lets you draw right on the slides!
+
+<i class="orange fas fa-hand-point-right"></i> **Add *scribble* and guess the regression.**
+
+1.  Add `"scribble"` to the extras in `use_xaringan_extra()`.
+
+2.  Save and render your slides.
+
+3.  On the plot slide, navigate to the **Output** panel.
+    Press <kbd>S</kbd> to enable *scribble* mode.
+    Draw a regression line on the lemur weight plot.
+
+4.  Press <kbd>S</kbd> again to turn off *scribble* mode.
+    Navigate to the **Regression** panel.
+    How good was your guestimated regression line?
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
+``` r
+xaringanExtra::use_xaringan_extra(c("panelset", "scribble"))
+```
+
+</details>

@@ -1,3 +1,24 @@
 .about-sidebar {
   height: unset;
 }
+
+.activity-table > table {
+  border: .125rem solid rgb(230,230,230);
+  min-width: 66%;
+  box-sizing: border-box;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.activity-table > table td:first-child {
+  font-weight: bold;
+  background: rgb(230,230,230);
+}
+
+.activity-table > table td {
+  padding: 0.66rem 1rem;
+}
+
+.activity-table > table > thead {
+  display: none;
+}
