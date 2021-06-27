@@ -1,0 +1,397 @@
+---
+scene: 2
+title: "From Style Guide to xaringan Theme"
+subtitle: "xaringanthemer"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: title
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+`r title_slide()`
+
+---
+
+# Anatomy of an HTML Document
+
+.flex[
+
+<div class="w-40 tc white center"><div class="ba bw1 b--black-20 pa1 w-90"><div class="bg-blue w-100 h-a-150 flex flex-column items-center justify-center tc f3">HEAD</div>
+<div class="bg-green w-100 h-a-300 flex flex-column items-center justify-center tc f3">BODY</div>
+</div>
+</div>
+
+.w-60.pre-hide-filetype.pre-hide-border[
+
+```{html eval=FALSE}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- meta -->
+
+    <title>My First Webpage</title>
+
+  </head>
+  <body>
+    <!-- content -->
+  </body>
+</html>
+```
+
+]
+]
+
+---
+layout: false
+class: header_background
+
+# Create an HTML Document
+
+.flex.pt2[
+.w-40[
+1. Open RStudio
+
+1. New File `r htmlent$triangle_right_small` Text Document
+
+1. .code.purple[first-page/index.html]
+
+1. Add .bigger[&#x1F449;]
+
+1. .silver[Use .code[html5] or .code[html:basic] snippet]
+
+1. Use _Live Preview_ addin
+]
+
+.w-60[
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- meta -->
+
+    <title>My First Webpage</title>
+
+  </head>
+  <body>
+    <!-- content -->
+  </body>
+</html>
+```
+]
+]
+
+.footnote.code[repl_example("first-page-00")]
+
+???
+
+- https://www.taniarascia.com/basic-html5-file/
+- https://html5boilerplate.com/
+
+---
+class: header_background
+
+# Solid Header == Your Turn!
+
+Always use a solid header to indicate audience participation.
+
+```md
+---
+class: header_background
+
+
+```
+
+---
+class: header_background
+
+# Chunks with filenames
+
+Use `name` chunk option, e.g. `name="first-page/index.html"` 
+
+```{html html-body, eval=FALSE, name="first-page/index.html"}
+<body>
+  <h1>Median Resident Age</h1>
+  <div><!-- chart will go here --></div>
+  <h2>San Francisco</h2>
+  <p>
+    The median age of the residents of
+    <strong>San Francisco</strong>
+    is <strong>38.8</strong> years old.
+  </p>
+</body>
+```
+
+---
+layout: true
+# Browsers: The RStudio IDE of Web Dev
+
+---
+
+.flex[
+.w-10[
+&nbsp;
+]
+
+.w-40[
+.w-40.center[
+![](assets/img/firefox_256.png)
+]
+.f5.center[Firefox]
+
+.center[
+.b[Win] <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
+
+.b[Mac] <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd>
+]
+]
+
+.w-40.cr[
+.w-40.center[
+![](assets/img/chrome_256.png)
+]
+.f5.center[Chrome]
+
+.center[
+.b[Win] <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
+
+.b[Mac] <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>C</kbd>
+]
+]
+]
+
+???
+
+ - **Firefox**:
+  - Windows/Linux: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
+  - Mac: <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd>
+  - <https://developer.mozilla.org/en-US/docs/Tools>
+- **Chrome**:
+  - Windows/Linux: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
+  - Mac: <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>C</kbd>
+  - <https://developers.google.com/web/tools/chrome-devtools/>
+- **Safari**:
+  - Enable: _Safari_ > _Preferences_ > _Advanced_ > _Show Develop menu in menu bar_
+  - Right-click + _Inspect Element_
+  - <https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac>
+- **RStudio**:
+  - Right-click + _Inspect Element_
+
+---
+
+.flex[
+.w-third[
+.w-40.center[
+![](assets/img/firefox_256.png)
+]
+.f5.center[Firefox]
+
+.center[
+.b[Win] <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
+
+.b[Mac] <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd>
+]
+]
+
+.w-third[
+.w-40.center[
+![](assets/img/chrome_256.png)
+]
+.f5.center[Chrome]
+
+.center[
+.b[Win] <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
+
+.b[Mac] <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>C</kbd>
+]
+]
+
+.w-third[
+.w-40.center.mt2[
+![](assets/img/rstudio-icon.png)
+]
+.tc[
+.f5[RStudio]
+
+![](assets/img/mouse-pointer.svg) .code.bg-black-10.ph2.black-60[Inspect Element]
+]
+]
+]
+
+---
+layout: false
+
+# Create a bunch of slides from images...
+
+```{r echo=FALSE}
+r_slides_imgs <- '`r slides_from_images("assets/img/intro/html-tree", regexp = "jpg$", class = "")`'
+```
+
+```markdown
+---
+layout: false
+
+`r r_slides_imgs`
+
+---
+
+# Next slide...
+```
+
+---
+layout: false
+
+# Common Inline Tags for Formatting
+
+| Tag           |     Markdown      | Description                        |
+| ------------- | :---------------: | ---------------------------------- |
+| .code[strong] | .code[&ast;&ast;] | <strong>Bold</strong> text         |
+| .code[em]     |       &#95;       | <em>Italic</em> text               |
+| .code[code]   |  .code[&grave;]   | Inline .code[code] snippet         |
+| .code[q]      |                   | Short <q>inline quotation</q>      |
+| .code[mark]   |                   | <mark>Highlighted</mark> text      |
+| .code[kbd]    |                   | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> |
+
+.footnote[So that's what a table looks like (and also `<kbd>`)]
+
+---
+layout: false
+
+# JavaScript Runs in the Browser
+
+.flex[
+.w-50.mr3[
+<h3 class="mv1 tc bb bw1">Find Elements</h3>
+
+.code.silver[document.red[.getElementById()]]
+
+.code.silver[document.red[.querySelector()]]
+
+.code.silver[document.red[.querySelectorAll()]]
+]
+.w-50[
+<h3 class="mv1 tc bb bw1">Modify Elements</h3>
+
+.code.silver[el.red[.textContent]]
+
+.code.silver[el.red[.innerHTML]]
+
+.code.silver[el.red[.style].blue[.color]]
+]
+]
+
+.footnote[A two column comparison slide]
+
+---
+class: break break-shiny
+
+# A shiny interstitial
+
+.footnote[break break-shiny]
+
+---
+class: break break-javascript
+
+# JavaScript inspired break
+
+.absolute.top-1.left-1[break break-javascript]
+
+---
+class: break break-blue-pink center middle
+
+# Wow this is a cool break slide!
+
+.footnote[break break-blue-pink]
+
+---
+
+# Fonts
+
+.mh-auto.w-80.f5.mt4[
+.f-lato[Lato (body)] .fr.code[.f-lato]
+
+.f-nunito[Nunito Sans] .fr.code[.f-nunito]
+
+.f-marker[Marker] .fr.code[.f-marker]
+
+.f-source-code[Source Code Pro] .fr.code[.f-source-code]
+]
+
+---
+
+# Summary
+
+.can-edit.key-summary[
+- HTML is a tree, called the DOM
+- HTML tags have a name, attributes, and contents
+- HTML for content, CSS for presentation
+- CSS selectors
+- CSS in `<style>` or `.css`
+- JavaScript is like R but different
+- JavaScript runs in the browser
+- JavaScript manipulates the DOM
+]
+
+.footnote[A summary slide with an editable list]
+
+---
+
+
+# HTML Resources
+
+* Mastering Shiny: Advanced UI<br>
+  https://mastering-shiny.org/advanced-ui.html
+
+* FrontEnd Masters Handbook<br>
+  https://frontendmasters.com/books/front-end-handbook/2019/
+
+* Interneting is Hard<br>
+  https://internetingishard.com/
+
+* HTML Semantics Cheat Sheet<br>
+  https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/
+
+---
+class: center middle
+
+# Next: [Ghost in the Machine (Interactivity)](interactivity.html)
+
+.footnote[End slides with link to next page in the series]

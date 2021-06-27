@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>From Style Guide to xaringan Theme</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Garrick Aden-Buie &amp; Silvia Canelón" />
+    <meta name="date" content="2021-07-07" />
+    <script src="assets/libs/header-attrs/header-attrs.js"></script>
+    <link href="assets/libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="assets/libs/tile-view/tile-view.js"></script>
+    <link href="assets/libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="assets/libs/clipboard/clipboard.min.js"></script>
+    <link href="assets/libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="assets/libs/shareon/shareon.min.js"></script>
+    <link href="assets/libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="assets/libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"From Style Guide to xaringan Theme","expires":14}</script>
+    <script src="assets/libs/himalaya/himalaya.js"></script>
+    <script src="assets/libs/js-cookie/js.cookie.js"></script>
+    <link href="assets/libs/editable/editable.css" rel="stylesheet" />
+    <script src="assets/libs/editable/editable.js"></script>
+    <link href="assets/libs/js4shiny/css/_variables-fonts.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/_variables.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/code.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/jsonview/jsonview.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny/jsonview/jsonview.min.js"></script>
+    <link href="assets/libs/js4shiny-redirectConsoleLog/jslog.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny-redirectConsoleLog/redirectConsoleLog.js"></script>
+    <meta name="description" content="Slides for &quot;From Style Guide to xaringan Theme&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:title" content="From Style Guide to xaringan Theme | Professional, Polished, Presentable"/>
+    <meta name="twitter:description" content="Slides for &quot;From Style Guide to xaringan Theme&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:url" content="https://presentable-user2021.netlify.app"/>
+    <meta name="twitter:image" content="https://presentable-user2021.netlify.app/img/social.jpg"/>
+    <meta name="twitter:image:alt" content="PLACEHOLDER FOR FINAL IMAGE"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@grrrck"/>
+    <meta name="twitter:site" content="@grrrck"/>
+    <meta property="og:title" content="From Style Guide to xaringan Theme | Professional, Polished, Presentable"/>
+    <meta property="og:description" content="Slides for &quot;From Style Guide to xaringan Theme&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta property="og:url" content="https://presentable-user2021.netlify.app"/>
+    <meta property="og:image" content="https://presentable-user2021.netlify.app/img/social.jpg"/>
+    <meta property="og:image:alt" content="PLACEHOLDER FOR FINAL IMAGE"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Garrick Aden-Buie"/>
+    <meta property="article:author" content="Silvia Canelón"/>
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: title
+
+
+
+
+
+<div class="scene f2 absolute top-0 left-0 w-10 bg-red bg-blue">2</div>
+<h1>From Style Guide to xaringan Theme</h1>
+<h2>xaringanthemer</h2>
+<div class="conf-logo"></div>
+<div class="talk-meta">
+<p class="talk-author">Garrick Aden-Buie &amp; Silvia Canelón</p>
+<p class="talk-date">Professional, Polished, Presentable</p>
+</div>
+
+---
+
+# Anatomy of an HTML Document
+
+.flex[
+
+&lt;div class="w-40 tc white center"&gt;&lt;div class="ba bw1 b--black-20 pa1 w-90"&gt;&lt;div class="bg-blue w-100 h-a-150 flex flex-column items-center justify-center tc f3"&gt;HEAD&lt;/div&gt;
+&lt;div class="bg-green w-100 h-a-300 flex flex-column items-center justify-center tc f3"&gt;BODY&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+.w-60.pre-hide-filetype.pre-hide-border[
+
+
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;!-- meta --&gt;
+
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- content --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```
+
+]
+]
+
+---
+layout: false
+class: header_background
+
+# Create an HTML Document
+
+.flex.pt2[
+.w-40[
+1. Open RStudio
+
+1. New File &amp;#9656; Text Document
+
+1. .code.purple[first-page/index.html]
+
+1. Add .bigger[&amp;#x1F449;]
+
+1. .silver[Use .code[html5] or .code[html:basic] snippet]
+
+1. Use _Live Preview_ addin
+]
+
+.w-60[
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;!-- meta --&gt;
+
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- content --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```
+]
+]
+
+.footnote.code[repl_example("first-page-00")]
+
+???
+
+- https://www.taniarascia.com/basic-html5-file/
+- https://html5boilerplate.com/
+
+---
+class: header_background
+
+# Solid Header == Your Turn!
+
+Always use a solid header to indicate audience participation.
+
+```md
+---
+class: header_background
+
+
+```
+
+---
+class: header_background
+
+# Chunks with filenames
+
+Use `name` chunk option, e.g. `name="first-page/index.html"` 
+
+&lt;div class="pre-name"&gt;first-page/index.html&lt;/div&gt;
+
+```html
+&lt;body&gt;
+  &lt;h1&gt;Median Resident Age&lt;/h1&gt;
+  &lt;div&gt;&lt;!-- chart will go here --&gt;&lt;/div&gt;
+  &lt;h2&gt;San Francisco&lt;/h2&gt;
+  &lt;p&gt;
+    The median age of the residents of
+    &lt;strong&gt;San Francisco&lt;/strong&gt;
+    is &lt;strong&gt;38.8&lt;/strong&gt; years old.
+  &lt;/p&gt;
+&lt;/body&gt;
+```
+
+---
+layout: true
+# Browsers: The RStudio IDE of Web Dev
+
+---
+
+.flex[
+.w-10[
+&amp;nbsp;
+]
+
+.w-40[
+.w-40.center[
+![](assets/img/firefox_256.png)
+]
+.f5.center[Firefox]
+
+.center[
+.b[Win] &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;I&lt;/kbd&gt;
+
+.b[Mac] &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;Opt&lt;/kbd&gt; + &lt;kbd&gt;I&lt;/kbd&gt;
+]
+]
+
+.w-40.cr[
+.w-40.center[
+![](assets/img/chrome_256.png)
+]
+.f5.center[Chrome]
+
+.center[
+.b[Win] &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+
+.b[Mac] &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;Opt&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+]
+]
+]
+
+???
+
+ - **Firefox**:
+  - Windows/Linux: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;I&lt;/kbd&gt; or &lt;kbd&gt;F12&lt;/kbd&gt;
+  - Mac: &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;Opt&lt;/kbd&gt; + &lt;kbd&gt;I&lt;/kbd&gt;
+  - &lt;https://developer.mozilla.org/en-US/docs/Tools&gt;
+- **Chrome**:
+  - Windows/Linux: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+  - Mac: &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;Opt&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+  - &lt;https://developers.google.com/web/tools/chrome-devtools/&gt;
+- **Safari**:
+  - Enable: _Safari_ &gt; _Preferences_ &gt; _Advanced_ &gt; _Show Develop menu in menu bar_
+  - Right-click + _Inspect Element_
+  - &lt;https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac&gt;
+- **RStudio**:
+  - Right-click + _Inspect Element_
+
+---
+
+.flex[
+.w-third[
+.w-40.center[
+![](assets/img/firefox_256.png)
+]
+.f5.center[Firefox]
+
+.center[
+.b[Win] &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;I&lt;/kbd&gt;
+
+.b[Mac] &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;Opt&lt;/kbd&gt; + &lt;kbd&gt;I&lt;/kbd&gt;
+]
+]
+
+.w-third[
+.w-40.center[
+![](assets/img/chrome_256.png)
+]
+.f5.center[Chrome]
+
+.center[
+.b[Win] &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+
+.b[Mac] &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;Opt&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+]
+]
+
+.w-third[
+.w-40.center.mt2[
+![](assets/img/rstudio-icon.png)
+]
+.tc[
+.f5[RStudio]
+
+![](assets/img/mouse-pointer.svg) .code.bg-black-10.ph2.black-60[Inspect Element]
+]
+]
+]
+
+---
+layout: false
+
+# Create a bunch of slides from images...
+
+
+
+```markdown
+---
+layout: false
+
+`r slides_from_images("assets/img/intro/html-tree", regexp = "jpg$", class = "")`
+
+---
+
+# Next slide...
+```
+
+---
+layout: false
+
+# Common Inline Tags for Formatting
+
+| Tag           |     Markdown      | Description                        |
+| ------------- | :---------------: | ---------------------------------- |
+| .code[strong] | .code[&amp;ast;&amp;ast;] | &lt;strong&gt;Bold&lt;/strong&gt; text         |
+| .code[em]     |       &amp;#95;       | &lt;em&gt;Italic&lt;/em&gt; text               |
+| .code[code]   |  .code[&amp;grave;]   | Inline .code[code] snippet         |
+| .code[q]      |                   | Short &lt;q&gt;inline quotation&lt;/q&gt;      |
+| .code[mark]   |                   | &lt;mark&gt;Highlighted&lt;/mark&gt; text      |
+| .code[kbd]    |                   | &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; |
+
+.footnote[So that's what a table looks like (and also `&lt;kbd&gt;`)]
+
+---
+layout: false
+
+# JavaScript Runs in the Browser
+
+.flex[
+.w-50.mr3[
+&lt;h3 class="mv1 tc bb bw1"&gt;Find Elements&lt;/h3&gt;
+
+.code.silver[document.red[.getElementById()]]
+
+.code.silver[document.red[.querySelector()]]
+
+.code.silver[document.red[.querySelectorAll()]]
+]
+.w-50[
+&lt;h3 class="mv1 tc bb bw1"&gt;Modify Elements&lt;/h3&gt;
+
+.code.silver[el.red[.textContent]]
+
+.code.silver[el.red[.innerHTML]]
+
+.code.silver[el.red[.style].blue[.color]]
+]
+]
+
+.footnote[A two column comparison slide]
+
+---
+class: break break-shiny
+
+# A shiny interstitial
+
+.footnote[break break-shiny]
+
+---
+class: break break-javascript
+
+# JavaScript inspired break
+
+.absolute.top-1.left-1[break break-javascript]
+
+---
+class: break break-blue-pink center middle
+
+# Wow this is a cool break slide!
+
+.footnote[break break-blue-pink]
+
+---
+
+# Fonts
+
+.mh-auto.w-80.f5.mt4[
+.f-lato[Lato (body)] .fr.code[.f-lato]
+
+.f-nunito[Nunito Sans] .fr.code[.f-nunito]
+
+.f-marker[Marker] .fr.code[.f-marker]
+
+.f-source-code[Source Code Pro] .fr.code[.f-source-code]
+]
+
+---
+
+# Summary
+
+.can-edit.key-summary[
+- HTML is a tree, called the DOM
+- HTML tags have a name, attributes, and contents
+- HTML for content, CSS for presentation
+- CSS selectors
+- CSS in `&lt;style&gt;` or `.css`
+- JavaScript is like R but different
+- JavaScript runs in the browser
+- JavaScript manipulates the DOM
+]
+
+.footnote[A summary slide with an editable list]
+
+---
+
+
+# HTML Resources
+
+* Mastering Shiny: Advanced UI&lt;br&gt;
+  https://mastering-shiny.org/advanced-ui.html
+
+* FrontEnd Masters Handbook&lt;br&gt;
+  https://frontendmasters.com/books/front-end-handbook/2019/
+
+* Interneting is Hard&lt;br&gt;
+  https://internetingishard.com/
+
+* HTML Semantics Cheat Sheet&lt;br&gt;
+  https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/
+
+---
+class: center middle
+
+# Next: [Ghost in the Machine (Interactivity)](interactivity.html)
+
+.footnote[End slides with link to next page in the series]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="assets/js/remark.0.14.1.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"highlightStyle": "docco",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script>
+(function (d) {
+  d.addEventListener('DOMContentLoaded', function () {
+    // find code chunks that get special colors
+    const langSpecial = ['r', 'js', 'yaml', 'json', 'bash', 'html', 'css']
+    const codeSpecial = d.querySelectorAll(langSpecial.map(l => 'pre code.' + l))
+
+    // find code chunks with highlighted lines
+    const hlines = d.querySelectorAll('.remark-code-line-highlighted')
+    const preHLParents = []
+
+    const findPreParent = function (line, p = 0) {
+      if (p > 1) return null // traverse up no further than grandparent
+      const el = line.parentElement
+      if (el.tagName === 'PRE') {
+        return el
+      } else {
+        return findPreParent(el, ++p)
+      }
+    }
+
+    // add the code language to the parent <pre> element
+    for (const code of codeSpecial) {
+      const pre = findPreParent(code)
+      const codeLang = code.className.split(' ').filter(c => langSpecial.includes(c))
+      pre.classList += ` ${codeLang}`
+    }
+
+    // add remark-code-has-line-highlighted to parent <pre> element
+    for (const line of hlines) {
+      const pre = findPreParent(line)
+      if (pre && !preHLParents.includes(pre)) preHLParents.push(pre)
+    }
+    preHLParents.forEach(p => p.classList += ' remark-code-has-line-highlighted')
+
+    slideshow.on('afterShowSlide', function (slide) {
+      replaceIframePlaceholders()
+    })
+
+    replaceIframePlaceholders()
+  })
+})(document)
+
+function replaceIframePlaceholders () {
+  document
+    .querySelectorAll('.remark-slides-area .remark-visible div[data-iframe]')
+    .forEach(el => replaceIframePlaceholder(el))
+}
+
+function replaceIframePlaceholder (el) {
+    const iframe = document.createElement('iframe')
+    if (el.childNodes) {
+      el.childNodes.forEach(e => iframe.appendChild(e))
+    }
+    iframe.src = el.dataset.src
+    iframe.classList = el.classList
+    el.parentElement.replaceChild(iframe, el)
+}
+</script>
+<style>
+  .remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+    opacity: 0.4;
+  }
+
+  .remark-code-line-highlighted {
+    background-color: inherit; /* Override highlight color */
+    /* font-weight: 500; */
+  }
+
+  /* Line Hover Indicator */
+  .remark-code-line:hover {
+    font-weight: bold;
+    opacity: 1 !important;
+  }
+
+  .remark-code-line:hover:before {
+    content: "\25B6";
+    color: #6d7e8a;
+    position: absolute;
+    transform: translateX(-1.2em);
+    animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translateX(-1.2em);
+    }
+    100% {
+      transform: translateX(-0.8em);
+    }
+  }
+</style>
+
+  </body>
+</html>
