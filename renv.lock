@@ -457,6 +457,13 @@
       "Repository": "CRAN",
       "Hash": "1ebfdc8a3cfe8fe19184f5481972b092"
     },
+    "magick": {
+      "Package": "magick",
+      "Version": "2.7.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "db36bbb91bf293f0550c51ecbf6f1928"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.1",
@@ -616,6 +623,18 @@
       "Repository": "CRAN",
       "Hash": "249d8cd1e74a8f6a26194a91b47f21d1"
     },
+    "rsicons": {
+      "Package": "rsicons",
+      "Version": "0.0.0.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rundel",
+      "RemoteRepo": "rsicons",
+      "RemoteRef": "main",
+      "RemoteSha": "251f80dfc712ba847bfe212e997cc5f55317e13b",
+      "Hash": "b3d346c425b9db1a61d492a3e77abae2"
+    },
     "rstudioapi": {
       "Package": "rstudioapi",
       "Version": "0.13",
@@ -758,27 +777,22 @@
     },
     "xaringanExtra": {
       "Package": "xaringanExtra",
-      "Version": "0.5.2",
+      "Version": "0.5.3",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "gadenbuie",
       "RemoteRepo": "xaringanExtra",
       "RemoteRef": "master",
-      "RemoteSha": "2dfa2e2c72d91761244d4ed3708cfb522de70a4d",
-      "Hash": "1c2d93bd0567c5500674af4c076b2af5"
+      "RemoteSha": "38011b852995e86a99c2bcceef1a3308bb9aa648",
+      "Hash": "c56e205299ec83a94e026082d56bc7aa"
     },
     "xaringanthemer": {
       "Package": "xaringanthemer",
-      "Version": "0.3.4.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "gadenbuie",
-      "RemoteRepo": "xaringanthemer",
-      "RemoteRef": "master",
-      "RemoteSha": "ce808c74f5facc69b8b789c4879d54f6338796df",
-      "Hash": "b700e3d9da04bf2f450ad64ef8ecc575"
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b6c551c7ab2791ec57c3d7326b79ff2f"
     },
     "xfun": {
       "Package": "xfun",
