@@ -2,10 +2,10 @@
 title: "Silvia Canelón"
 subtitle: "Postdoctoral Research Scientist"
 excerpt: >
-  Biomedical informatics researcher at the [University of Pennsylvania](https://www.dbei.med.upenn.edu/), curious about all intersections of data and society.
+  **Instructor**<br>Biomedical informatics researcher at the [University of Pennsylvania](https://www.dbei.med.upenn.edu/), curious about all intersections of data and society.
 type: people
 show_post_image: true
-weight: 6
+weight: 2
 author: "Silvia Canelón"
 draft: false
 categories:
@@ -17,7 +17,7 @@ links:
   icon_pack: fas
   name: she/her
   url: https://pronoun.is/she
-- icon: link
+- icon: home
   icon_pack: fas
   name: silvia.rbind.io
   url: https://silvia.rbind.io
@@ -29,6 +29,10 @@ links:
   icon_pack: fab
   name: spcanelon
   url: https://github.com/spcanelon
+- icon: linkedin
+  icon_pack: fab
+  name: spcanelon
+  url: https://www.linkedin.com/in/spcanelon/
 - icon: orcid
   icon_pack: ai
   name: Orcid

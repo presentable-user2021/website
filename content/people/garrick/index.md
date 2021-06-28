@@ -2,7 +2,7 @@
 title: "Garrick Aden-Buie"
 subtitle: Data Science Educator & R Developer
 excerpt: >
-  Data Science Educator at [RStudio](https://rstudio.com) and full-stack R
+  **Instructor**<br>Data Science Educator at [RStudio](https://rstudio.com) and full-stack R
   developer. Always learning something new.
 weight: 1
 type: people
