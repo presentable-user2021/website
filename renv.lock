@@ -480,15 +480,10 @@
     },
     "metathis": {
       "Package": "metathis",
-      "Version": "1.0.3.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "gadenbuie",
-      "RemoteRepo": "metathis",
-      "RemoteRef": "main",
-      "RemoteSha": "0e28c8f930e549c2cc80f6a536f2958400f22731",
-      "Hash": "c8d8d308ece66ecebec644f3596ee1db"
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "72a2d9355531fa2fff6673affd34f725"
     },
     "mgcv": {
       "Package": "mgcv",
@@ -604,10 +599,10 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.8",
+      "Version": "2.9",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "f518ba47713f92d0d603eec7c6888faf"
+      "Hash": "912c09266d5470516df4df7a303cde92"
     },
     "rpart": {
       "Package": "rpart",
