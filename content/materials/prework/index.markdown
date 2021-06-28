@@ -13,9 +13,21 @@ draft: false
 
 
 
-Welcome to the [Professional, Polished, Presentable](/) workshop! We look forward to meeting you. 
+Welcome to the [Professional, Polished, Presentable](/) workshop! We look forward to meeting you.
 
 This is an intermediate workshop designed for R learners already familiar with the [xaringan](/packages/xaringan/) package for building presentations. Before attending the workshop, please complete the following prework.
+
+## Get the materials
+
+<i class="fas fa-tasks" pr2></i> **Reminder:** Check back the day before the workshop to download companion materials that will help you complete the exercises:
+
+
+```r
+usethis::use_course(
+  url = "presentable-user2021/materials",
+  destdir = "/file/path/on/your/local/machine"
+)
+```
 
 ## Bring a style guide
 
@@ -59,17 +71,19 @@ Explore the style guide, asking yourself:
 
 Have this style guide easily available during the workshop so you can refer to it as needed.
 
-## Set up RStudio Cloud
-
-Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. We recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). We want you to be able to work from your own computer and preferred IDE in this workshop, but Cloud is an important back-up plan should you run into troubles.
-
 ## Review markdown
 
 Please complete this [10-minute interactive tutorial on Markdown](https://commonmark.org/help/tutorial/).
 
 ## Review xaringan
 
-Please review the [xaringan](/packages/xaringan/) package documentation and/or chapter of the R Markdown book. [xaringan chapter](https://bookdown.org/yihui/rmarkdown/xaringan.html) of the R Markdown book.
+Please review the [xaringan](/packages/xaringan/) package documentation and/or [xaringan chapter](https://bookdown.org/yihui/rmarkdown/xaringan.html) of the R Markdown book.
+
+## Set up RStudio Cloud
+
+We want you to be able to work from your own computer and preferred IDE in this workshop, but Cloud is an important back-up plan should you run into troubles.
+
+Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. We recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). 
 
 ## Installations
 
