@@ -10,6 +10,7 @@ description: >
   institution or organization’s style guide. Together we’ll explore the basics
   of CSS—the design language of the internet—and how we can leverage CSS to
   produce elegant slides for effective communication.
+sharing_image: "/img/presentable-social.png"
 images:
   - img/xaringan-colored.svg
 image_left: false
