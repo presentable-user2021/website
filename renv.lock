@@ -480,15 +480,10 @@
     },
     "metathis": {
       "Package": "metathis",
-      "Version": "1.0.3.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "gadenbuie",
-      "RemoteRepo": "metathis",
-      "RemoteRef": "main",
-      "RemoteSha": "0e28c8f930e549c2cc80f6a536f2958400f22731",
-      "Hash": "c8d8d308ece66ecebec644f3596ee1db"
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "72a2d9355531fa2fff6673affd34f725"
     },
     "mgcv": {
       "Package": "mgcv",
