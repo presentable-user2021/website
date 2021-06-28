@@ -599,10 +599,10 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.8",
+      "Version": "2.9",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "f518ba47713f92d0d603eec7c6888faf"
+      "Hash": "912c09266d5470516df4df7a303cde92"
     },
     "rpart": {
       "Package": "rpart",
