@@ -26,8 +26,12 @@ title_slide <- function(
         metathis::meta_social(
           title = glue::glue("{title} | Professional, Polished, Presentable"),
           url = "https://presentable-user2021.netlify.app",
-          image = "https://presentable-user2021.netlify.app/img/social.jpg",
-          image_alt = "PLACEHOLDER FOR FINAL IMAGE",
+          image = "https://presentable-user2021.netlify.app/img/presentabe-social.png",
+          image_alt = paste(
+            "The eye of xaringan with the title of the tutorial: Professional,",
+            "Polished, Presentable, Presentable: Making great xaringan slides.",
+            "A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."
+          ),
           og_type = "website",
           og_author = c("Garrick Aden-Buie", "Silvia Canelón"),
           twitter_card_type = "summary",
