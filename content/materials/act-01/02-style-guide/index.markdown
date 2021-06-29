@@ -1,7 +1,7 @@
 ---
 title: "02: From style guide to xaringan theme"
 weight: 2
-subtitle: "Insert subtitle here"
+draft: yes
 excerpt: ""
 links:
 - icon: images

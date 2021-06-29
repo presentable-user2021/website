@@ -1,7 +1,7 @@
 ---
 title: "03: xaringan extras"
 weight: 3
-subtitle: "Insert subtitle here"
+draft: yes
 excerpt: ""
 links:
 - icon: images

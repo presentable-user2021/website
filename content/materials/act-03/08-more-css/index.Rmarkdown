@@ -1,7 +1,7 @@
 ---
 title: "08: More CSS"
 weight: 2
-subtitle: "Insert subtitle here"
+draft: yes
 excerpt: ""
 links:
 - icon: images

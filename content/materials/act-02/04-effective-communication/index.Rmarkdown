@@ -1,7 +1,7 @@
 ---
 title: "04: Effective Communication"
 weight: 1
-subtitle: "Insert subtitle here"
+draft: yes
 excerpt: ""
 links:
 - icon: images
