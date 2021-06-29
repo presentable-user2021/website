@@ -1,7 +1,7 @@
 ---
 title: "01: Setting the stage"
 weight: 1
-subtitle: "Insert subtitle here"
+draft: yes
 excerpt: ""
 links:
 - icon: images
@@ -40,9 +40,24 @@ Preview a slide deck with inf\_mr() that has a customized title slide and helpfu
 
 Time: ⏱ 10 minutes
 
-Open and preview this slide deck: materials/act-01/01-review.Rmd
+1.  Open and preview this slide deck: `01-introduction/01-introduction.Rmd`
 
--   run `inf_mr()`
--   adjust slide ratio
--   customize parameters in YAML
--   create basic title slide using parameters and content classes
+2.  Run `xaringan::inf_mr()` or `xaringan::infinite_moon_reader()` in the console to render the Rmd into HTML slides
+
+3.  xaringan scavenger hunt! Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
+
+-   `.pull-left[]` and `.pull-right[]`
+-   `.left-column[]` and `.right-column[]`
+-   `.footnote[]`
+-   inverse slide
+-   horizontal bars
+-   presenter notes
+-   
+
+1.  Play around
+
+2.  adjust slide ratio
+
+3.  customize parameters in YAML
+
+4.  create basic title slide using parameters and content classes

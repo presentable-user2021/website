@@ -1,7 +1,7 @@
 ---
 title: "09: Design Components"
 weight: 3
-subtitle: "Insert subtitle here"
+draft: yes
 excerpt: ""
 links:
 - icon: images
