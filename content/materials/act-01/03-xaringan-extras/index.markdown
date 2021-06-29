@@ -59,7 +59,7 @@ Our goal is to present both the code and the plot.
 For our first configuration, split the presentation into two slides.
 First present the code, followed by the plot on a new slide.
 
-<i class="orange fas fa-hand-point-right"></i> **Use `knitr::fig_chunk()` or the `ref.label` option to separate the code and the plot.**
+<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Use `knitr::fig_chunk()` or the `ref.label` option to separate the code and the plot.**
 
 <details>
 <summary>
@@ -94,9 +94,9 @@ First present the code, followed by the plot on a new slide.
 
 ### Use Panelsets
 
-<i class="orange fas fa-hand-point-right"></i> **Reset the code in your slides to the original `lemur-weight` chunk.**
+<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Reset the code in your slides to the original `lemur-weight` chunk.**
 
-<i class="orange fas fa-hand-point-right"></i> **Now, use [panelsets](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
+<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Now, use [panelsets](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
 to place the code and output in the same slide:**
 
 1.  Add a new chunk to your slides to use panelsets
@@ -144,7 +144,7 @@ Checkpoint
 
 </details>
 
-<i class="orange fas fa-hand-point-right"></i> **Add another panel with a regression line over the lemur weight plot.**
+<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Add another panel with a regression line over the lemur weight plot.**
 
 1.  Inside the `.panelset[ ... ]`, add a new `.panel[ ... ]`
 
@@ -180,7 +180,7 @@ we’ll add the [scribble](https://pkg.garrickadenbuie.com/xaringanExtra/#/scrib
 feature to our slides.
 Scribble lets you draw right on the slides!
 
-<i class="orange fas fa-hand-point-right"></i> **Add *scribble* and guess the regression.**
+<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Add *scribble* and guess the regression.**
 
 1.  Add `"scribble"` to the extras in `use_xaringan_extra()`.
 
