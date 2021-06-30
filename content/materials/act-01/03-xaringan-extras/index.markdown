@@ -63,8 +63,6 @@ First present the code, followed by the plot on a new slide.
 
 **Use `knitr::fig_chunk()` or the `ref.label` option to separate the code and the plot.**
 
-</div>
-
 <details>
 <summary>
 <code>knitr::fig\_chunk()</code>
@@ -95,6 +93,8 @@ First present the code, followed by the plot on a new slide.
     ```
 
 </details>
+
+</div>
 
 ### Use Panelsets
 
