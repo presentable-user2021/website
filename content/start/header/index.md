@@ -11,3 +11,6 @@ headline: |
 
 <!-- this is a subheadline -->
 A [useR!2021][user-2021] tutorial about making great slides with [xaringan].
+
+Are you joining the tutorial?
+Follow the [tutorial Prework](/materials/prework) to get ready!

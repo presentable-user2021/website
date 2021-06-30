@@ -99,3 +99,20 @@ Please bring a computer that has the following installed:
     + [xaringanthemer](/packages/xaringanthemer/)
     + [xaringanExtra](/packages/xaringanextra/)
     + [metathis](/packages/metathis/)
+
+<details><summary>Installation R Script</summary>
+
+
+```r
+# Core Packages -----------------------------------------------------------
+install.packages(c("xaringan", "metathis"))
+install.packages("xaringanthemer", dependencies = TRUE)
+
+
+# Extra Packages ----------------------------------------------------------
+install.packages("remotes")
+remotes::install_github("gadenbuie/xaringanExtra")
+
+install.packages("fontawesome")
+```
+</details>
