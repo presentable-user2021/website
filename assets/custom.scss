@@ -22,3 +22,32 @@
 .activity-table > table > thead {
   display: none;
 }
+
+.activity-step {
+  @extend .b--dark-green, .pr3, .pv1, .bw1, .ba, .mv3;
+  border-color: #CFE3DC;
+  padding-left: 3rem;
+  position: relative;
+}
+
+.activity-step > :first-child {
+  @extend .dark-green;
+  padding-left: 1rem;
+}
+
+.activity-step::before {
+	content: "\f0a4";
+	@extend .dark-green;
+	font-family: 'font awesome 5 free';
+	font-weight: 900;
+	font-size: 1.25rem;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	width: 4rem;
+	text-align: center;
+}
+
+.activity-step > details {
+  @extend .mb3;
+}

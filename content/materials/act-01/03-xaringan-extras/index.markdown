@@ -59,7 +59,11 @@ Our goal is to present both the code and the plot.
 For our first configuration, split the presentation into two slides.
 First present the code, followed by the plot on a new slide.
 
-<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Use `knitr::fig_chunk()` or the `ref.label` option to separate the code and the plot.**
+<div class="activity-step">
+
+**Use `knitr::fig_chunk()` or the `ref.label` option to separate the code and the plot.**
+
+</div>
 
 <details>
 <summary>
@@ -94,9 +98,15 @@ First present the code, followed by the plot on a new slide.
 
 ### Use Panelsets
 
-<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Reset the code in your slides to the original `lemur-weight` chunk.**
+<div class="activity-step">
 
-<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Now, use [panelsets](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
+**Reset the code in your slides to the original `lemur-weight` chunk.**
+
+</div>
+
+<div class="activity-step">
+
+**Now, use [panelsets](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
 to place the code and output in the same slide:**
 
 1.  Add a new chunk to your slides to use panelsets
@@ -144,7 +154,11 @@ Checkpoint
 
 </details>
 
-<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Add another panel with a regression line over the lemur weight plot.**
+</div>
+
+<div class="activity-step">
+
+**Add another panel with a regression line over the lemur weight plot.**
 
 1.  Inside the `.panelset[ ... ]`, add a new `.panel[ ... ]`
 
@@ -173,6 +187,8 @@ Checkpoint
 
 </details>
 
+</div>
+
 ### Add Scribble
 
 For our last trick,
@@ -180,7 +196,9 @@ we’ll add the [scribble](https://pkg.garrickadenbuie.com/xaringanExtra/#/scrib
 feature to our slides.
 Scribble lets you draw right on the slides!
 
-<i aria-hidden="true" class="orange fas fa-hand-point-right"></i> **Add *scribble* and guess the regression.**
+<div class="activity-step">
+
+**Add *scribble* and guess the regression.**
 
 1.  Add `"scribble"` to the extras in `use_xaringan_extra()`.
 
@@ -204,3 +222,5 @@ xaringanExtra::use_xaringan_extra(c("panelset", "scribble"))
 ```
 
 </details>
+
+</div>
