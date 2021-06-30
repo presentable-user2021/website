@@ -22,3 +22,7 @@ cascade:
 ## Materials
 
 Use the left sidebar menu to explore the materials for today.
+
+---
+
+Lemur illustration by [Rachel Hudson](https://lemur.duke.edu/100-lemurs/)
