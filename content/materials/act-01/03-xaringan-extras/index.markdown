@@ -68,7 +68,7 @@ First present the code, followed by the plot on a new slide.
 <code>knitr::fig\_chunk()</code>
 </summary>
 
-    ```{r lemur-weight, results="hide"}
+    ```{r lemur-weight, fig.show="hide"}
     # ggplot2 plotting code
     ```
 
