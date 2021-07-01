@@ -1,7 +1,7 @@
 ---
 title: "03: xaringan extras"
 weight: 3
-draft: yes
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images

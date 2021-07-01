@@ -1,8 +1,7 @@
 ---
 title: "06: Introduction to CSS"
 weight: 3
-draft: yes
-excerpt: ""
+publishDate: 2021-07-06
 links:
 - icon: images
   icon_pack: fas
