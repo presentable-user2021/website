@@ -87,7 +87,7 @@ Please review the [xaringan](/packages/xaringan/) package documentation and/or [
 [safari]: https://www.apple.com/safari/
 
 <div class="flex flex-wrap tc">
-<div class="w-25 ph4 relative dim">
+<div class="w-25-ns w-50 ph4-ns ph3 pt3 pt-ns relative dim">
 <a class="f4" href="https://www.mozilla.org/en-US/firefox/new/">
 <img src="/slides/assets/img/firefox_256.png" alt="Firefox browser logo"><br>
 <i class="fa fa-star gold absolute top-0 left-1"></i>
@@ -95,7 +95,7 @@ Please review the [xaringan](/packages/xaringan/) package documentation and/or [
 Firefox
 </a>
 </div>
-<div class="w-25 ph4 relative dim">
+<div class="w-25-ns w-50 ph4-ns ph3 pt3 pt-ns relative dim">
 <a class="f4" href="https://www.google.com/chrome/">
 <img src="/slides/assets/img/chrome_256.png" alt="Chrome browser logo"><br>
 <i class="fa fa-star gold absolute top-0 left-1"></i>
@@ -103,13 +103,13 @@ Firefox
 Chrome
 </a>
 </div>
-<div class="w-25 ph4 dim">
+<div class="w-25-ns w-50 ph4-ns ph3 pt3 pt-ns dim">
 <a class="f4" href="https://www.apple.com/safari/">
 <img src="/slides/assets/img/safari_256.png" alt="Safari browser logo"><br>
 Safari
 </a>
 </div>
-<div class="w-25 ph4 dim">
+<div class="w-25-ns w-50 ph4-ns ph3 pt3 pt-ns dim">
 <a class="f4" href="https://www.microsoft.com/en-us/edge">
 <img src="/slides/assets/img/edge_256-2.png" alt="Edge browser logo"><br>
 Edge
