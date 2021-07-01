@@ -26,13 +26,12 @@
 .activity-step {
   @extend .b--dark-green, .pr3, .pv1, .bw1, .ba, .mv3;
   border-color: #CFE3DC;
-  padding-left: 3rem;
+  padding-left: 4rem;
   position: relative;
 }
 
 .activity-step > :first-child {
   @extend .dark-green;
-  padding-left: 1rem;
 }
 
 .activity-step::before {
