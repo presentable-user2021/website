@@ -7,7 +7,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/06-intro-css.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -20,17 +20,39 @@ links:
 <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="/slides/03-why-r.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="/slides/06-intro-css.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
 ## Topic
 
-End goal: control the precise placement and size of content on the slide.
+Learn how to use CSS to style your slides.
+In the end, we’ll solve the common slide design problem
+of putting things exactly where you want them to be.
 
 ## Activity
 
-Time: ⏱ 10 minutes
+<div class="activity-table">
+
+|           |                          |
+|:----------|:-------------------------|
+| Time      | 15 minutes               |
+| Materials | `06-intro-css/start.Rmd` |
+
+</div>
+
+In this activity, we’ll be working together.
+Follow allow with me as use [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS) to customize our slides.
+
+### Setup
+
+<div class="activity-step">
+
+Restart your R session and open `06-intro-css/06-start.Rmd`
+
+Remember: restart your R session with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F10</kbd>.
+
+</div>
 
 Open and preview this slide deck: materials/act-02/06-css-intro.Rmd
 

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to CSS</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Garrick Aden-Buie &amp; Silvia Canelón" />
+    <meta name="date" content="2021-07-07" />
+    <script src="assets/libs/header-attrs/header-attrs.js"></script>
+    <link href="assets/libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="assets/libs/tile-view/tile-view.js"></script>
+    <link href="assets/libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="assets/libs/clipboard/clipboard.min.js"></script>
+    <link href="assets/libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="assets/libs/shareon/shareon.min.js"></script>
+    <link href="assets/libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="assets/libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"Introduction to CSS","expires":14}</script>
+    <script src="assets/libs/himalaya/himalaya.js"></script>
+    <script src="assets/libs/js-cookie/js.cookie.js"></script>
+    <link href="assets/libs/editable/editable.css" rel="stylesheet" />
+    <script src="assets/libs/editable/editable.js"></script>
+    <link href="assets/libs/js4shiny/css/_variables-fonts.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/_variables.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/code.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/jsonview/jsonview.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny/jsonview/jsonview.min.js"></script>
+    <link href="assets/libs/js4shiny-redirectConsoleLog/jslog.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny-redirectConsoleLog/redirectConsoleLog.js"></script>
+    <meta name="description" content="Slides for &quot;Introduction to CSS&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:title" content="Introduction to CSS | Professional, Polished, Presentable"/>
+    <meta name="twitter:description" content="Slides for &quot;Introduction to CSS&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:url" content="https://presentable-user2021.netlify.app"/>
+    <meta name="twitter:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
+    <meta name="twitter:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@grrrck"/>
+    <meta name="twitter:site" content="@grrrck"/>
+    <meta property="og:title" content="Introduction to CSS | Professional, Polished, Presentable"/>
+    <meta property="og:description" content="Slides for &quot;Introduction to CSS&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta property="og:url" content="https://presentable-user2021.netlify.app"/>
+    <meta property="og:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
+    <meta property="og:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Garrick Aden-Buie"/>
+    <meta property="article:author" content="Silvia Canelón"/>
+    <link href="assets/libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="assets/libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/06-extra.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: title
+
+
+
+
+
+<div class="scene f2 absolute top-0 left-0 w-10 bg-red bg-blue">6</div>
+<h1>Introduction to CSS</h1>
+<div class="conf-logo"></div>
+<div class="talk-meta">
+<p class="talk-author">Garrick Aden-Buie &amp; Silvia Canelón</p>
+<p class="talk-date">Professional, Polished, Presentable</p>
+</div>
+
+---
+class: header_background f6
+
+# Let's do this together!
+
+Restart your R session  &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F10&lt;/kbd&gt;
+
+.mt4[
+Open `06-intro-css/06-start.Rmd`
+]
+
+---
+name: remark-example
+
+class: f4
+
+&lt;pre&gt;&lt;code style="color: #999"&gt;.pull-left&amp;#8288;[
+!&amp;#8288;[cute lemur]&amp;#8288;(lemur.jpg)
+]
+
+.pull-right&amp;#8288;[
+Lemurs are the cutest.
+]
+
+.footnote&amp;#8288;[Duke Lemur Center]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;script&gt;
+const remarkExample = document.getElementById('slide-remark-example').querySelectorAll('.remark-code-line')
+;[0,2].forEach(idx =&gt; remarkExample[idx].classList.add('red', 'b'))
+;[4,6].forEach(idx =&gt; remarkExample[idx].classList.add('blue', 'b'))
+remarkExample[8].innerHTML = `&lt;span class="orange b"&gt;.footnote&amp;#8288;[&lt;/span&gt;Duke Lemur Center&lt;span class="orange b"&gt;&amp;#8288;]&lt;/span&gt;`
+&lt;/script&gt;
+
+???
+
+You've probably encountered remark's dot-name-bracket notation before.
+The most common examples in the default slides are `.pull-left[]`, `.pull-right[]` and `.footnote[]`.
+We can use this syntax to modify the appearance or position of the text in our slides.
+And most importantly, we can create our own versions.
+
+---
+class: header_background
+
+# Use .code[.big&amp;#8288;[]] in the first slide
+
+1. Launch `infinite_moon_reader()` 
+
+1. Put `.big[ ]` around just **a few words** on the slide
+
+<div class="countdown" id="timer_60ddea58" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: f5
+
+&lt;div class="mt4 pre-name"&gt;06-start.Rmd&lt;/div&gt;
+
+```
+---
+class: center middle
+
+Lemurs are the .big[most endangered] mammals on Earth
+
+![A cute lemur](lemur.jpg)
+```
+
+???
+
+Your slide source code probably looks like this now
+
+---
+class: center middle
+
+Lemurs are the .big[most endangered] mammals on Earth
+
+![A cute lemur](assets/img/lemur.jpg)
+
+--
+name: rendered-example
+
+.footnote[![RStudio viewer popout](assets/img/rstudio-viewer-popout.png) .ml1[Open the slides in your browser]]
+
+???
+
+Open the slides in Chrome or Firefox.
+
+Right click on the embiggened words and select  _Inspect Element_
+
+What rules are being applied to this element?
+
+Adjust `font-size` rule of the `.big` class
+
+---
+class: header_background
+
+# Make the .code[.big] class your own
+
+1. .b[Set the `color` to your favorite color.]
+
+   Here are a few to try:
+
+    - `DeepPink`
+    - `CornFlowerBlue`
+    - `RosyBrown`
+    - `SeaGreen`
+    
+1. .b[Find another property to change.]
+
+   Try typing `font-` and pressing &lt;kbd&gt;Tab&lt;/kbd&gt;    
+
+<div class="countdown" id="timer_60dde9cc" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: header_background
+
+# Copy the rule into your .code[extra.css] file
+
+1. .b[Right Click] on [the rule](#rendered-example) and select .i[Copy Rule]
+
+   ![Right click menu on CSS rule in Firefox Developer tools](assets/img/06/copy-css-rule.png)
+
+2. .b[Paste the rule into `extra.css`] and save to update
+
+---
+class: header_background
+
+# Write your own rule
+
+1. Follow the pattern from `.big` to write your own rule called `.fade`
+
+    - Set `opacity` to `0.66`
+
+1. Then, put `.fade[]` around the lemur image
+
+<div class="countdown" id="timer_60ddea54" style="top:3rem;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+--
+
+.mb0[
+&lt;div class="pre-name"&gt;extra.css&lt;/div&gt;
+
+```css
+.fade {
+  opacity: 0.66;
+}
+```
+]
+
+&lt;div class="mt0 pre-name"&gt;06-start.Rmd&lt;/div&gt;
+```
+.fade[
+![A cute lemur](lemur.jpg)
+]
+```
+
+---
+layout: true
+
+# Anatomy of a CSS rule
+
+---
+
+.code.f4.mh-a.mt4[
+.purple[selector] {&lt;br&gt;
+.ml4[.dark-green[property]: .blue[value];]&lt;br&gt;
+.ml4[.dark-green[property]: .blue[value];]&lt;br&gt;
+}
+]
+
+---
+class: animated fadeIn
+
+.code.f4.mh-a.mt4[
+.purple[.big] {&lt;br&gt;
+.ml4[.dark-green[font-size]: .blue[2em];]&lt;br&gt;
+.ml4[.dark-green[color]: .blue[CornFlowerBlue];]&lt;br&gt;
+}
+]
+
+---
+layout: true
+class: f4 middle animated fadeIn
+
+&lt;pre&gt;&lt;code style="color: #999"&gt;.pull-right&amp;#8288;[
+Lemurs are .big&amp;#8288[the cutest].
+]&lt;/code&gt;&lt;/pre&gt;
+
+---
+
+Lemurs are the cutest
+
+---
+name: inline-vs-block-inline
+
+Lemurs are .bg-washed-blue.blue.b--dashed.ph1[the cutest]
+
+&lt;script&gt;
+const exInline = document.getElementById('slide-inline-vs-block-inline').querySelectorAll('.remark-code-line')
+// ;[0,2].forEach(idx =&gt; exInline[idx].classList.add('red', 'b'))
+exInline[1].innerHTML = `Lemurs are &lt;span class="blue b"&gt;.big&amp;#8288;[&lt;/span&gt;&lt;span class="blue"&gt;the cutest&lt;/span&gt;&lt;span class="blue b"&gt;&amp;#8288;]&lt;/span&gt;`
+&lt;/script&gt;
+
+???
+
+_Inline_ elements are like inline R code.
+They modify a small snippet of text
+
+---
+name: inline-vs-block-block
+
+&lt;div class="bg-washed-red red b--dashed p  a1 mv3"&gt;Lemurs are the cutest&lt;/div&gt;
+
+&lt;script&gt;
+const exBlock = document.getElementById('slide-inline-vs-block-block').querySelectorAll('.remark-code-line')
+;[0,1,2].forEach(idx =&gt; exBlock[idx].classList.add('red', idx == 1 ? 'normal' : 'b'))
+&lt;/script&gt;
+
+???
+
+_Block_ elements are like R code chunks.
+They're a whole chunk of _something_.
+
+---
+layout: false
+class: middle
+
+.pull-left[
+&lt;pre&gt;&lt;code style="color: #999"&gt;.pull-right&amp;#8288;[
+Lemurs are .big&amp;#8288[the cutest].
+]&lt;/code&gt;&lt;/pre&gt;
+]
+
+.pull-right[
+Lemurs are .big[the cutest].
+]
+
+.footnote[![RStudio viewer popout](assets/img/mouse-pointer.svg) .ml1[Inspect the output]]
+
+???
+
+Let's see how xaringan and remark render the markdown on the left.
+
+---
+class: middle animated fadeIn
+
+.pull-left[
+
+```html
+&lt;div class="pull-right"&gt;
+  &lt;p&gt;
+    Lemurs are 
+    &lt;span class="big"&gt;
+      the cutest
+    &lt;/span&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+```
+]
+
+.pull-right[
+Lemurs are .big[the cutest].
+]
+
+???
+
+In the HTML we see the `.pull-right` is used for a `&lt;div&gt;` tag (block element)
+and the `.pull-left` is used for a `&lt;span&gt;` tag (inline element).
+
+---
+class: header_background
+
+# Another place to put CSS (temporarily)
+
+The second slide contains a figure, using the `knitr::fig_chunk()` trick we learned earlier.
+
+With `infinite_moon_reader()` running...
+
+- Add a `&lt;style&gt;` tag to the slide markdown
+
+   ```
+   &lt;style&gt;
+   
+   &lt;/style&gt;
+   ```
+   
+- In the next task, write you CSS inside the `&lt;style&gt;` tag.
+  The slides will update live!
+
+---
+class: header_background
+
+# Move the figure
+
+
+
+1. Put the figure in a `.bottom-right[]`.
+
+1. Create a new CSS rule in `extra.css` called `.bottom-right`
+
+1. Set the `position` property to `absolute`
+
+1. Set the `width` and `height` properties
+
+   - Try values like `200px` or `450px`
+
+1. Set the `bottom` and `right` properties to a CSS _distance_
+
+    - Try values like `1.5em` or `2em`
+    
+1. *Bonus* Give the plot a [border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+    
+<div class="countdown" id="timer_60dde784" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: middle
+
+&lt;img 
+  class="absolute right-2 w-50 ba bw1 b--light-gray"
+  src="assets/img/06/slide-bottom-right.png" 
+  alt="Slide result using the `.bottom-right` class"
+/&gt;
+
+
+```css
+.bottom-right {
+  position: absolute;
+  bottom: 1.5em;
+  right: 2em;
+  width: 450px;
+  height: 200px;
+  border: 2px solid gray;
+}
+```
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="assets/js/remark.0.14.1.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"highlightStyle": "docco",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script>
+(function (d) {
+  d.addEventListener('DOMContentLoaded', function () {
+    // find code chunks that get special colors
+    const langSpecial = ['r', 'js', 'yaml', 'json', 'bash', 'html', 'css']
+    const codeSpecial = d.querySelectorAll(langSpecial.map(l => 'pre code.' + l))
+
+    // find code chunks with highlighted lines
+    const hlines = d.querySelectorAll('.remark-code-line-highlighted')
+    const preHLParents = []
+
+    const findPreParent = function (line, p = 0) {
+      if (p > 1) return null // traverse up no further than grandparent
+      const el = line.parentElement
+      if (el.tagName === 'PRE') {
+        return el
+      } else {
+        return findPreParent(el, ++p)
+      }
+    }
+
+    // add the code language to the parent <pre> element
+    for (const code of codeSpecial) {
+      const pre = findPreParent(code)
+      const codeLang = code.className.split(' ').filter(c => langSpecial.includes(c))
+      pre.classList += ` ${codeLang}`
+    }
+
+    // add remark-code-has-line-highlighted to parent <pre> element
+    for (const line of hlines) {
+      const pre = findPreParent(line)
+      if (pre && !preHLParents.includes(pre)) preHLParents.push(pre)
+    }
+    preHLParents.forEach(p => p.classList += ' remark-code-has-line-highlighted')
+
+    slideshow.on('afterShowSlide', function (slide) {
+      replaceIframePlaceholders()
+    })
+
+    replaceIframePlaceholders()
+  })
+})(document)
+
+function replaceIframePlaceholders () {
+  document
+    .querySelectorAll('.remark-slides-area .remark-visible div[data-iframe]')
+    .forEach(el => replaceIframePlaceholder(el))
+}
+
+function replaceIframePlaceholder (el) {
+    const iframe = document.createElement('iframe')
+    if (el.childNodes) {
+      el.childNodes.forEach(e => iframe.appendChild(e))
+    }
+    iframe.src = el.dataset.src
+    iframe.classList = el.classList
+    el.parentElement.replaceChild(iframe, el)
+}
+</script>
+<style>
+  .remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+    opacity: 0.4;
+  }
+
+  .remark-code-line-highlighted {
+    background-color: inherit; /* Override highlight color */
+    /* font-weight: 500; */
+  }
+
+  /* Line Hover Indicator */
+  .remark-code-line:hover {
+    font-weight: bold;
+    opacity: 1 !important;
+  }
+
+  .remark-code-line:hover:before {
+    content: "\25B6";
+    color: #6d7e8a;
+    position: absolute;
+    transform: translateX(-1.2em);
+    animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translateX(-1.2em);
+    }
+    100% {
+      transform: translateX(-0.8em);
+    }
+  }
+</style>
+
+  </body>
+</html>

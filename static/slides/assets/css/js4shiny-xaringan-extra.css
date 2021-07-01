@@ -65,7 +65,11 @@ html {
 }
 
 .remark-slide-content {
-  padding: 0 3em;
+  padding: 0 2rem;
+}
+
+.remark-slide-number {
+  font-size: 0.66rem;
 }
 
 .remark-slide-content.fullscreen {

@@ -7,12 +7,14 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/06-intro-css.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
   url: "/materials/act-02/06-css-intro/#activity"
 ---
+
+[css]: https://developer.mozilla.org/en-US/docs/Glossary/CSS
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(eval=FALSE)
@@ -21,16 +23,35 @@ xaringanExtra::use_clipboard()
 ```
 
 ```{r embed-xaringan, echo=FALSE, eval=TRUE}
-xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
 
 ## Topic
 
-End goal: control the precise placement and size of content on the slide.
+Learn how to use CSS to style your slides.
+In the end, we'll solve the common slide design problem
+of putting things exactly where you want them to be.
 
 ## Activity
 
-Time: `r emo::ji("stopwatch")` 10 minutes
+::: activity-table
+|           |                          |
+|:----------|:-------------------------|
+| Time      | 15 minutes               |
+| Materials | `06-intro-css/start.Rmd` |
+:::
+
+
+In this activity, we'll be working together.
+Follow allow with me as use [CSS] to customize our slides.
+
+### Setup
+
+::: activity-step
+Restart your R session and open `06-intro-css/06-start.Rmd`
+
+Remember: restart your R session with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F10</kbd>.
+:::
 
 Open and preview this slide deck: materials/act-02/06-css-intro.Rmd
 
