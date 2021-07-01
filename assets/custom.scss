@@ -50,3 +50,21 @@
 .activity-step > details {
   @extend .mb3;
 }
+
+kbd {
+  padding: 0.1rem 0.6rem;
+  border-width: 1px;
+  border-style: solid;
+  @extend .b--light-gray;
+  @extend .bg-near-white;
+  @extend .gray;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff inset;
+  box-shadow: 0 1px 0px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff inset;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-size: 1em !important;
+}
