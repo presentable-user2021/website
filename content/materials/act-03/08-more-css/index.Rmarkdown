@@ -1,13 +1,14 @@
 ---
 title: "08: More CSS"
 weight: 2
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/08-more-css.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -21,7 +22,7 @@ xaringanExtra::use_clipboard()
 ```
 
 ```{r embed-xaringan, echo=FALSE, eval=TRUE}
-xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
 
 ## Topic

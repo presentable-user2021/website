@@ -1,0 +1,427 @@
+---
+scene: 8
+title: "More CSS"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: title
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+use_placeholders(images = FALSE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "panelset", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", 
+  pen_size = 4,
+  palette = c("#d33f49", "#466683", "#338d70", "#c0af3f", "#ff6300", "#993d70")
+)
+```
+
+```{css echo=FALSE}
+/* small fixes for scribble interacting with tachyons */
+.xe-scribble__button {
+  padding: 0 3px;
+  height: 32px;
+  line-height: 1;
+}
+:root {
+  --primary: #4d8dc9;
+  --secondary: #44bc96;
+}
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+`r title_slide()`
+
+---
+layout: true
+
+# Identifying Elements with CSS
+
+.f6.code.center[
+&lt;.red.bg-washed-red[div] class=".dark-blue.bg-washed-blue[special]" id=".dark-green.bg-washed-green[slide-facts]"&gt;
+]
+
+---
+
+---
+
+`r slides_from_images("assets/img/08/css-selectors", regexp = "jpg$", class = "")`
+
+---
+layout: true
+
+# Selecting Elements with CSS
+
+.f6.code.w-70.mh-auto.lh-copy.mb4[
+&nbsp;&nbsp;&lt;.red.bg-washed-red[div]&nbsp;class=".dark-blue.bg-washed-blue[pull-right]&nbsp;.dark-green.bg-washed-green[fact]"&gt;<br>
+<br>
+&nbsp;&nbsp;&lt;/div&gt;
+]
+
+---
+
+---
+
+## What are some ways to identify this element?
+
+--
+
+.flex.code.f6.tc[
+.w-third[
+.red.bg-washed-red[div]
+]
+.w-third[
+.dark-blue.bg-washed-blue[.pull-right]
+]
+.w-third[
+.dark-green.bg-washed-green[.fact]
+]
+]
+
+---
+
+## What are some ways to identify this element?
+
+.code.f6.w-max-content.mh-auto[
+.red.bg-washed-red[div].dark-blue.bg-washed-blue[.pull-right].dark-green.bg-washed-green[.fact]
+]
+
+---
+
+## What are some ways to identify this element?
+
+.code.f6.w-max-content.mh-auto[
+.dark-blue.bg-washed-blue[.pull-right].dark-green.bg-washed-green[.fact]
+]
+
+```{css echo=FALSE}
+.w-max-content { width: max-content; }
+```
+
+---
+
+## What are some ways to identify this element?
+
+.code.f6.w-max-content.mh-auto[
+.dark-blue.bg-washed-blue[.pull-right].dark-green.bg-washed-green[.fact][<br>
+.silver[... content ...]<br>
+]
+]
+
+---
+layout: true
+
+# Selecting Elements with CSS
+
+.f6.code.w-70.mh-auto.lh-copy[
+&nbsp;&nbsp;&lt;.red.bg-washed-red[div]&nbsp;class=".dark-blue.bg-washed-blue[pull-right]&nbsp;.dark-green.bg-washed-green[fact]"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;.gold.ph1.bg-washed-yellow[p]&gt;(lives&nbsp;in&nbsp;trees)&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;
+]
+
+---
+
+---
+
+## What are some ways to identify the .gold.ph1.bg-washed-yellow[paragraph]?
+
+--
+
+.code.f6.tc[
+.gold.ph1.bg-washed-yellow[p]
+]
+
+---
+
+## What are some ways to identify the .gold.ph1.bg-washed-yellow[paragraph]?
+
+.code.f6.tc[
+.dark-green.bg-washed-green[.fact] .gold.ph1.bg-washed-yellow[p]
+]
+
+
+---
+layout: false
+name: interactive
+class: fullscreen
+
+<button class="smallest link dim ba pa1 mb1 ml1 dib mid-gray absolute bottom-0 left-0 pointer" id="interactive-reset" title="Reset">Reset</button>
+
+<script>
+setTimeout(function() {
+  document.querySelectorAll('.remark__tile-view style').forEach(el => el.remove())
+}, 2000)
+document.getElementById('interactive-reset').addEventListener('click', function(e) {
+  document.getElementById('style-can-edit').innerText = '.fact {\n\n}\n\n.special {\n\n}'
+})
+</script>
+
+.flex.h-100[
+.w-third.pl2.flex.items-center[
+<style id="style-can-edit" class="code can-edit" style="display: block; white-space: pre;">.fact {
+  
+}
+
+.special {
+  
+}
+</style>
+]
+
+.w-two-thirds.ph2.h-100[
+.panelset.h-100[
+.panel[.panel-name[Markdown]
+
+```
+---
+name: facts
+class: special
+
+# Interesting Lemur Facts
+
+Lemurs are .fact[arboreal]
+
+.fact.pull-right[
+Note about arboreal
+]
+
+Lemurs are .fact[diurnal]
+```
+]
+
+.panel[.panel-name[HTML]
+```html
+<div id="slide-facts" class="remark-slide-content special">
+  <h1 id="interesting-lemur-facts">
+    Interesting Lemur Facts
+  </h1>
+  <p>
+    Lemurs are <span class="fact">arboreal</span>
+  </p>
+  <div class="fact pull-right">
+    <p>(lives in trees)</p>
+  </div>
+  <p>
+    Lemurs are <span class="fact">diurnal</span>
+  </p>
+  <div class="remark-slide-number">22</div>
+</div>
+```
+]
+
+.panel[.panel-name[Slide]
+
+<div id="slide-facts" class="special w-100 ph2 pt1 pb4 ba bw1 b--light-gray relative">
+  <h1 id="interesting-lemur-facts">
+    Interesting Lemur Facts
+  </h1>
+  <p>
+    Lemurs are <span class="fact">arboreal</span>
+  </p>
+  <div class="pull-right fact">
+    <p>(lives in trees)</p>
+  </div>
+  <p>
+    Lemurs are <span class="fact">diurnal</span>
+  </p>
+  <div class="remark-slide-number">22</div>
+</div>
+
+]
+
+] <!-- end panelset -->
+
+] <!-- end two thirds -->
+
+] <!-- end flex -->
+
+```{css echo=FALSE}
+#slide::before, #slide::after, #slide ::before, #slide ::after {
+  opacity: 0.5;
+  font-family: monospace;
+  font-size: 20px;
+}
+#slide *:hover::before, #slide *:hover::after {
+  opacity: 1;
+}
+#slide .fact::before {
+  content: '.fact\200B[';
+}
+#slide .fact::after {
+  content: ']';
+}
+#slide .pull-right.fact::before {
+  content: '.pull-right.fact\200B[';
+}
+#slide p::before {
+  content: '<p>';
+}
+#slide p::after {
+  content: '</p>';
+}
+#slide h1:before {
+  content: '<h1>';
+}
+#slide h1 {
+  font-size: 1.25rem;
+}
+#slide h1::after {
+  content: '</h1>';
+}
+#slide #slide-facts::before {
+  content: '<div id="slide-interesting" class="remark-slide-content special">';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 19px;
+}
+#slide #slide-facts::after {
+  content: '</div>';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+```
+
+---
+name: facts
+class: special
+
+# Interesting Lemur Facts
+
+Lemurs are .fact[arboreal]
+
+.fact.pull-right[
+(lives in trees)
+]
+
+Lemurs are .fact[diurnal]
+
+
+---
+layout: false
+class: break break-blue-pink center middle
+
+# CSS Variables
+
+---
+class: middle big
+
+```css
+:root {
+  --hot-pink: #ff41b4;
+}
+
+.fact {
+  color: var(--hot-pink);
+}
+```
+
+.absolute.bottom-0.right-1[`r jump_to("interactive")`]
+
+---
+background-image: url(assets/img/08/xaringnthemer-style-duo-accent-arguments.png)
+background-size: cover
+background-position: top center
+
+<div role="img" aria-label="Slide shows: The reference page for the xaringanthemer style_duo_accent() function with the Arguments section in view."></div>
+
+---
+background-image: url(assets/img/08/xaringnthemer-style-duo-accent-arguments-hl.jpg)
+background-size: cover
+background-position: top center
+
+<div role="img" aria-label="Slide shows: The reference page for the xaringanthemer style_duo_accent() function with the Arguments section in view and the both the 'primary_color' argument and the corresponding CSS variable 'var(--primary)' highlighted."></div>
+
+---
+
+# xaringanthemer CSS Color Variables
+
+.panelset[
+.panel[.panel-name[xaringanthemer]
+
+```{r palette, echo=FALSE}
+palette <- c(
+  orange      = "#fb5607",
+  pink        = "#ff006e",
+  blue_violet = "#8338ec",
+  zomp        = "#38A88E",
+  shadow      = "#87826E"
+)
+```
+
+```{r eval=FALSE}
+library(xaringanthemer)
+<<palette>>
+
+style_duo_accent(colors = palette)
+```
+]
+
+.panel[.panel-name[Variables]
+
+```{r palette-css-vars, echo=FALSE, results = "asis"}
+vars <- glue::glue("  --{names(palette)}: {palette};\n", .trim = FALSE)
+cat(glue::glue("```css\n:root {{\n{paste(vars, collapse = '')}}}\n```\n\n"))
+```
+]
+
+.panel[.panel-name[Classes]
+
+```{r palette-table, echo=FALSE}
+knitr::kable(
+  data.frame(
+    Foreground = paste0("<span class='code'>.", names(palette), "</span>"), 
+    Background = paste0("<span class='code'>.bg-", names(palette), "</span>")
+  ),
+  format = "html",
+  escape = FALSE
+)
+```
+
+]
+
+]
+
+.footnote[[.gray.underline[Colors from coolors]](https://coolors.co/fb5607-ff006e-8338ec-38a88e-87826e)]
+
+---
+class: center middle
+
+# Activity Time
+
+.f4[
+[materials/act-03/08-more-css](/materials/act-03/08-more-css/#activity)
+]
