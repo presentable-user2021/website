@@ -1,6 +1,7 @@
 ---
 title: "06: Introduction to CSS"
 weight: 3
+show_post_date: false
 publishDate: 2021-07-06
 links:
 - icon: images
