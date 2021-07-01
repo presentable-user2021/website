@@ -42,10 +42,10 @@ Use features from `xaringanExtra`, `xaringan`, and `rmarkdown` that strengthen c
 
 <div class="activity-table">
 
-|           |                                |
-|:----------|:-------------------------------|
-| Time      | 6 minutes                      |
-| Materials | `03-xaringan-extras/start.Rmd` |
+|           |                                   |
+|:----------|:----------------------------------|
+| Time      | 6 minutes                         |
+| Materials | `03-xaringan-extras/03-start.Rmd` |
 
 </div>
 
