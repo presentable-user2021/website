@@ -76,6 +76,52 @@ Please complete this [10-minute interactive tutorial on Markdown](https://common
 
 Please review the [xaringan](/packages/xaringan/) package documentation and/or [xaringan chapter](https://bookdown.org/yihui/rmarkdown/xaringan.html) of the R Markdown book.
 
+## Pick a browser
+
+[firefox]: https://www.mozilla.org/en-US/firefox/new/
+[chrome]: https://www.google.com/chrome/
+[edge]: https://www.microsoft.com/en-us/edge
+[safari]: https://www.apple.com/safari/
+
+<div class="flex flex-wrap tc">
+<div class="w-25 ph4 relative">
+<a class="f4" href="https://www.mozilla.org/en-US/firefox/new/">
+<img src="/slides/assets/img/firefox_256.png" alt="Firefox browser logo"><br>
+<i class="fa fa-star gold absolute top-0 left-1"></i>
+<span class="clip">Preferred: </span>
+Firefox
+</a>
+</div>
+<div class="w-25 ph4 relative">
+<a class="f4" href="https://www.google.com/chrome/">
+<img src="/slides/assets/img/chrome_256.png" alt="Chrome browser logo"><br>
+<i class="fa fa-star gold absolute top-0 left-1"></i>
+<span class="clip">Preferred: </span>
+Chrome
+</a>
+</div>
+<div class="w-25 ph4 dim">
+<a class="f4" href="https://www.apple.com/safari/">
+<img src="/slides/assets/img/safari_256.png" alt="Safari browser logo"><br>
+Safari
+</a>
+</div>
+<div class="w-25 ph4 dim">
+<a class="f4" href="https://www.microsoft.com/en-us/edge">
+<img src="/slides/assets/img/edge_256-2.png" alt="Edge browser logo"><br>
+Edge
+</a>
+</div>
+</div>
+
+These days, most browsers are great at rendering HTML.
+It turns out that they are also full of tools to help you _develop_ for the web.
+That said, we'll use either [Firefox] or [Chrome] and we recommend you do the same, if only for our tutorial.
+If for any reason you need to use [Safari] or [Edge],
+please take a minute to learn how to access the 
+[developer tools](https://developer.mozilla.org/en-US/docs/Glossary/Developer_Tools).
+
+
 ## Set up RStudio Cloud
 
 We want you to be able to work from your own computer and preferred IDE in this workshop, but Cloud is an important back-up plan should you run into troubles.
