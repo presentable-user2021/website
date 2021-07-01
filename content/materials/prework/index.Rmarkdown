@@ -84,7 +84,7 @@ Please review the [xaringan](/packages/xaringan/) package documentation and/or [
 [safari]: https://www.apple.com/safari/
 
 <div class="flex flex-wrap tc">
-<div class="w-25 ph4 relative">
+<div class="w-25 ph4 relative dim">
 <a class="f4" href="https://www.mozilla.org/en-US/firefox/new/">
 <img src="/slides/assets/img/firefox_256.png" alt="Firefox browser logo"><br>
 <i class="fa fa-star gold absolute top-0 left-1"></i>
@@ -92,7 +92,7 @@ Please review the [xaringan](/packages/xaringan/) package documentation and/or [
 Firefox
 </a>
 </div>
-<div class="w-25 ph4 relative">
+<div class="w-25 ph4 relative dim">
 <a class="f4" href="https://www.google.com/chrome/">
 <img src="/slides/assets/img/chrome_256.png" alt="Chrome browser logo"><br>
 <i class="fa fa-star gold absolute top-0 left-1"></i>
