@@ -1,8 +1,8 @@
 ---
 title: "Shannon Pileggi"
-subtitle: "Statistician"
+subtitle: "Senior Statistician"
 excerpt: >
-  **Teaching Assistant**<br>Statistician
+  **Teaching Assistant**<br>Former college professor turned to industry; always seeking new learning opportunities for myself and others!
 type: people
 show_post_image: true
 weight: 4
