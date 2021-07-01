@@ -658,3 +658,7 @@ li .answer {
 .not-animated {
   animation-duration: 0s !important;
 }
+
+.bg-washed-purple {
+  background-color: var(--washed-purple);
+}
