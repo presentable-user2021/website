@@ -1,7 +1,8 @@
 ---
 title: "03: xaringan extras"
 weight: 3
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
@@ -42,10 +43,10 @@ Use features from `xaringanExtra`, `xaringan`, and `rmarkdown` that strengthen c
 
 <div class="activity-table">
 
-|           |                                |
-|:----------|:-------------------------------|
-| Time      | 6 minutes                      |
-| Materials | `03-xaringan-extras/start.Rmd` |
+|           |                                   |
+|:----------|:----------------------------------|
+| Time      | 6 minutes                         |
+| Materials | `03-xaringan-extras/03-start.Rmd` |
 
 </div>
 
@@ -68,7 +69,7 @@ First present the code, followed by the plot on a new slide.
 <code>knitr::fig\_chunk()</code>
 </summary>
 
-    ```{r lemur-weight, results="hide"}
+    ```{r lemur-weight, fig.show="hide"}
     # ggplot2 plotting code
     ```
 
