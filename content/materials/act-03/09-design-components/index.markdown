@@ -27,22 +27,9 @@ links:
 
 ## Topic
 
-Create consistency with reusable design components.
-
-To motivate: an activity inspired by [Can’t Unsee](https://cantunsee.space/): compare two slides on the screen. Which one looks “most correct?” (I think this activity would fit a little better in \#7 but I could use it here, too)
-
-How can we create consistency and re-usability?
-
-1.  At the *text* level
-    -   Using markdown or inline classes, esp color classes, like `.yellow[word]`
-    -   👉 Rely on xaringanthemer and be consistent with structure.
-2.  At the *block* level
-    -   Boxes or groups of content that appear on the slide
-    -   👉 Write CSS classes (maybe more than one class!)
-3.  At the *slide* level
-    -   When the whole slide is a little different
-    -   E.g. the `header_background` from xaringanthemer
-    -   👉 Write a slide-level CSS class in combination with `layout: true` and `template` from remark
+Consistency of color, size and font makes it easier for the audience to engage with your presentation.
+In this section, we’ll explore several options for creating reusable design components
+that make it easier to establish consistency with your own design language.
 
 ## Activity
 
