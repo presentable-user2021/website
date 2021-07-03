@@ -51,6 +51,11 @@
   @extend .mb3;
 }
 
+.activity-step ul,
+.activity-step ol {
+  margin-left: -1rem;
+}
+
 kbd {
   padding: 0.1rem 0.6rem;
   border-width: 1px;
@@ -67,4 +72,8 @@ kbd {
   line-height: 1.4;
   white-space: nowrap;
   font-size: 1em !important;
+}
+
+.pkg {
+  @extend .dark-green, .bg-black-05, .code, .pv1, .ph1, .br2, .normal;
 }
