@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Design Components</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Garrick Aden-Buie &amp; Silvia Canelón" />
+    <meta name="date" content="2021-07-07" />
+    <script src="assets/libs/header-attrs/header-attrs.js"></script>
+    <link href="assets/libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="assets/libs/tile-view/tile-view.js"></script>
+    <link href="assets/libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="assets/libs/clipboard/clipboard.min.js"></script>
+    <link href="assets/libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="assets/libs/shareon/shareon.min.js"></script>
+    <link href="assets/libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="assets/libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"Design Components","expires":14}</script>
+    <script src="assets/libs/himalaya/himalaya.js"></script>
+    <script src="assets/libs/js-cookie/js.cookie.js"></script>
+    <link href="assets/libs/editable/editable.css" rel="stylesheet" />
+    <script src="assets/libs/editable/editable.js"></script>
+    <link href="assets/libs/js4shiny/css/_variables-fonts.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/_variables.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/code.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/jsonview/jsonview.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny/jsonview/jsonview.min.js"></script>
+    <link href="assets/libs/js4shiny-redirectConsoleLog/jslog.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny-redirectConsoleLog/redirectConsoleLog.js"></script>
+    <meta name="description" content="Slides for &quot;Design Components&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:title" content="Design Components | Professional, Polished, Presentable"/>
+    <meta name="twitter:description" content="Slides for &quot;Design Components&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:url" content="https://presentable-user2021.netlify.app"/>
+    <meta name="twitter:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
+    <meta name="twitter:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@grrrck"/>
+    <meta name="twitter:site" content="@grrrck"/>
+    <meta property="og:title" content="Design Components | Professional, Polished, Presentable"/>
+    <meta property="og:description" content="Slides for &quot;Design Components&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta property="og:url" content="https://presentable-user2021.netlify.app"/>
+    <meta property="og:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
+    <meta property="og:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Garrick Aden-Buie"/>
+    <meta property="article:author" content="Silvia Canelón"/>
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/06-extra.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: title
+
+
+
+
+
+<div class="scene f2 absolute top-0 left-0 w-10 bg-red bg-blue">9</div>
+<h1>Design Components</h1>
+<div class="conf-logo"></div>
+<div class="talk-meta">
+<p class="talk-author">Garrick Aden-Buie &amp; Silvia Canelón</p>
+<p class="talk-date">Professional, Polished, Presentable</p>
+</div>
+
+---
+background-image: url(https://source.unsplash.com/aWXVxy8BSzc)
+background-size: cover
+
+.footnote.white[Photo by [Hanny Naibaho](https://unsplash.com/@hannynaibaho)]
+
+???
+
+Think about your favorite song?
+How long would it take you to recognize it?
+From the first note?
+When you hear the chorus?
+
+---
+background-image: url(https://source.unsplash.com/_r0mZJ5QjXU)
+background-size: cover
+
+.footnote.white[Photo by [.white[Alejandro Lopez]](https://unsplash.com/@lopify)]
+
+???
+
+What if you heard the song somewhere totally different?
+What would it take to recognize it on a crowded street?
+
+---
+background-image: url(https://source.unsplash.com/tq7RtEvezSY)
+background-size: cover
+
+.footnote.white[Photo by [.white[Clark Young]](https://unsplash.com/@cbyoung)]
+
+???
+
+Or if you stripped it down to its most minimal parts, 
+how much of the song would you need before you start to sing along.
+
+---
+
+.f2[
+We can do something .blue[similar] with our slides
+]
+
+---
+class: bottom right
+
+.f4[
+Consistency makes it .purple[EASIER] to follow
+]
+
+---
+class: header_background
+
+# Structure
+
+.f5.mt4[
+guides
+
+.right.mt4[
+your
+]
+
+.center.mt5[
+attention
+]
+]
+
+---
+class: left middle
+
+.f5[
+Lorem ipsum dolor sit amet, .red[where] consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore .green[should] et dolore
+magna  aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation .orange[you] ullamco laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute irure dolor in 
+reprehenderit .purple[be] in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+non proident, sunt in culpa qui .blue[looking?] officia deserunt mollit
+anim id est laborum.
+]
+
+---
+class: left middle
+
+.f5.black-20[
+Lorem ipsum dolor sit amet, .red[where] consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore .green[should] et dolore
+magna  aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation .orange[you] ullamco laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute irure dolor in 
+reprehenderit .purple[be] in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+non proident, sunt in culpa qui .blue[looking?] officia deserunt mollit
+anim id est laborum.
+]
+
+---
+class: center middle bg-blue
+
+# .white[Design Makes Communication Easier]
+
+???
+
+If you're anything like me, those last slides were distracting.
+It was harder to follow what I was saying,
+especially with the text in so many different places or 
+so much visual information on the screen.
+
+But you can use slide design to facilitate communication...
+
+---
+layout: true
+
+class: f6
+
+# Where can you apply design thinking?
+
+---
+
+.fl.w-20.b.tr.pr4[
+Text
+]
+.fr.w-80[
+Markdown or inline classes  
+`.yellow[Watch out...]`
+]
+
+???
+
+Use R Markdown and color consistently for specific words.
+Can you think of any good examples?
+(code vs packages)
+
+Use xaringanthemer to set yourself up for success.
+
+--
+
+.fl.w-20.b.tr.pr4.cb[
+Block
+]
+.fr.w-80[
+Boxes or groups of content  
+`.callout[ ... ]`
+]
+
+???
+
+Boxes or groups of content. Example? `.pull-right`
+
+Have to remember to apply it consistently,
+so write your own classes with special meaning if it makes it easier.
+
+--
+
+.fl.w-20.b.tr.pr4.cb[
+Slide
+]
+.fr.w-80[
+Special kinds of slides  
+`class: header_background`
+]
+
+???
+
+Style the whole slide for special circumstances.
+Examples: use `inverse` as a strong signal that you're changing topics.
+Or we've used `header_background` from xaringanthemer to add a header to slides when it's *your turn* to do something.
+
+---
+layout: false
+class: header_background f5
+
+# Choose your final activity
+
+1. An interesting quote on a boring slide&lt;br&gt;&amp;#x1F449; a fancy **quote slide**
+
+1. A regular slide with a bit of text&lt;br&gt;&amp;#x1F449; a sidebar image **slide template**
+
+&amp;#x1F9D1;&amp;#x200D;&amp;#x1F4BB; [materials/act-03/09-design-components](https://presentable-user2021.netlify.app/materials/act-03/09-design-components/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="assets/js/remark.0.14.1.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"highlightStyle": "docco",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script>
+(function (d) {
+  d.addEventListener('DOMContentLoaded', function () {
+    // find code chunks that get special colors
+    const langSpecial = ['r', 'js', 'yaml', 'json', 'bash', 'html', 'css']
+    const codeSpecial = d.querySelectorAll(langSpecial.map(l => 'pre code.' + l))
+
+    // find code chunks with highlighted lines
+    const hlines = d.querySelectorAll('.remark-code-line-highlighted')
+    const preHLParents = []
+
+    const findPreParent = function (line, p = 0) {
+      if (p > 1) return null // traverse up no further than grandparent
+      const el = line.parentElement
+      if (el.tagName === 'PRE') {
+        return el
+      } else {
+        return findPreParent(el, ++p)
+      }
+    }
+
+    // add the code language to the parent <pre> element
+    for (const code of codeSpecial) {
+      const pre = findPreParent(code)
+      const codeLang = code.className.split(' ').filter(c => langSpecial.includes(c))
+      pre.classList += ` ${codeLang}`
+    }
+
+    // add remark-code-has-line-highlighted to parent <pre> element
+    for (const line of hlines) {
+      const pre = findPreParent(line)
+      if (pre && !preHLParents.includes(pre)) preHLParents.push(pre)
+    }
+    preHLParents.forEach(p => p.classList += ' remark-code-has-line-highlighted')
+
+    slideshow.on('afterShowSlide', function (slide) {
+      replaceIframePlaceholders()
+    })
+
+    replaceIframePlaceholders()
+  })
+})(document)
+
+function replaceIframePlaceholders () {
+  document
+    .querySelectorAll('.remark-slides-area .remark-visible div[data-iframe]')
+    .forEach(el => replaceIframePlaceholder(el))
+}
+
+function replaceIframePlaceholder (el) {
+    const iframe = document.createElement('iframe')
+    if (el.childNodes) {
+      el.childNodes.forEach(e => iframe.appendChild(e))
+    }
+    iframe.src = el.dataset.src
+    iframe.classList = el.classList
+    el.parentElement.replaceChild(iframe, el)
+}
+</script>
+<style>
+  .remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+    opacity: 0.4;
+  }
+
+  .remark-code-line-highlighted {
+    background-color: inherit; /* Override highlight color */
+    /* font-weight: 500; */
+  }
+
+  /* Line Hover Indicator */
+  .remark-code-line:hover {
+    font-weight: bold;
+    opacity: 1 !important;
+  }
+
+  .remark-code-line:hover:before {
+    content: "\25B6";
+    color: #6d7e8a;
+    position: absolute;
+    transform: translateX(-1.2em);
+    animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translateX(-1.2em);
+    }
+    100% {
+      transform: translateX(-0.8em);
+    }
+  }
+</style>
+
+  </body>
+</html>
