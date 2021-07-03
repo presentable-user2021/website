@@ -48,20 +48,20 @@ How can we create consistency and re-usability?
 
 <div class="activity-table">
 
-|                                     |                                                 |
-|-------------------------------------|-------------------------------------------------|
-| Time                                | 10 minutes                                      |
-| [Quote Slide](#quote-slide)         | `09-design-components/quote/09-quote-start.Rmd` |
-| [Slide Templates](#slide-templates) | `09-design-components/template/start.Rmd`       |
+|                                     |                                                       |
+|-------------------------------------|-------------------------------------------------------|
+| Time                                | 10 minutes                                            |
+| [Quote Slide](#quote-slide)         | `09-design-components/quote/09-quote-start.Rmd`       |
+| [Slide Templates](#slide-templates) | `09-design-components/template/09-template-start.Rmd` |
 
 </div>
 
 Choose one of the following two options for this activity:
 
--   [Create a slide style for inspirational or thought-provoking quotes.](#quote-slide)  
+-   [Create a slide style for inspirational or thought-provoking quotes.](#quote-slide)
     *Difficulty: mild*
 
--   [Create a re-usable slide template with an image sidebar.](#slide-templates)  
+-   [Create a re-usable slide template with an image sidebar.](#slide-templates)
     *Difficulty: intermediate*
 
 ### Quote Slide
@@ -606,9 +606,39 @@ Lorem per erat vulputate iaculis eu in dui vestibulum.
 
 #### Add a background image
 
--   Use `source.unsplash.com` trick
+<div class="activity-step">
 
--   What’s the background size?
+Add a background image from [unsplash](https://unsplash.com).
+
+Let’s use [this picture of a lemur](https://unsplash.com/photos/83gB_koMuvA)
+by [Zdeněk Macháček](https://unsplash.com/@zmachacek).
+
+We can use the <https://source.unsplash.com> trick:
+
+    https://source.unsplash.com/{{unsplash_id}}/
+
+Since this photo has id `83gB_koMuvA`, we can add the following to the slide properties:
+
+    background-image: url(background-image: url(https://source.unsplash.com/83gB_koMuvA))
+
+</div>
+
+<div class="activity-step">
+
+Set the size of the background image.
+
+With just `background-image`, the lemur picture is too big and it takes up the entire slide.
+We’d like it to take up just `400px` on the right side.
+How tall should the image be?
+
+To find out, open the slides in a browser and use *Inpsect Element* on the slide.
+Look for the `<div>` with class `remark-slide-scaler`.
+The `style` attribute on this element tells you how big the “native” slide is.
+
+<details>
+<summary>
+Slide Scaler HTML
+</summary>
 
 ``` html
 <div class="remark-slide-scaler" style="width: 1210px; height: 681px; transform: scale(0.664463); left: 0px; top: 444.25px;">
@@ -623,23 +653,59 @@ Lorem per erat vulputate iaculis eu in dui vestibulum.
 </div>
 ```
 
--   Background position
+</details>
 
-<!-- -->
+Now that you know the slide size, add `/400x{{height}}` to the end of the slide’s `background-image` URL.
+And for good measure, also add a `background-size` property (this one needs `px` units, e.g. `400px {{height}}px`).
 
-    background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
-    background-size: 400px 681px
+<details>
+<summary>
+Checkpoint
+</summary>
+
+``` markdown
+background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
+background-size: 400px 681px
+```
+
+</details>
+
+</div>
+
+<div class="activity-step">
+
+Position the background image on the right.
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
     background-position: right
+
+</details>
+
+</div>
 
 #### Improve the accessibility of the slide
 
--   Add an `aria-label` to describe the background image
+The slide looks a little more interesting — there’s at least a background image!
+But we’re missing some key ingredients:
 
-``` html
-<div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
-```
+1.  We want to include attribution text to give credit to the photographer.
+2.  Because we used a background image, we would like to add alt text for screen readers to describe the image.
 
--   Add attribution
+<div class="activity-step">
+
+Add attribution text to the slides.
+
+Tell the audience the photo was by Zdeněk Macháček who can be found at <https://unsplash.com/@zmachacek>.
+Put the attribution text inside an `.attribution` div so that we can style it specifically.
+
+<details>
+<summary>
+Checkpoint
+</summary>
 
 ``` markdown
 .attribution[
@@ -647,9 +713,52 @@ Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
 ]
 ```
 
+</details>
+
+</div>
+
+<div class="activity-step">
+
+Add a screen-readable description of the slide’s background image.
+
+Add a `<div>` with `role="img"` and an `aria-label` attribute describing the image.
+Start the description with *Slide background shows:* and then write a complete sentence describing the image.
+
+Put this `<div>` at the top of the slide content,
+just after the slide properties,
+to ensure that it’s read out loud when entering the slide.
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
+``` html
+<div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
+```
+
+</details>
+
+</div>
+
 #### Style the slide
 
--   Add padding to the slide to stay out of the sidebar
+We now have the content in place,
+but we still need to do a little work on the appearance of our slide.
+We need to:
+
+-   add padding to the slide area so that the slide text and other objects stay out of the sidebar
+-   make the slide number white so it’s still visible
+-   move the attribution to the right spot on the slide
+
+<div class="activity-step">
+
+Write a CSS rule for our `.image-sidebar-right` slide to add 450 pixels of padding on the right side.
+
+<details>
+<summary>
+Checkpoint
+</summary>
 
 ``` css
 .image-sidebar-right {
@@ -657,7 +766,20 @@ Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
 }
 ```
 
--   Change the color of the slide number
+</details>
+
+</div>
+
+<div class="activity-step">
+
+Make the slide numbers **white** on the `.image-sidebar-right` slides.
+
+Use the browser tools to find the class given to the element containing slide numbers in remarkjs slides.
+
+<details>
+<summary>
+Checkpoint
+</summary>
 
 ``` css
 .image-sidebar-right .remark-slide-number {
@@ -665,124 +787,303 @@ Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
 }
 ```
 
--   Put the attribution in the right spot
+</details>
+
+</div>
+
+<div class="activity-step">
+
+Position the attribution in the right spot.
+
+Use absolute positioning to place the attribution
+on the bottom of slide and
+a bit to the right of the left edge of the sidebar image.
+
+While you’re working on the attribution,
+make the attribution text two-thirds of the slide text size.
+
+<details>
+<summary>
+Checkpoint
+</summary>
 
 ``` css
 .image-sidebar-right .attribution {
   position: absolute;
   bottom: -0.75em;
   right: 410px;
-}
-```
-
--   Smaller attribution font size
-
-``` css
-.image-sidebar-right .attribution {
   font-size: 0.66em;
 }
 ```
 
+</details>
+
+</div>
+
 #### Make it a layout
 
--   Add `layout: true`
+Now that’s one great-looking slide!
+We’d love to be able to use it in other places
+without having to copy and paste the markdown each time we want to use it.
+In this step, we’ll use [layout slides](https://github.com/gnab/remark/wiki/Markdown#layout) for our first iteration of re-use.
 
-        ---
-        layout: true
-        name: image-sidebar-right
-        class: image-sidebar-right
+<div class="activity-step">
 
--   Move the content to a new slide
+Add `layout: true` to the `image-sidebar-right` slide.
 
-        ---
-        layout: true
-        name: image-sidebar-right
-        class: image-sidebar-right
-        background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
-        background-size: 400px 681px
-        background-position: right
+<details>
+<summary>
+Checkpoint
+</summary>
 
-        <div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
+    ---
+    layout: true
+    name: image-sidebar-right
+    class: image-sidebar-right
 
-        .attribution[
-        Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
-        ]
+</details>
 
-        ---
+</div>
 
-        # Awesome Lemurs
+<div class="activity-step">
 
-        Lorem per erat vulputate iaculis eu in dui vestibulum.
+Move the slide content to a new slide. Leave the background image description and the attribution text in the slide layout portion.
 
--   Add a third slide, with the same image and background, but different content
+When you’ve finished, save your slides so that infinite moon reader re-renders your slides.
+They should looke the same!
 
-        ---
+<details>
+<summary>
+Checkpoint
+</summary>
 
-        # This is fun!
+    ---
+    layout: true
+    name: image-sidebar-right
+    class: image-sidebar-right
+    background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
+    background-size: 400px 681px
+    background-position: right
 
-        1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+    <div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
 
-        1. Consectetur inceptos iaculis montes erat pharetra etiam accumsan eleifend.
+    .attribution[
+    Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
+    ]
 
-        1. Amet donec pharetra lacus aliquet massa cum magnis aliquam justo tortor hac!
+    ---
 
--   Add a new slide with `layout: false` between the two slides, breaking everything
+    # Awesome Lemurs
 
-        ---
-        layout: false
+    Lorem per erat vulputate iaculis eu in dui vestibulum.
 
-        # Other content ...
+</details>
 
-        ---
+</div>
 
-        # This is fun!
+<div class="activity-step">
 
-        1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+Add a third slide with new content.
+
+This new slide will have different content but will still have the same sidebar image and attribution text.
+Here’s some generic slide content for you to use:
+
+    ---
+
+    # This is fun!
+
+    1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+
+    1. Consectetur inceptos iaculis montes erat pharetra etiam accumsan eleifend.
+
+    1. Amet donec pharetra lacus aliquet massa cum magnis aliquam justo tortor hac!
+
+</div>
+
+<div class="activity-step">
+
+Add a new slide between the two slides, but that doesn’t use the same layout.
+
+    ---
+    layout: false
+
+    # Other content ...
+
+Because layout slides are “chained,” \]
+if we add a non-layout slide into the mix
+it breaks the layout.
+Our *This is fun!* slide that we added in the task above is no longer as fun.
+
+</div>
 
 #### Make it a template
 
--   Add `name: image-sidebar-right` to the first layout slide
+To get around the limitations of layout slides, we can instead use [template slides](https://github.com/gnab/remark/wiki/Markdown#template).
 
-        ---
-        layout: true
-        name: image-sidebar-right
-        class: image-sidebar-right
+<div class="activity-step">
 
--   Add `template: image-sidebar-right` to the third slide
+Give the first layout slide a name.
 
-        ---
-        template: image-sidebar-right
+    ---
+    layout: true
+    name: image-sidebar-right
+    class: image-sidebar-right
 
-        # This is fun!
+</div>
 
-        1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+<div class="activity-step">
+
+Reference the named `image-sidebar-right` slide with the `template` property.
+
+Add `template: image-sidebar-right` to the third slide:
+
+    ---
+    template: image-sidebar-right
+
+    # This is fun!
+
+    1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+
+</div>
 
 #### Parameterize the template
 
--   Move `background-image` from the layout to the first *Awesome Lemurs* slide
+We now have two slides with a lemur sidebar image,
+and the second one can be anywhere later in the slide deck.
+This is great!
+But for our final step, we’ll take template slides one step further.
 
--   Add a new background to the *This is fun!* slide
+In this step, we’ll parameterize the slide template
+and make it easy to swap out the background image for any other image.
 
-        background-image: url(https://source.unsplash.com/tXz6g8JYYoI/400x681)
+<div class="activity-step">
 
--   Looks good, but the attribution and alt text are wrong :sad:
+Move `background-image` from the named layout slide to the first *Awesome Lemurs* slide.
 
--   Create slide variables for the photo alt text `photo_alt`.
+    ---
+    background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
 
-    1.  Cut the existing text in the layout slide and replace with `{{photo_alt}}`
-    2.  Add `photo_alt:` to the slide properties
-    3.  Paste the alt text
-    4.  Save it to re-render the slides
+    # Awesome Lemurs
 
--   Repeat for `photographer` and `photographer_url`
+</div>
 
--   Then add similar variable values to the *This is fun!* slide:
+<div class="activity-step">
 
-        background-image: url(https://source.unsplash.com/tXz6g8JYYoI/400x681)
-        photographer: Lidya Nada
-        photographer_url: https://unsplash.com/@lidyanada
-        photo_alt: A colorful image of a woman holding a bouquet of helium balloons in the shape of emoji against a brick wall painted in bright shades of blue, red, yellow and green.
+Add a new background to the *This is fun!* slide.
+
+I’ve picked one out for this round:
+
+    background-image: url(https://source.unsplash.com/tXz6g8JYYoI/400x681)
+
+This looks great, but the attribution and alt text are wrong. 😥
+
+</div>
+
+<div class="activity-step">
+
+Create a slide variable for the photo description.
+
+1.  Select and cut the photo description in the layout slide and replace it with `{{photo_alt}}`.
+2.  Add `photo_alt:` to the slide properties of the first *Awesome Lemurs* slide.
+3.  Paste the alt text into the new slide property.
+4.  Save it to re-render the slides and check that the *Awesome Lemurs* slide looks the same.
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
+    <div role="img" aria-label="Slide background shows: {{photo_alt}}"></div>
+
+    ---
+    background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
+    photo_alt: A lemur standing on a tree stump, looking directly at the camera.
+
+</details>
+
+</div>
+
+<div class="activity-step">
+
+Repeat the task above for `photographer` and `photographer_url`.
+
+<details>
+<summary>
+Checkpoint
+</summary>
+
+    <div role="img" aria-label="Slide background shows: {{photo_alt}}"></div>
+
+    .attribution[
+    Photo by [{{photographer}}]({{photographer_url}})
+    ]
+
+    ---
+    background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
+    photo_alt: A lemur standing on a tree stump, looking directly at the camera.
+    photographer: Zdeněk Macháček
+    photographer_url: https://unsplash.com/@zmachacek
+
+</details>
+
+</div>
+
+<div class="activity-step">
+
+Fill out the slide parameters of the *This is fun!* slide.
+
+<table>
+<tbody>
+<tr>
+<td class="pv2 b v-top">
+Unsplash
+</td>
+<td class="ph3 pv2">
+<code>https://source.unsplash.com/tXz6g8JYYoI/400x681</code>
+</td>
+</tr>
+<tr>
+<td class="pv2 b v-top">
+Photographer
+</td>
+<td class="ph3 pv2">
+Lidya Nada
+</td>
+</tr>
+<tr>
+<td class="pv2 b v-top">
+URL
+</td>
+<td class="ph3 pv2">
+<code>https://unsplash.com/@lidyanada</code>
+</td>
+</tr>
+<tr>
+<td class="pv2 b v-top">
+Description
+</td>
+<td class="ph3 pv2">
+A colorful image of a woman holding a bouquet of helium balloons in the shape of emoji against a brick wall painted in bright shades of blue, red, yellow and green.
+</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>
+Checkpoint
+</summary>
+
+    ---
+    background-image: url(https://source.unsplash.com/tXz6g8JYYoI/400x681)
+    photographer: Lidya Nada
+    photographer_url: https://unsplash.com/@lidyanada
+    photo_alt: A colorful image of a woman holding a bouquet of helium balloons in the shape of emoji against a brick wall painted in bright shades of blue, red, yellow and green.
+
+</details>
+
+</div>
 
 #### Make another slide
 
+🎉 Great work! Want to take it one more step?
 Pick your own image from [unsplash](https://unsplash.com) and make a new slide with the required pieces.
