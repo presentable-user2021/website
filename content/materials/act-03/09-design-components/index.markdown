@@ -48,11 +48,11 @@ How can we create consistency and re-usability?
 
 <div class="activity-table">
 
-|                                   |                                                 |
-|-----------------------------------|-------------------------------------------------|
-| Time                              | 10 minutes                                      |
-| [Quote Slide](#quote-slide)       | `09-design-components/quote/09-quote-start.Rmd` |
-| [Template Slide](#template-slide) | `09-design-components/template/start.Rmd`       |
+|                                     |                                                 |
+|-------------------------------------|-------------------------------------------------|
+| Time                                | 10 minutes                                      |
+| [Quote Slide](#quote-slide)         | `09-design-components/quote/09-quote-start.Rmd` |
+| [Slide Templates](#slide-templates) | `09-design-components/template/start.Rmd`       |
 
 </div>
 
@@ -61,7 +61,7 @@ Choose one of the following two options for this activity:
 -   [Create a slide style for inspirational or thought-provoking quotes.](#quote-slide)  
     *Difficulty: mild*
 
--   [Create a re-usable slide template with an image sidebar.](#template-slide)  
+-   [Create a re-usable slide template with an image sidebar.](#slide-templates)  
     *Difficulty: intermediate*
 
 ### Quote Slide
@@ -540,8 +540,249 @@ you might need to update the CSS variable to match the name you gave the color.
 
 </div>
 
-### Template Slide
+### Slide Templates
 
-2.  Create a slide template for a slide with an image on the right
-    -   Slide-level CSS for `.image-sidebar-right` and `.image-sidebar-right .attribution`
-    -   Template slide using remark variables for the image and attribution details
+In this activity, we’ll create a re-usable slide template.
+This feature combines advanced xaringan slide-building skills with a bit of CSS.
+
+<div class="flex flex-wrap">
+
+<div class="w-third-ns w-100 pa2">
+
+Start<br><a href="template-0.png"><img class="ba bw1 b--light-gray" src="template-0.png" alt="Template slide, initial slides"></a>
+
+</div>
+
+<div class="w-third-ns w-100 pa2">
+
+Template<br><a href="template-1.png"><img class="ba bw1 b--light-gray" src="template-1.png" alt="Template slide, styled template"></a>
+
+</div>
+
+<div class="w-third-ns w-100 pa2">
+
+Applied<br><a href="template-2.png"><img class="ba bw1 b--light-gray" src="template-2.png" alt="Template slide, template used with new content"></a>
+
+</div>
+
+</div>
+
+<div class="activity-step">
+
+Restart your R session and open the files for this activity.
+
+-   Slides: `09-design-components/template/09-template-start.Rmd`
+-   CSS file: `09-design-components/template/template.css`
+
+</div>
+
+<div class="activity-step">
+
+Start `ininite_moon_reader()` and explore the demo slides.
+
+These slides use a <span class="pkg">xaringanthemer</span> theme and an extra CSS file `template.css`.
+
+``` yaml
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, template.css]
+    nature:
+      ratio: 16:9
+```
+
+The final slide in this example presentation contains our slide, but it’s kind of boring.
+We’ve given that slide a `image-sidebar-right` class but that’s about it.
+
+``` markdown
+---
+class: image-sidebar-right
+
+# Awesome Lemurs
+
+Lorem per erat vulputate iaculis eu in dui vestibulum.
+```
+
+</div>
+
+#### Add a background image
+
+-   Use `source.unsplash.com` trick
+
+-   What’s the background size?
+
+``` html
+<div class="remark-slide-scaler" style="width: 1210px; height: 681px; transform: scale(0.664463); left: 0px; top: 444.25px;">
+  <div class="remark-slide"><div class="remark-slide-content image-sidebar-right hljs-github">
+    <h1 id="awesome-lemurs">Awesome Lemurs</h1>
+    <p>Lorem per erat vulputate iaculis eu in dui vestibulum.</p>
+    <p>Amet fermentum sodales himenaeos nascetur lectus nunc hac nascetur auctor.</p>
+    <p>Consectetur in accumsan neque libero magna leo felis viverra!</p>
+    <p>Ipsum eros facilisi habitant habitant ultricies maecenas tellus parturient interdum potenti nisl.</p>
+    <div class="remark-slide-number">3</div></div>
+  </div>
+</div>
+```
+
+-   Background position
+
+<!-- -->
+
+    background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
+    background-size: 400px 681px
+    background-position: right
+
+#### Improve the accessibility of the slide
+
+-   Add an `aria-label` to describe the background image
+
+``` html
+<div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
+```
+
+-   Add attribution
+
+``` markdown
+.attribution[
+Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
+]
+```
+
+#### Style the slide
+
+-   Add padding to the slide to stay out of the sidebar
+
+``` css
+.image-sidebar-right {
+  padding-right: 450px;
+}
+```
+
+-   Change the color of the slide number
+
+``` css
+.image-sidebar-right .remark-slide-number {
+  color: white;
+}
+```
+
+-   Put the attribution in the right spot
+
+``` css
+.image-sidebar-right .attribution {
+  position: absolute;
+  bottom: -0.75em;
+  right: 410px;
+}
+```
+
+-   Smaller attribution font size
+
+``` css
+.image-sidebar-right .attribution {
+  font-size: 0.66em;
+}
+```
+
+#### Make it a layout
+
+-   Add `layout: true`
+
+        ---
+        layout: true
+        name: image-sidebar-right
+        class: image-sidebar-right
+
+-   Move the content to a new slide
+
+        ---
+        layout: true
+        name: image-sidebar-right
+        class: image-sidebar-right
+        background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
+        background-size: 400px 681px
+        background-position: right
+
+        <div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
+
+        .attribution[
+        Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
+        ]
+
+        ---
+
+        # Awesome Lemurs
+
+        Lorem per erat vulputate iaculis eu in dui vestibulum.
+
+-   Add a third slide, with the same image and background, but different content
+
+        ---
+
+        # This is fun!
+
+        1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+
+        1. Consectetur inceptos iaculis montes erat pharetra etiam accumsan eleifend.
+
+        1. Amet donec pharetra lacus aliquet massa cum magnis aliquam justo tortor hac!
+
+-   Add a new slide with `layout: false` between the two slides, breaking everything
+
+        ---
+        layout: false
+
+        # Other content ...
+
+        ---
+
+        # This is fun!
+
+        1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+
+#### Make it a template
+
+-   Add `name: image-sidebar-right` to the first layout slide
+
+        ---
+        layout: true
+        name: image-sidebar-right
+        class: image-sidebar-right
+
+-   Add `template: image-sidebar-right` to the third slide
+
+        ---
+        template: image-sidebar-right
+
+        # This is fun!
+
+        1. Sit mattis viverra condimentum orci nibh ultrices cubilia cum ornare eget dictumst?
+
+#### Parameterize the template
+
+-   Move `background-image` from the layout to the first *Awesome Lemurs* slide
+
+-   Add a new background to the *This is fun!* slide
+
+        background-image: url(https://source.unsplash.com/tXz6g8JYYoI/400x681)
+
+-   Looks good, but the attribution and alt text are wrong :sad:
+
+-   Create slide variables for the photo alt text `photo_alt`.
+
+    1.  Cut the existing text in the layout slide and replace with `{{photo_alt}}`
+    2.  Add `photo_alt:` to the slide properties
+    3.  Paste the alt text
+    4.  Save it to re-render the slides
+
+-   Repeat for `photographer` and `photographer_url`
+
+-   Then add similar variable values to the *This is fun!* slide:
+
+        background-image: url(https://source.unsplash.com/tXz6g8JYYoI/400x681)
+        photographer: Lidya Nada
+        photographer_url: https://unsplash.com/@lidyanada
+        photo_alt: A colorful image of a woman holding a bouquet of helium balloons in the shape of emoji against a brick wall painted in bright shades of blue, red, yellow and green.
+
+#### Make another slide
+
+Pick your own image from [unsplash](https://unsplash.com) and make a new slide with the required pieces.
