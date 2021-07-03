@@ -1,7 +1,8 @@
 ---
 title: "01: Setting the stage"
 weight: 1
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
@@ -20,44 +21,53 @@ links:
 <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="/slides/03-why-r.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="/slides/01-why-online.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
-## Goal
-
-Preview a slide deck with inf\_mr() that has a customized title slide and helpful setup code chunk
-- Use `infinite_moon_reader()` for quick iteration with xaringan slides
-- Setup for success using xaringan’s built-in settings
-
-## Material
-
--   review YAML
--   review content classes (e.g. `.pull-left[ ]`, class: inverse)
--   review syntax (e.g. `---` is a new slide, `???` adds presenter notes)
-
 ## Activity
 
-Time: ⏱ 10 minutes
+<div class="activity-table">
 
-1.  Open and preview this slide deck: `01-introduction/01-introduction.Rmd`
+|           |                             |
+|:----------|:----------------------------|
+| Time      | 5 minutes                   |
+| Materials | `01-introduction/start.Rmd` |
 
-2.  Run `xaringan::inf_mr()` or `xaringan::infinite_moon_reader()` in the console to render the Rmd into HTML slides
+</div>
 
-3.  xaringan scavenger hunt! Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
+<div class="activity-step">
 
--   `.pull-left[]` and `.pull-right[]`
--   `.left-column[]` and `.right-column[]`
--   `.footnote[]`
--   inverse slide
--   horizontal bars
--   presenter notes
--   
+Open and preview this slide deck: `01-introduction/start.Rmd`
 
-1.  Play around
+Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
 
-2.  adjust slide ratio
+</div>
 
-3.  customize parameters in YAML
+<div class="activity-step">
 
-4.  create basic title slide using parameters and content classes
+xaringan scavenger hunt!
+
+Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
+- lists (ordered and unordered)
+- quotes: `>`
+- `.pull-left[]` and `.pull-right[]`
+- `.left-column[]` and `.right-column[]`
+- `.right[]`
+- `.footnote[]`
+- images inserted with `background-image:` or `![alt](url)`
+- slide classes like `inverse`, `middle`, `center`
+- horizontal bars using `---`
+- presenter notes using `???` (hint: press the letter “P”)
+
+</div>
+
+<div class="activity-step">
+
+**Bonus:** Play around with some of the YAML parameters
+
+-   Adjust the slide `ratio` (e.g. `4:3`)
+-   Pick another syntax [highlighting style](https://github.com/gnab/remark/wiki/Configuration#highlighting) for `highlightStyle`
+-   Change the [slide number format](https://github.com/yihui/xaringan/wiki/Slide-number#slide-number-format) for `slideNumberFormat`
+
+</div>

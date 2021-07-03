@@ -1,7 +1,8 @@
 ---
 title: "01: Setting the stage"
 weight: 1
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
@@ -21,43 +22,47 @@ xaringanExtra::use_clipboard()
 ```
 
 ```{r embed-xaringan, echo=FALSE, eval=TRUE}
-xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
-
-##  Goal
-
-Preview a slide deck with inf_mr() that has a customized title slide and helpful setup code chunk
-- Use `infinite_moon_reader()` for quick iteration with xaringan slides
-- Setup for success using xaringan's built-in settings
-
-## Material
-
-- review YAML 
-- review content classes (e.g. `.pull-left[ ]`, class: inverse)
-- review syntax (e.g. `---` is a new slide, `???` adds presenter notes)
 
 ## Activity
 
-Time: `r emo::ji("stopwatch")` 10 minutes
+::: activity-table
+|           |                                |
+|:----------|:-------------------------------|
+| Time      | 5 minutes                      |
+| Materials | `01-introduction/start.Rmd`    |
+:::
 
-1. Open and preview this slide deck: `01-introduction/01-introduction.Rmd`
 
-1. Run `xaringan::inf_mr()` or `xaringan::infinite_moon_reader()` in the console to render the Rmd into HTML slides
+::: activity-step
+Open and preview this slide deck: `01-introduction/start.Rmd`
 
-1. xaringan scavenger hunt! Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
+Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+:::
+
+::: activity-step
+xaringan scavenger hunt! 
+
+Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
+  - lists (ordered and unordered)
+  - quotes: `>`
   - `.pull-left[]` and `.pull-right[]`
   - `.left-column[]` and `.right-column[]`
+  - `.right[]`
   - `.footnote[]`
-  - inverse slide
-  - horizontal bars
-  - presenter notes
-  - 
-  
+  - images inserted with `background-image:` or `![alt](url)`
+  - slide classes like `inverse`, `middle`, `center`
+  - horizontal bars using `---`
+  - presenter notes using `???` (hint: press the letter "P")
+:::
 
-1. Play around
+::: activity-step
 
-1. adjust slide ratio
+**Bonus:** Play around with some of the YAML parameters
 
-1. customize parameters in YAML
+- Adjust the slide `ratio` (e.g. `4:3`)
+- Pick another syntax [highlighting style](https://github.com/gnab/remark/wiki/Configuration#highlighting) for `highlightStyle`
+- Change the [slide number format](https://github.com/yihui/xaringan/wiki/Slide-number#slide-number-format) for `slideNumberFormat`
 
-1. create basic title slide using parameters and content classes
+:::
