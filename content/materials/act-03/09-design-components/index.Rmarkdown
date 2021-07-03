@@ -1,13 +1,14 @@
 ---
 title: "09: Design Components"
 weight: 3
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/09-design-components.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -21,7 +22,7 @@ xaringanExtra::use_clipboard()
 ```
 
 ```{r embed-xaringan, echo=FALSE, eval=TRUE}
-xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
 
 ## Topic
@@ -45,18 +46,434 @@ How can we create consistency and re-usability?
 
 ## Activity
 
-Time: `r emo::ji("stopwatch")` 10 minutes
 
-Open and preview this slide deck: materials/act-03/09-design-components.Rmd
+::: activity-table
+|                                   |                                           |
+| --------------------------------- | ----------------------------------------- |
+| Time                              | 10 minutes                                |
+| [Quote Slide](#quote-slide)       | `09-design-components/quote/09-quote-start.Rmd`    |
+| [Template Slide](#template-slide) | `09-design-components/template/start.Rmd` |
+:::
 
-Two options (attendees will pick one to work on)
+Choose one of the following two options for this activity:
 
-1. Create a quote with attribution box — large quote text, small attribution text
-    - Write a CSS `.quote` and `.attribution` class
+- [Create a slide style for inspirational or thought-provoking quotes.](#quote-slide)  
+  _Difficulty: mild_
+  
+- [Create a re-usable slide template with an image sidebar.](#template-slide)  
+  _Difficulty: intermediate_
+
+### Quote Slide
+
+The goal of this activity is to create a slide style that showcases a quote.
+We'll start with the first example below and end with a slide style that helps
+the audience focus on your quote.
+
+<div class="flex flex-wrap">
+  <div class="w-third-ns w-100 pa2">
+  Start<br><a href="quote-0.png"><img class="ba bw1 b--light-gray" src="quote-0.png" alt="Quote slide, initial slides."></a>
+  </div>
+  <div class="w-third-ns w-100 pa2">
+  Example 1<br><a href="quote-1.png"><img class="ba bw1 b--light-gray" src="quote-1.png" alt="Quote slide, final version."></a>
+  </div>
+  <div class="w-third-ns w-100 pa2">
+  Example 2<br><a href="quote-2.png"><img class="ba bw1 b--light-gray" src="quote-2.png" alt="Quote slide, inverse variant."></a>
+  </div>
+</div>
+
+::: activity-step
+Restart your R session and open the files for this activity.
+
+- Slides: `09-design-components/quote/09-quote-start.Rmd`
+- CSS file: `09-design-components/quote/quote.css`
+:::
+
+::: activity-step
+Start `ininite_moon_reader()` and explore the demo slides.
+
+These slides use a [xaringanthemer]{.pkg} theme and an extra CSS file `quote.css`.
+
+```yaml
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, quote.css]
+```
+
+Notice that we're using `style_duo_accent()` with a **primary** and **secondary** color.
+We've also added additional colors named **yellow** and **pink** using the `colors` argument.
+
+```r
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#035AA6",
+  secondary_color = "#03A696",
+  colors = c(yellow = "#FFFC31", pink = "#E56399")
+)
+```
+
+The final slide in this example presentation contains our quote.
+We've given that slide a `quote` class
+and we've also marked the attribution line with an `.attribution[]`.
+
+```markdown
+---
+class: quote middle
+
+Lemurs are the only non-human primates with blue eyes.
+
+.attribution[
+[Duke Lemur Center](https://lemur.duke.edu/discover/meet-the-lemurs/blue-eyed-black-lemur/)
+]
+
+```
+:::
+
+#### Set Font Sizes
+
+Let's tackle the first part of the challenge:
+making text on a `quote` slide extra large.
+At this stage, we need to write some CSS:
+
+- You can choose to write the CSS in the `quote.css` file.
+  When you save the file, the slides will update and you'll see your changes applied.
+  
+- You could write your CSS in the slides' `.Rmd` file inside `<style></style>` tags.
+  You'll see your changes applied live, but you might need to save the file occassionally.
+  At the end, you can copy the CSS into `quote.css`.
+  
+::: activity-step
+Pick a font size for the quote text.
+
+- Add a `.quote` class to your CSS.
+- Use `font-size:` to pick a font size. I liked `4.75em` but you might like another size better.
+
+
+<details><summary>Checkpoint</summary>
+
+```css
+.quote {
+  font-size: 4.75em;
+}
+```
+</details>
+:::
+
+::: activity-step
+Pick a font size for the attribution text.
+
+In the previous step, we also scaled the attribution text,
+but we don't want it to be _that_ large.
+
+Add a `.quote .attribution` CSS rule that sets the font size to something smaller.
+Do you need to use `em` or `px` units?
+
+<details><summary><code>em</code> vs <code>px</code></summary>
+
+You might have thought that setting `font-size: 1.5em;`
+would make the attribution text 1.5 times our typical slide font size.
+But if you used `em`, the font size is then relative to the _parent_ element,
+and we've just changed the size of all slide text to be 4.75 times larger!
+
+One way to get around this is to set the font size in pixels.
+It works, but if you decide to change the base font size, you'd need to update this rule in your CSS, too.
+
+In the next step we'll see how to scale the font size in a robust way without changing our slide text size.
+</details>
+:::
+
+::: activity-step
+Be more specific and more relative with the text size.
+
+Our best case scenario is to have _relative_ units for the text size.
+This means that both `font-size:` properties should be set to `em`, or relative text units.
+
+To achieve this, we need to be a _little_ more specific with our CSS rule for the quote text.
+Instead of `.quote`, use `.quote > p`
+
+```css
+.quote > p {
+  font-size: 4.75em;
+}
+```
+
+and you can now change the `font-size: ` property of `.quote .attribution` to `em` as well.
+
+```css
+.quote .attribution {
+  font-size: 1.5em;
+}
+```
+
+<details><summary>Why does this work?</summary>
+
+For two reasons.
+First, remarkjs puts each block of text inside a paragraph tag, `<p>`.
+Event the attribution text is inside a `<p>` tag, but it's contained inside a parent `<div>` with the `attribution` class.
+
+<details><summary>Slide Markdown</summary>
+
+```
+Lemurs are the only non-human primates with blue eyes.
+
+.attribution[
+[Duke Lemur Center](https://lemur.duke.edu/discover/meet-the-lemurs/blue-eyed-black-lemur/)
+]
+```
+</details>
+
+<details><summary>Slide HTML</summary>
+
+```html
+<div class="remark-slide-content quote middle">
+  <p>Lemurs are the only non-human primates with blue eyes.</p>
+  <div class="attribution">
+    <p><a href="https://lemur.duke.edu/discover/meet-the-lemurs/blue-eyed-black-lemur/" target="_blank">Duke Lemur Center</a></p>
+  </div>
+</div>
+```
+</details>
+
+The `>` operator in CSS rules means _a direct child of ..._.
+If we read `.quote > p` from right to left,
+we're looking for `<p>` tags that are _direct children of_ elements with the `.quote` class.
+In our case, only plain text on a `.quote` slide will be in a `<p>` tag directly below the slide container with the `.quote` class.
+
+</details>
+:::
+
+#### Set Colors
+
+In this step, 
+we'll use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+to set the colors of the quote and attribution text.
+
+::: activity-step
+Set the `color` property for the quote text.
+
+When you use the `style_duo_*()` functions, 
+[xaringanthemer]{.pkg} add CSS variables for
+the primary and secondary colors.
+It also creates CSS variables for any colors in the `colors` argument.
+
+Choose from the following and add them to your `.quote > p` rule.
+
+- `color: var(--primary);`
+- `color: var(--secondary);`
+- `color: var(--yellow);`
+- `color: var(--pink);`
+:::
+
+::: activity-step
+Set the `color` property for the attribution text.
+
+Because we're using a link in the attribution text, we need to add a new CSS rule.
+
+**How would you add a CSS that targets an `<a>` element within an `.attribution` element with a `.quote` slide?**
+Create a rule for this element and set the `color:` property using the examples above.
+
+<details><summary>Checkpoint</summary>
+
+```css
+.quote .attribution a {
+  color: var(--pink);
+}
+```
+</details>
+:::
+
+#### Adjust spacing
+
+At this point, your CSS should look something like this:
+
+```css
+.quote > p {
+  font-size: 4.75em;
+  color: var(--primary);
+}
+.quote .attribution {
+  font-size: 1.5em;
+}
+.quote .attribution a {
+  color: var(--pink);
+}
+```
+
+But there's an awfully large space between the quote and attribution text.
+Let' adjust that by adjusting the margin of paragraphs in the quote slides.
+
+::: activity-step
+Set the `margin:` property of `.quote > p`.
+
+We're going to use a shortcut here.
+The `margin:` property is flexible.
+If you give it two values, it uses those values for the _vertical_ and _horizontal_ margins respectively.
+
+**Set the vertical margin to `0.2em` and the horizontal margin to `0`.**
+
+<details><summary>Checkpoint</summary>
+
+```css
+margin: 0.2em 0;
+```
+</details>
+:::
+
+#### Adjust the quote font
+
+We're almost there, let's just adjust the font style of the quote text.
+Choose any or all of the following steps to get your quote font looking _just right_.
+Apply all of the following to the `.quote > p` rule.
+
+::: activity-step
+Set the `font-family:` property.
+
+By default, the font family of the quote text is the default slide text family,
+which was set by `text_font_family_google` in `style_duo_accent()`.
+[xaringanthemer]{.pkg} creates CSS variables for the heading and text font families,
+so you can use the heading family with:
+
+```css
+font-family: var(--heading-font-family);
+```
+
+Alternatively, you can use a serif font, like `Charter`.
+(This font tends to be available on all systems, but it's a good idea to provide a fallback.)
+
+```css
+font-family: Charter, serif;
+```
+
+If you'd like to use a font from Google, check out the [instructions in the Extras section](#quote-extras).
+:::
+
+::: activity-step
+Make the quote font _italic_.
+
+Set the `font-style:` property to `italic`.
+:::
+
+::: activity-step
+Make the quote font bold.
+
+Set the `font-weight:` property to `bold` or `700`.
+:::
+
+
+<details><summary>Checkpoint</summary>
+
+```css
+.quote > p {
+  color: var(--primary);
+  font-size: 4.75em;
+  margin: 0.2em 0;
+  font-family: Charter, serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.quote .attribution {
+  font-size: 1.5em;
+}
+.quote .attribution a {
+  color: var(--pink);
+}
+```
+</details>
+
+#### Extras {#quote-extras}
+
+Congratulations on your great looking quote slide!
+If you'd like to keep tinkering, here are a few more things you can try out.
+
+::: activity-step
+Change the background color of the quote slide.
+
+[xaringan]{.pkg} provides a helpful `inverse` slide class.
+Create CSS rules that invert the colors of the quote slide when `inverse` is included in the slide's classes.
+
+```
+---
+class: quote middle inverse
+```
+
+First, add a new rule to change the `background-color:` property of any `.quote` with `.inverse` slides.
+When they reference the same element, there are no spaces between the selectors:
+
+```css
+.quote.inverse {
+  background-color: ____;
+}
+```
+
+Now change the text colors for the inverse quote slides.
+You don't have to rewrite _everything_!
+Instead, find all of the CSS rules that change the `color` property.
+Copy the selectors into new rules, and update the selector to include `.inverse` and `.quote` on _the same element_.
+
+<details><summary>New Rules</summary>
+
+```css
+.inverse.quote > p {
+  color: var(--primary);
+}
+.inverse.quote .attribution a {
+   color: var(--pink);
+}
+```
+</details>
+
+<details><summary>Checkpoint</summary>
+
+```css
+.inverse.quote {
+  background-color: var(--primary);
+}
+.inverse.quote > p {
+  color: white;
+}
+.inverse.quote .attribution a {
+  color: var(--yellow);
+}
+```
+</details>
+:::
+
+::: activity-step
+Try using a different font for the quote text.
+
+Browse [Google Fonts](https://fonts.google.com) to pick a font style that you like.
+
+**Add the new font to your theme.**
+You can include extra fonts in your [xaringanthemer]{.pkg} theme using the `extra_fonts` argument in the `style_` functions.
+
+```r
+extra_fonts = list(google_font("PT Serif"))
+```
+
+**Use the new font in for your quote paragraph text.**
+
+```css
+font-family: 'PT Serif', Charter;
+```
+:::
+
+::: activity-step
+Pick new colors for your theme.
+
+Use [coolors](https://coolors.co) to [generate a random color palette](https://coolors.co/generate)
+or [browse trending color palettes](https://coolors.co/palettes/trending).
+Update the `primary` and `secondary` color arguments
+and add additional colors to the `colors` vector.
+
+If you used `var(--primary)` or `var(--secondary)` for any `color:` property in your CSS,
+those colors will update automatically when you change the theme colors!
+
+If you added colors to the `colors` argument,
+you might need to update the CSS variable to match the name you gave the color.
+:::
+
+### Template Slide
+
 2. Create a slide template for a slide with an image on the right
     - Slide-level CSS for `.image-sidebar-right` and `.image-sidebar-right .attribution`
     - Template slide using remark variables for the image and attribution details
-
-## Exploration
-
-[xaringan-template-layout-with-variables.Rmd](https://gist.github.com/gadenbuie/74a3fef858117301c17b1d829297e8be)

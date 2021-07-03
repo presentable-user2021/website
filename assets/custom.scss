@@ -68,3 +68,7 @@ kbd {
   white-space: nowrap;
   font-size: 1em !important;
 }
+
+.pkg {
+  @extend .dark-green, .bg-black-05, .code, .pv1, .ph1, .br2, .normal;
+}
