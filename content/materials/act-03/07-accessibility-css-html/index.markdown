@@ -1,13 +1,14 @@
 ---
 title: "07: Accessibility with CSS & HTML"
 weight: 1
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/07-accessibility-css-html.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -20,28 +21,28 @@ links:
 <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="/slides/03-why-r.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="/slides/07-accessibility-css-html.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
-## Goal
-
-Leverage CSS & HTML to make baseline theme more accessible
-
-## Material
-
-How to…
-
--   increase font size
--   style links
--   add alt-text to background images
--   describe an icon `<i>` with `aria-label`
--   use `text-transform` for UPPERCASE instead of hand-typing it out
-
 ## Activity
 
-Time: ⏱ 10 minutes
+<div class="activity-table">
 
-Open and preview this slide deck: materials/act-03/07-accessibility-css-html.Rmd
+|           |                                          |
+|:----------|:-----------------------------------------|
+| Time      | 15 minutes                               |
+| Materials | `07-accessibility-css-html/07-start.Rmd` |
 
--   practice the new techniques shown
+</div>
+
+In this activity, we’ll be working together.
+Follow allow with me (or use the slides above) as we leverage CSS and HTML to help make slide customizations more accessible.
+
+<div class="activity-step">
+
+Open and preview this slide deck: `07-accessibility-css-html/start.Rmd`
+
+Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+
+</div>

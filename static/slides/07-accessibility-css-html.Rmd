@@ -1,0 +1,290 @@
+---
+scene: 7
+title: "Accessibility with<br>CSS & HTML"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+      - assets/css/07-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: title
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+`r title_slide()`
+
+---
+class: header_background f6
+
+# Let's do this together!
+
+Restart your R session  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F10</kbd>
+
+.mt4[
+Open `07-accessibility-css-html/07-start.Rmd`
+]
+
+---
+
+# Adding alt-text with HTML
+
+.pull-left[
+Sometimes we want to add images using raw HTML
+
+We can add alt-text to an `<img>` tag using HTML by using the `alt` attribute
+
+```{html alt-text, eval=FALSE, echo=TRUE}
+<img 
+src="common-black-lemur.jpg" 
+alt="Common black lemur with a millipede in one hand and flies hovering overhead"
+/>
+```
+
+.footnote[Resource: [Alternative text basics by WebAIM](https://webaim.org/techniques/alttext/#basics)]
+
+]
+
+.pull-right[
+
+.b[Fun fact:] Common black lemurs will coax toxic millipedes to release toxins and then will use these toxins as insect repellant by rubbing the millipedes all over their fur!
+
+<img 
+src="assets/img/common-black-lemur.jpg" 
+alt="Common black lemur with a millipede in one hand and flies hovering overhead"
+width="300px"
+/>
+
+]
+
+---
+class: header_background
+
+# Replace the alt-text in slide 3
+
+In the slide titled "Common black lemurs are sexually dichromatic," .b[replace]:
+
+<div class="mt4 pre-name">07-start.Rmd</div>
+```html
+alt = "Common black lemur with a millipede in one hand and flies hovering overhead"
+```
+
+.b[With this alternative] that better matches the information being conveyed:
+
+<div class="mt4 pre-name">07-start.Rmd</div>
+```html
+alt = "Female common black lemur with brown-orange fur and white ear tufts"
+```
+
+---
+
+# Adding alt text to background images
+
+Sometimes we want to convey important information with an image that covers the slide
+
+We can add alt-text to these images using the `<span>` tag and some special attributes
+
+<div class="mt4 pre-name">07-start.Rmd</div>
+```
+---
+class: bottom
+background-image: url(common-black-lemur-male.jpg)
+background-size: cover
+
+# Adding<br>alt-text to<br>background<br>images
+
+<span role="img" aria-label="Male common black lemur with rich black fur covering their entire body, and black ear tufts"></span>
+---
+```
+
+---
+class: bottom
+background-image: url(assets/img/common-black-lemur-male.jpg)
+background-size: cover
+
+# Adding<br>alt-text to<br>background<br>images
+
+<span role="img" aria-label="Male common black lemur with rich black fur covering their entire body, and black ear tufts"></span>
+
+
+---
+
+# Styling links so that color<br>is not the only indicator
+
+```{css, echo=FALSE}
+.ul {
+  text-decoration: underline;
+}
+```
+
+.pull-left[
+Links on your slides contain important information (like references!) and should be easy to differentiate from non-link content
+
+The link styling most familiar to users is .ul[text underlining]
+]
+ 
+.pull-right[
+We can apply this styling using the [`text-decoration` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) to the `a` (anchor) element.
+
+```css
+a {
+  text-decoration: underline;
+}
+```
+]
+
+---
+class: header_background
+
+# Apply underlining to your link text
+
+1\. .b[Navigate to the slide] titled "Styling links"
+
+2\. .b[Paste the CSS rule into `extra.css`] and save to update
+
+<div class="mt4 pre-name">extra.css</div>
+```css
+a {
+  text-decoration: underline;
+}
+```
+
+If you prefer to style your links with color, there are two [additional considerations for link appearance](https://webaim.org/techniques/hypertext/link_text#appearance) you need to consider: One involves color contrast and the other involves mouse hover and keyboard focus states.
+
+---
+
+# Transforming text to uppercase
+
+.pull-left[
+Sometimes we want to style text with .upper[UPPERCASE] for emphasis or aesthetics.
+
+It can be tempting to use the <kbd>Shift</kbd> or <kbd>Caps Lock</kbd> key to insert letters individually, but this can mean [screen readers read each letter individually](https://webaim.org/techniques/screenreader/#how), like an acronym.
+]
+
+.pull-right[
+We can apply .upper[UPPERCASE] styling using the [`text-transform` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+
+```css
+.upper {
+  text-transform: uppercase;
+}
+```
+
+Using the `.upper[]` class produces .upper[Capitalized Words] that still read like case-sensitive text to a screen reader
+
+.b[Behind the scenes:]
+```html
+<span class="upper">
+Capitalized Words</span>
+```
+]
+
+---
+class: header_background
+
+# Apply an uppercase transformation
+
+1\. .b[Navigate to the slide] titled "Transforming text to uppercase"
+
+2\. .b[Paste the following rule into `extra.css`] and save to update
+
+.pull-left[
+<div class="mt4 pre-name">extra.css</div>
+```css
+.upper {
+  text-transform: uppercase;
+}
+```
+]
+
+.pull-right[
+<div class="mt4 pre-name">07-start.Rmd</div>
+```
+Hello there, I'm transforming .upper[this text] to uppercase
+```
+]
+
+.b[Note:] It is best to [apply uppercase text judiciously](https://www.456bereastreet.com/archive/201012/use_uppercase_capitalised_text_judiciously/) because it can reduce legibility of the text.
+
+
+---
+
+# Using icons like `r fontawesome::fa_i("wikipedia-w")` with context in mind
+
+.pull-left[
+
+### R approach
+
+```r
+fontawesome::fa_i("wikipedia-w")
+```
+
+.b[Behind the scenes:]
+
+```html
+<i 
+class="fab fa-wikipedia-w" 
+role="presentation" 
+aria-label="wikipedia-w icon">
+</i>
+```
+
+.b[Screen reader:] Reads icon as "Wikipedia W icon empty group"
+
+]
+
+--
+
+.pull-right[
+
+### HTML approach
+
+```html
+<i class="fab fa-wikipedia-w"></i>
+```
+
+.b[Behind the scenes:]
+
+```html
+<i 
+class="fab fa-wikipedia-w">
+</i>
+```
+
+.b[Screen reader:] Skips the icon
+
+This approach is accessible only if the icon is .b[not] the only element conveying necessary information
+]
