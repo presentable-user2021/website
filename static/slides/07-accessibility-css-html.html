@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Introduction to CSS</title>
+    <title>Accessibility with CSS &amp; HTML</title>
     <meta charset="utf-8" />
     <meta name="author" content="Garrick Aden-Buie &amp; Silvia Canelón" />
     <meta name="date" content="2021-07-07" />
@@ -14,7 +14,7 @@
     <script src="assets/libs/shareon/shareon.min.js"></script>
     <link href="assets/libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
     <script src="assets/libs/xaringanExtra-shareagain/shareagain.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"Introduction to CSS","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"Accessibility with&lt;br&gt;CSS &amp; HTML","expires":14}</script>
     <script src="assets/libs/himalaya/himalaya.js"></script>
     <script src="assets/libs/js-cookie/js.cookie.js"></script>
     <link href="assets/libs/editable/editable.css" rel="stylesheet" />
@@ -26,17 +26,17 @@
     <script src="assets/libs/js4shiny/jsonview/jsonview.min.js"></script>
     <link href="assets/libs/js4shiny-redirectConsoleLog/jslog.css" rel="stylesheet" />
     <script src="assets/libs/js4shiny-redirectConsoleLog/redirectConsoleLog.js"></script>
-    <meta name="description" content="Slides for &quot;Introduction to CSS&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
-    <meta name="twitter:title" content="Introduction to CSS | Professional, Polished, Presentable"/>
-    <meta name="twitter:description" content="Slides for &quot;Introduction to CSS&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="description" content="Slides for &quot;Accessibility with&lt;br&gt;CSS &amp; HTML&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:title" content="Accessibility with&lt;br&gt;CSS &amp; HTML | Professional, Polished, Presentable"/>
+    <meta name="twitter:description" content="Slides for &quot;Accessibility with&lt;br&gt;CSS &amp; HTML&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
     <meta name="twitter:url" content="https://presentable-user2021.netlify.app"/>
     <meta name="twitter:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
     <meta name="twitter:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:creator" content="@grrrck"/>
     <meta name="twitter:site" content="@grrrck"/>
-    <meta property="og:title" content="Introduction to CSS | Professional, Polished, Presentable"/>
-    <meta property="og:description" content="Slides for &quot;Introduction to CSS&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta property="og:title" content="Accessibility with&lt;br&gt;CSS &amp; HTML | Professional, Polished, Presentable"/>
+    <meta property="og:description" content="Slides for &quot;Accessibility with&lt;br&gt;CSS &amp; HTML&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
     <meta property="og:url" content="https://presentable-user2021.netlify.app"/>
     <meta property="og:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
     <meta property="og:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
@@ -44,12 +44,12 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="article:author" content="Garrick Aden-Buie"/>
     <meta property="article:author" content="Silvia Canelón"/>
-    <link href="assets/libs/countdown/countdown.css" rel="stylesheet" />
-    <script src="assets/libs/countdown/countdown.js"></script>
+    <link href="assets/libs/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="assets/libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/06-extra.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/07-extra.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -61,8 +61,8 @@ class: title
 
 
 
-<div class="scene f2 absolute top-0 left-0 w-10 bg-red bg-blue">6</div>
-<h1>Introduction to CSS</h1>
+<div class="scene f2 absolute top-0 left-0 w-10 bg-red bg-blue">7</div>
+<h1>Accessibility with&lt;br&gt;CSS &amp; HTML</h1>
 <div class="conf-logo"></div>
 <div class="talk-meta">
 <p class="talk-author">Garrick Aden-Buie &amp; Silvia Canelón</p>
@@ -77,339 +77,240 @@ class: header_background f6
 Restart your R session  &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F10&lt;/kbd&gt;
 
 .mt4[
-Open `06-intro-css/06-start.Rmd`
+Open `07-accessibility-css-html/07-start.Rmd`
 ]
 
 ---
-name: remark-example
 
-class: f4
-
-&lt;pre&gt;&lt;code style="color: #999"&gt;.pull-left&amp;#8288;[
-!&amp;#8288;[cute lemur]&amp;#8288;(lemur.jpg)
-]
-
-.pull-right&amp;#8288;[
-Lemurs are the cutest.
-]
-
-.footnote&amp;#8288;[Duke Lemur Center]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;script&gt;
-const remarkExample = document.getElementById('slide-remark-example').querySelectorAll('.remark-code-line')
-;[0,2].forEach(idx =&gt; remarkExample[idx].classList.add('red', 'b'))
-;[4,6].forEach(idx =&gt; remarkExample[idx].classList.add('blue', 'b'))
-remarkExample[8].innerHTML = `&lt;span class="orange b"&gt;.footnote&amp;#8288;[&lt;/span&gt;Duke Lemur Center&lt;span class="orange b"&gt;&amp;#8288;]&lt;/span&gt;`
-&lt;/script&gt;
-
-???
-
-You've probably encountered remark's dot-name-bracket notation before.
-The most common examples in the default slides are `.pull-left[]`, `.pull-right[]` and `.footnote[]`.
-We can use this syntax to modify the appearance or position of the text in our slides.
-And most importantly, we can create our own versions.
-
----
-class: header_background
-
-# Use .code[.big&amp;#8288;[]] in the first slide
-
-1. Launch `infinite_moon_reader()` 
-
-1. Put `.big[ ]` around just **a few words** on the slide
-
-<div class="countdown" id="timer_60e21081" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
----
-class: f5
-
-&lt;div class="mt4 pre-name"&gt;06-start.Rmd&lt;/div&gt;
-
-```
----
-class: center middle
-
-Lemurs are the .big[most endangered] mammals on Earth
-
-![A cute lemur](lemur.jpg)
-```
-
-???
-
-Your slide source code probably looks like this now
-
----
-class: center middle
-
-Lemurs are the .big[most endangered] mammals on Earth
-
-![A cute lemur](assets/img/lemur.jpg)
-
---
-name: rendered-example
-
-.footnote[![RStudio viewer popout](assets/img/rstudio-viewer-popout.png) .ml1[Open the slides in your browser]]
-
-???
-
-Open the slides in Chrome or Firefox.
-
-Right click on the embiggened words and select  _Inspect Element_
-
-What rules are being applied to this element?
-
-Adjust `font-size` rule of the `.big` class
-
----
-class: header_background
-
-# Make the .code[.big] class your own
-
-1. .b[Set the `color` to your favorite color.]
-
-   Here are a few to try:
-
-    - `DeepPink`
-    - `CornFlowerBlue`
-    - `RosyBrown`
-    - `SeaGreen`
-    
-1. .b[Find another property to change.]
-
-   Try typing `font-` and pressing &lt;kbd&gt;Tab&lt;/kbd&gt;    
-
-<div class="countdown" id="timer_60e20eaf" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
----
-class: header_background
-
-# Copy the rule into your .code[extra.css] file
-
-1. .b[Right Click] on [the rule](#rendered-example) and select .i[Copy Rule]
-
-   ![Right click menu on CSS rule in Firefox Developer tools](assets/img/06/copy-css-rule.png)
-
-2. .b[Paste the rule into `extra.css`] and save to update
-
----
-class: header_background
-
-# Write your own rule
-
-1. Follow the pattern from `.big` to write your own rule called `.fade`
-
-    - Set `opacity` to `0.66`
-
-1. Then, put `.fade[]` around the lemur image
-
-<div class="countdown" id="timer_60e20ddc" style="top:3rem;right:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
---
-
-.mb0[
-&lt;div class="pre-name"&gt;extra.css&lt;/div&gt;
-
-```css
-.fade {
-  opacity: 0.66;
-}
-```
-]
-
-&lt;div class="mt0 pre-name"&gt;06-start.Rmd&lt;/div&gt;
-```
-.fade[
-![A cute lemur](lemur.jpg)
-]
-```
-
----
-layout: true
-
-# Anatomy of a CSS rule
-
----
-
-.code.f4.mh-a.mt4[
-.purple[selector] {&lt;br&gt;
-.ml4[.dark-green[property]: .blue[value];]&lt;br&gt;
-.ml4[.dark-green[property]: .blue[value];]&lt;br&gt;
-}
-]
-
----
-class: animated fadeIn
-
-.code.f4.mh-a.mt4[
-.purple[.big] {&lt;br&gt;
-.ml4[.dark-green[font-size]: .blue[2em];]&lt;br&gt;
-.ml4[.dark-green[color]: .blue[CornFlowerBlue];]&lt;br&gt;
-}
-]
-
----
-layout: true
-class: f4 middle animated fadeIn
-
-&lt;pre&gt;&lt;code style="color: #999"&gt;.pull-right&amp;#8288;[
-Lemurs are .big&amp;#8288[the cutest].
-]&lt;/code&gt;&lt;/pre&gt;
-
----
-
-Lemurs are the cutest
-
----
-name: inline-vs-block-inline
-
-Lemurs are .bg-washed-blue.blue.b--dashed.ph1[the cutest]
-
-&lt;script&gt;
-const exInline = document.getElementById('slide-inline-vs-block-inline').querySelectorAll('.remark-code-line')
-// ;[0,2].forEach(idx =&gt; exInline[idx].classList.add('red', 'b'))
-exInline[1].innerHTML = `Lemurs are &lt;span class="blue b"&gt;.big&amp;#8288;[&lt;/span&gt;&lt;span class="blue"&gt;the cutest&lt;/span&gt;&lt;span class="blue b"&gt;&amp;#8288;]&lt;/span&gt;`
-&lt;/script&gt;
-
-???
-
-_Inline_ elements are like inline R code.
-They modify a small snippet of text
-
----
-name: inline-vs-block-block
-
-&lt;div class="bg-washed-red red b--dashed p  a1 mv3"&gt;Lemurs are the cutest&lt;/div&gt;
-
-&lt;script&gt;
-const exBlock = document.getElementById('slide-inline-vs-block-block').querySelectorAll('.remark-code-line')
-;[0,1,2].forEach(idx =&gt; exBlock[idx].classList.add('red', idx == 1 ? 'normal' : 'b'))
-&lt;/script&gt;
-
-???
-
-_Block_ elements are like R code chunks.
-They're a whole chunk of _something_.
-
----
-layout: false
-class: middle
+# Adding alt-text with HTML
 
 .pull-left[
-&lt;pre&gt;&lt;code style="color: #999"&gt;.pull-right&amp;#8288;[
-Lemurs are .big&amp;#8288[the cutest].
-]&lt;/code&gt;&lt;/pre&gt;
-]
+Sometimes we want to add images using raw HTML
 
-.pull-right[
-Lemurs are .big[the cutest].
-]
+We can add alt-text to an `&lt;img&gt;` tag using HTML by using the `alt` attribute
 
-.footnote[![RStudio viewer popout](assets/img/mouse-pointer.svg) .ml1[Inspect the output]]
-
-???
-
-Let's see how xaringan and remark render the markdown on the left.
-
----
-class: middle animated fadeIn
-
-.pull-left[
 
 ```html
-&lt;div class="pull-right"&gt;
-  &lt;p&gt;
-    Lemurs are 
-    &lt;span class="big"&gt;
-      the cutest
-    &lt;/span&gt;.
-  &lt;/p&gt;
-&lt;/div&gt;
+&lt;img 
+src="common-black-lemur.jpg" 
+alt="Common black lemur with a millipede in one hand and flies hovering overhead"
+/&gt;
+```
+
+.footnote[Resource: [Alternative text basics by WebAIM](https://webaim.org/techniques/alttext/#basics)]
+
+]
+
+.pull-right[
+
+.b[Fun fact:] Common black lemurs will coax toxic millipedes to release toxins and then will use these toxins as insect repellant by rubbing the millipedes all over their fur!
+
+&lt;img 
+src="assets/img/common-black-lemur.jpg" 
+alt="Common black lemur with a millipede in one hand and flies hovering overhead"
+width="300px"
+/&gt;
+
+]
+
+---
+class: header_background
+
+# Replace the alt-text in slide 3
+
+In the slide titled "Common black lemurs are sexually dichromatic," .b[replace]:
+
+&lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
+```html
+alt = "Common black lemur with a millipede in one hand and flies hovering overhead"
+```
+
+.b[With this alternative] that better matches the information being conveyed:
+
+&lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
+```html
+alt = "Female common black lemur with brown-orange fur and white ear tufts"
+```
+
+---
+
+# Adding alt text to background images
+
+Sometimes we want to convey important information with an image that covers the slide
+
+We can add alt-text to these images using the `&lt;span&gt;` tag and some special attributes
+
+&lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
+```
+---
+class: bottom
+background-image: url(common-black-lemur-male.jpg)
+background-size: cover
+
+# Adding&lt;br&gt;alt-text to&lt;br&gt;background&lt;br&gt;images
+
+&lt;span role="img" aria-label="Male common black lemur with rich black fur covering their entire body, and black ear tufts"&gt;&lt;/span&gt;
+---
+```
+
+---
+class: bottom
+background-image: url(assets/img/common-black-lemur-male.jpg)
+background-size: cover
+
+# Adding&lt;br&gt;alt-text to&lt;br&gt;background&lt;br&gt;images
+
+&lt;span role="img" aria-label="Male common black lemur with rich black fur covering their entire body, and black ear tufts"&gt;&lt;/span&gt;
+
+
+---
+
+# Styling links so that color&lt;br&gt;is not the only indicator
+
+&lt;style type="text/css"&gt;
+.ul {
+  text-decoration: underline;
+}
+&lt;/style&gt;
+
+.pull-left[
+Links on your slides contain important information (like references!) and should be easy to differentiate from non-link content
+
+The link styling most familiar to users is .ul[text underlining]
+]
+ 
+.pull-right[
+We can apply this styling using the [`text-decoration` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) to the `a` (anchor) element.
+
+```css
+a {
+  text-decoration: underline;
+}
+```
+]
+
+---
+class: header_background
+
+# Apply underlining to your link text
+
+1\. .b[Navigate to the slide] titled "Styling links"
+
+2\. .b[Paste the CSS rule into `extra.css`] and save to update
+
+&lt;div class="mt4 pre-name"&gt;extra.css&lt;/div&gt;
+```css
+a {
+  text-decoration: underline;
+}
+```
+
+If you prefer to style your links with color, there are two [additional considerations for link appearance](https://webaim.org/techniques/hypertext/link_text#appearance) you need to consider: One involves color contrast and the other involves mouse hover and keyboard focus states.
+
+---
+
+# Transforming text to uppercase
+
+.pull-left[
+Sometimes we want to style text with .upper[UPPERCASE] for emphasis or aesthetics.
+
+It can be tempting to use the &lt;kbd&gt;Shift&lt;/kbd&gt; or &lt;kbd&gt;Caps Lock&lt;/kbd&gt; key to insert letters individually, but this can mean [screen readers read each letter individually](https://webaim.org/techniques/screenreader/#how), like an acronym.
+]
+
+.pull-right[
+We can apply .upper[UPPERCASE] styling using the [`text-transform` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+
+```css
+.upper {
+  text-transform: uppercase;
+}
+```
+
+Using the `.upper[]` class produces .upper[Capitalized Words] that still read like case-sensitive text to a screen reader
+
+.b[Behind the scenes:]
+```html
+&lt;span class="upper"&gt;
+Capitalized Words&lt;/span&gt;
+```
+]
+
+---
+class: header_background
+
+# Apply an uppercase transformation
+
+1\. .b[Navigate to the slide] titled "Transforming text to uppercase"
+
+2\. .b[Paste the following rule into `extra.css`] and save to update
+
+.pull-left[
+&lt;div class="mt4 pre-name"&gt;extra.css&lt;/div&gt;
+```css
+.upper {
+  text-transform: uppercase;
+}
 ```
 ]
 
 .pull-right[
-Lemurs are .big[the cutest].
+&lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
+```
+Hello there, I'm transforming .upper[this text] to uppercase
+```
 ]
 
-???
+.b[Note:] It is best to [apply uppercase text judiciously](https://www.456bereastreet.com/archive/201012/use_uppercase_capitalised_text_judiciously/) because it can reduce legibility of the text.
 
-In the HTML we see the `.pull-right` is used for a `&lt;div&gt;` tag (block element)
-and the `.pull-left` is used for a `&lt;span&gt;` tag (inline element).
 
 ---
-class: header_background
 
-# Another place to put CSS (temporarily)
+# Using icons like <i class="fab fa-wikipedia-w" role="presentation" aria-label="wikipedia-w icon"></i> with context in mind
 
-The second slide contains a figure, using the `knitr::fig_chunk()` trick we learned earlier.
+.pull-left[
 
-With `infinite_moon_reader()` running...
+### R approach
 
-- Add a `&lt;style&gt;` tag to the slide markdown
-
-   ```
-   &lt;style&gt;
-   
-   &lt;/style&gt;
-   ```
-   
-- In the next task, write you CSS inside the `&lt;style&gt;` tag.
-  The slides will update live!
-
----
-class: header_background
-
-# Move the figure
-
-
-
-1. Put the figure in a `.bottom-right[]`.
-
-1. Create a new CSS rule in `extra.css` called `.bottom-right`
-
-1. Set the `position` property to `absolute`
-
-1. Set the `width` and `height` properties
-
-   - Try values like `200px` or `450px`
-
-1. Set the `bottom` and `right` properties to a CSS _distance_
-
-    - Try values like `1.5em` or `2em`
-    
-1. *Bonus* Give the plot a [border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
-    
-<div class="countdown" id="timer_60e20fd2" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
----
-class: middle
-
-&lt;img 
-  class="absolute right-2 w-50 ba bw1 b--light-gray"
-  src="assets/img/06/slide-bottom-right.png" 
-  alt="Slide result using the `.bottom-right` class"
-/&gt;
-
-
-```css
-.bottom-right {
-  position: absolute;
-  bottom: 1.5em;
-  right: 2em;
-  width: 450px;
-  height: 200px;
-  border: 2px solid gray;
-}
+```r
+fontawesome::fa_i("wikipedia-w")
 ```
+
+.b[Behind the scenes:]
+
+```html
+&lt;i 
+class="fab fa-wikipedia-w" 
+role="presentation" 
+aria-label="wikipedia-w icon"&gt;
+&lt;/i&gt;
+```
+
+.b[Screen reader:] Reads icon as "Wikipedia W icon empty group"
+
+]
+
+--
+
+.pull-right[
+
+### HTML approach
+
+```html
+&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
+```
+
+.b[Behind the scenes:]
+
+```html
+&lt;i 
+class="fab fa-wikipedia-w"&gt;
+&lt;/i&gt;
+```
+
+.b[Screen reader:] Skips the icon
+
+This approach is accessible only if the icon is .b[not] the only element conveying necessary information
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="assets/js/remark.0.14.1.min.js"></script>
