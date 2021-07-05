@@ -39,6 +39,8 @@ source(here::here("static", "slides", "R", "components.R"))
 # use_placeholders(TRUE, TRUE)
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
 xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+
+library(fontawesome)
 ```
 
 ```{r js4shiny, echo=FALSE}
@@ -56,6 +58,10 @@ Restart your R session  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F10</kbd>
 
 .mt4[
 Open `07-accessibility-css-html/07-start.Rmd`
+]
+
+.mt4[
+Run `xaringan::infinite_moon_reader()` to preview your slides
 ]
 
 ---
@@ -85,7 +91,7 @@ alt="Common black lemur with a millipede in one hand and flies hovering overhead
 <img 
 src="assets/img/common-black-lemur.jpg" 
 alt="Common black lemur with a millipede in one hand and flies hovering overhead"
-width="300px"
+width="400px"
 />
 
 ]
@@ -239,39 +245,85 @@ Hello there, I'm transforming .upper[this text] to uppercase
 
 .b[Note:] It is best to [apply uppercase text judiciously](https://www.456bereastreet.com/archive/201012/use_uppercase_capitalised_text_judiciously/) because it can reduce legibility of the text.
 
-
 ---
 
-# Using icons like `r fontawesome::fa_i("wikipedia-w")` with context in mind
+# Using icons like `r fa("wikipedia-w", a11y="sem")` with context in mind
+
+### fontawesome::fa("wikipedia-w", a11y = "sem") `r fa("wikipedia-w", a11y = "sem")`
 
 .pull-left[
+"sem" is short for "semantic" 
 
-### R approach
+A .b[screen reader] will read the icon title text, like "Wikipedia W"
 
+]
+
+.pull-right[
+
+.b[Code:]
 ```r
-fontawesome::fa_i("wikipedia-w")
+fontawesome::fa("wikipedia-w", a11y="sem")
 ```
 
 .b[Behind the scenes:]
 
 ```html
-<i 
-class="fab fa-wikipedia-w" 
-role="presentation" 
-aria-label="wikipedia-w icon">
-</i>
+<svg 
+aria-label="Wikipedia W" 
+img="role" 
+...more SVG properties...>
+  <title>Wikipedia W</title>
+</svg>
 ```
-
-.b[Screen reader:] Reads icon as "Wikipedia W icon empty group"
-
 ]
 
---
+---
+
+# Using icons like `r fontawesome::fa("wikipedia-w", a11y="sem")` with context in mind
+
+### fontawesome::fa("wikipedia-w", a11y = "deco") `r fontawesome::fa("wikipedia-w")`
+
+.pull-left[
+"deco" is short for "decorative" and the argument `a11y = "deco"` is the default
+
+A .b[screen reader] will skip over a decorative icon
+
+A decorative icon (or image) is appropriate only when it is .b[not] the only element conveying necessary information
+]
 
 .pull-right[
+.b[Code:]
+```r
+fontawesome::fa("wikipedia-w", a11y="deco")
+```
 
-### HTML approach
+.b[Behind the scenes:]
 
+```html
+<svg 
+aria-hidden="true" 
+img="role"
+...more SVG properties...>
+</svg>
+```
+]
+
+---
+# Using icons like `r fa("wikipedia-w", a11y="sem")` with context in mind
+
+### Raw <i class="fab fa-wikipedia-w"></i> HTML `<i class="fab fa-wikipedia-w"></i>`
+<i class="fab fa-wikipedia-w"></i>
+
+.pull-left[
+A .b[screen reader] will also skip an icon formatted with the basic HTML readily available on the [FontAwesome website](https://fontawesome.com/v5.15/icons/wikipedia-w?style=brands)
+
+This approach might be accessible only if the icon is .b[not] the only element conveying necessary information
+
+The HTML input would need to be supplemented with accessibility attributes like `aria-label` and `role` for the icon to be accessible on its own
+]
+
+.pull-right[
+.b[Code:]
 ```html
 <i class="fab fa-wikipedia-w"></i>
 ```
@@ -279,12 +331,13 @@ aria-label="wikipedia-w icon">
 .b[Behind the scenes:]
 
 ```html
-<i 
-class="fab fa-wikipedia-w">
-</i>
+<i class="fab fa-wikipedia-w"></i>
 ```
-
-.b[Screen reader:] Skips the icon
-
-This approach is accessible only if the icon is .b[not] the only element conveying necessary information
 ]
+
+---
+class: header_background, middle
+
+# We are finished with this scene!
+
+## `r fa("theater-masks")` We can meet back at the [07-accessibility-css-html activity](/materials/act-03/07-accessibility-css-html/#activity) when you finish

@@ -28,10 +28,10 @@ xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = 
 ## Activity
 
 ::: activity-table
-|           |                                       |
-|:----------|:--------------------------------------|
-| Time      | 15 minutes                            |
-| Materials | `07-accessibility-css-html/07-start.Rmd` |
+|           |                                         |
+|:----------|:----------------------------------------|
+| Time      | 15 minutes                              |
+| Materials | `07-accessibility-css-html/07-start.Rmd`|
 :::
 
 In this activity, we'll be working together.
@@ -40,5 +40,5 @@ Follow allow with me (or use the slides above) as we leverage CSS and HTML to he
 ::: activity-step
 Open and preview this slide deck: `07-accessibility-css-html/start.Rmd`
 
-Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML
 :::

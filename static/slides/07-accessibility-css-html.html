@@ -44,8 +44,6 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="article:author" content="Garrick Aden-Buie"/>
     <meta property="article:author" content="Silvia Canelón"/>
-    <link href="assets/libs/font-awesome/css/all.min.css" rel="stylesheet" />
-    <link href="assets/libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
@@ -80,6 +78,10 @@ Restart your R session  &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&g
 Open `07-accessibility-css-html/07-start.Rmd`
 ]
 
+.mt4[
+Run `xaringan::infinite_moon_reader()` to preview your slides
+]
+
 ---
 
 # Adding alt-text with HTML
@@ -108,7 +110,7 @@ alt="Common black lemur with a millipede in one hand and flies hovering overhead
 &lt;img 
 src="assets/img/common-black-lemur.jpg" 
 alt="Common black lemur with a millipede in one hand and flies hovering overhead"
-width="300px"
+width="400px"
 /&gt;
 
 ]
@@ -262,39 +264,85 @@ Hello there, I'm transforming .upper[this text] to uppercase
 
 .b[Note:] It is best to [apply uppercase text judiciously](https://www.456bereastreet.com/archive/201012/use_uppercase_capitalised_text_judiciously/) because it can reduce legibility of the text.
 
-
 ---
 
-# Using icons like <i class="fab fa-wikipedia-w" role="presentation" aria-label="wikipedia-w icon"></i> with context in mind
+# Using icons like <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg> with context in mind
+
+### fontawesome::fa("wikipedia-w", a11y = "sem") <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg>
 
 .pull-left[
+"sem" is short for "semantic" 
 
-### R approach
+A .b[screen reader] will read the icon title text, like "Wikipedia W"
 
+]
+
+.pull-right[
+
+.b[Code:]
 ```r
-fontawesome::fa_i("wikipedia-w")
+fontawesome::fa("wikipedia-w", a11y="sem")
 ```
 
 .b[Behind the scenes:]
 
 ```html
-&lt;i 
-class="fab fa-wikipedia-w" 
-role="presentation" 
-aria-label="wikipedia-w icon"&gt;
-&lt;/i&gt;
+&lt;svg 
+aria-label="Wikipedia W" 
+img="role" 
+...more SVG properties...&gt;
+  &lt;title&gt;Wikipedia W&lt;/title&gt;
+&lt;/svg&gt;
 ```
-
-.b[Screen reader:] Reads icon as "Wikipedia W icon empty group"
-
 ]
 
---
+---
+
+# Using icons like <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg> with context in mind
+
+### fontawesome::fa("wikipedia-w", a11y = "deco") <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg>
+
+.pull-left[
+"deco" is short for "decorative" and the argument `a11y = "deco"` is the default
+
+A .b[screen reader] will skip over a decorative icon
+
+A decorative icon (or image) is appropriate only when it is .b[not] the only element conveying necessary information
+]
 
 .pull-right[
+.b[Code:]
+```r
+fontawesome::fa("wikipedia-w", a11y="deco")
+```
 
-### HTML approach
+.b[Behind the scenes:]
 
+```html
+&lt;svg 
+aria-hidden="true" 
+img="role"
+...more SVG properties...&gt;
+&lt;/svg&gt;
+```
+]
+
+---
+# Using icons like <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg> with context in mind
+
+### Raw &lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt; HTML `&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;`
+&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
+
+.pull-left[
+A .b[screen reader] will also skip an icon formatted with the basic HTML readily available on the [FontAwesome website](https://fontawesome.com/v5.15/icons/wikipedia-w?style=brands)
+
+This approach might be accessible only if the icon is .b[not] the only element conveying necessary information
+
+The HTML input would need to be supplemented with accessibility attributes like `aria-label` and `role` for the icon to be accessible on its own
+]
+
+.pull-right[
+.b[Code:]
 ```html
 &lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
 ```
@@ -302,15 +350,16 @@ aria-label="wikipedia-w icon"&gt;
 .b[Behind the scenes:]
 
 ```html
-&lt;i 
-class="fab fa-wikipedia-w"&gt;
-&lt;/i&gt;
+&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
 ```
-
-.b[Screen reader:] Skips the icon
-
-This approach is accessible only if the icon is .b[not] the only element conveying necessary information
 ]
+
+---
+class: header_background, middle
+
+# We are finished with this scene!
+
+## <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg> We can meet back at the [07-accessibility-css-html activity](/materials/act-03/07-accessibility-css-html/#activity) when you finish
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="assets/js/remark.0.14.1.min.js"></script>
