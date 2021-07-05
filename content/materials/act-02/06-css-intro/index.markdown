@@ -34,12 +34,21 @@ of putting things exactly where you want them to be.
 
 <div class="activity-table">
 
-|           |                          |
-|:----------|:-------------------------|
-| Time      | 15 minutes               |
-| Materials | `06-intro-css/start.Rmd` |
+|           |                             |
+|:----------|:----------------------------|
+| Time      | 15 minutes                  |
+| Materials | `06-intro-css/06-start.Rmd` |
 
 </div>
 
-In this activity, we’ll be working together.
-Follow allow with me (or use the slides above) as we use [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS) to customize our slides.
+<div class="activity-step">
+
+Let’s do this together!
+
+In this activity, follow allow with me (or use the slides above) as we use [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS) to customize our slides.
+
+-   Open and preview the slide deck in `06-intro-css/06-start.Rmd`.
+
+-   Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML.
+
+</div>
