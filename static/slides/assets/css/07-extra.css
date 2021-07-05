@@ -1,9 +1,7 @@
-.big {
-  font-size: 2em;
+a {
+  text-decoration: underline;
 }
 
-.bottom-right {
-  position: absolute;
-  bottom: 1em;
-  right: 2em;
+.upper {
+  text-transform: uppercase;
 }

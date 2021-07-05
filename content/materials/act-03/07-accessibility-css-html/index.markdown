@@ -43,6 +43,6 @@ Follow allow with me (or use the slides above) as we leverage CSS and HTML to he
 
 Open and preview this slide deck: `07-accessibility-css-html/start.Rmd`
 
-Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML
 
 </div>
