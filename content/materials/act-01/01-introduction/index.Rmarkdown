@@ -8,11 +8,11 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/01-introduction.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
-  url: "/materials/act-01/01-review/#activity"
+  url: "/materials/act-01/01-introduction/#activity"
 ---
 
 ```{r setup, include=FALSE}
@@ -28,17 +28,17 @@ xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = 
 ## Activity
 
 ::: activity-table
-|           |                                |
-|:----------|:-------------------------------|
-| Time      | 5 minutes                      |
-| Materials | `01-introduction/start.Rmd`    |
+|           |                                   |
+|:----------|:----------------------------------|
+| Time      | 10 minutes                        |
+| Materials | `01-introduction/01-start.Rmd`    |
 :::
 
 
 ::: activity-step
-Open and preview this slide deck: `01-introduction/start.Rmd`
+Open and preview this slide deck: `01-introduction/01-start.Rmd`
 
-Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML
 :::
 
 ::: activity-step
@@ -46,7 +46,7 @@ xaringan scavenger hunt!
 
 Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
   - lists (ordered and unordered)
-  - quotes: `>`
+  - quotes inserted with `>`
   - `.pull-left[]` and `.pull-right[]`
   - `.left-column[]` and `.right-column[]`
   - `.right[]`
@@ -54,7 +54,7 @@ Explore the HTML slide deck and see if you can identify the following classes an
   - images inserted with `background-image:` or `![alt](url)`
   - slide classes like `inverse`, `middle`, `center`
   - horizontal bars using `---`
-  - presenter notes using `???` (hint: press the letter "P")
+  - presenter notes using `???` (hint: press the letter <kbd>P</kbd>)
 :::
 
 ::: activity-step
