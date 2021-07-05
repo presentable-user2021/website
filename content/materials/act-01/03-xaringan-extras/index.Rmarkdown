@@ -97,6 +97,29 @@ First present the code, followed by the plot on a new slide.
 
 ::: activity-step
 **Reset the code in your slides to the original `lemur-weight` chunk.**
+
+<details><summary>Original Chunk</summary>
+````
+```{r lemur-weight}`r ''`
+library(tidyverse)
+lemurs <- readRDS("lemurs.rds")
+
+lemurs %>%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %>%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+````
+</details>
 :::
 
 ::: activity-step
