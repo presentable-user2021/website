@@ -8,11 +8,11 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/01-introduction.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
-  url: "/materials/act-01/01-review/#activity"
+  url: "/materials/act-01/01-introduction/#activity"
 ---
 
 <script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
@@ -21,7 +21,7 @@ links:
 <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="/slides/01-why-online.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="/slides/01-introduction.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
@@ -29,18 +29,18 @@ links:
 
 <div class="activity-table">
 
-|           |                             |
-|:----------|:----------------------------|
-| Time      | 5 minutes                   |
-| Materials | `01-introduction/start.Rmd` |
+|           |                                |
+|:----------|:-------------------------------|
+| Time      | 10 minutes                     |
+| Materials | `01-introduction/01-start.Rmd` |
 
 </div>
 
 <div class="activity-step">
 
-Open and preview this slide deck: `01-introduction/start.Rmd`
+Open and preview this slide deck: `01-introduction/01-start.Rmd`
 
-Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML
 
 </div>
 
@@ -50,7 +50,7 @@ xaringan scavenger hunt!
 
 Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
 - lists (ordered and unordered)
-- quotes: `>`
+- quotes inserted with `>`
 - `.pull-left[]` and `.pull-right[]`
 - `.left-column[]` and `.right-column[]`
 - `.right[]`
@@ -58,7 +58,7 @@ Explore the HTML slide deck and see if you can identify the following classes an
 - images inserted with `background-image:` or `![alt](url)`
 - slide classes like `inverse`, `middle`, `center`
 - horizontal bars using `---`
-- presenter notes using `???` (hint: press the letter “P”)
+- presenter notes using `???` (hint: press the letter <kbd>P</kbd>)
 
 </div>
 

@@ -1,0 +1,194 @@
+---
+scene: 1
+title: "Setting the Stage"
+subtitle: "xaringan"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+      - assets/css/01-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: title
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE,
+  echo=FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+
+library(fontawesome)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+`r title_slide()`
+
+---
+class: inverse, middle, center
+
+# Welcome!
+
+## Today we will learn how to make<br> .b[great] slides with xaringan (and friends)
+
+### Let's review a few things
+
+---
+#  xaringan
+
+.pull-left[
+.center[
+<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png" alt="xaringan package" width="150px">
+
+.b[xaringan] is a package that introduces<br>`remark.js` to R Markdown
+
+<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" alt="rmarkdown package" width="150px">
+
+]]
+.pull-right[
+```{r}
+knitr::include_url("https://slides.yihui.org/xaringan")
+```
+[xaringan documentation](https://slides.yihui.org/xaringan)
+]
+
+---
+
+# remark.js
+
+.pull-left[
+.center[
+### `r fa("js-square", height="3em", a11y="deco")` <br>JavaScript
+
+### .b[and]
+
+### `r fa("markdown", height="3em", a11y="deco")`<br>Markdown
+]
+]
+
+.pull-right[
+"A simple, in-browser, Markdown-driven slideshow tool targeted at people who know their way around HTML and CSS."
+```{r}
+knitr::include_url("https://remarkjs.com", height = "375px")
+```
+[remarkjs documentation](https://remarkjs.com)
+]
+
+
+---
+## CSS
+
+.mb4[
+**CSS** stands for **C**ascading **S**tyle **S**heet, and turns...
+]
+
+.pull-left[
+functional, but dull HTML (content)...
+
+<img src="assets/img/01-title-slide-no-css.png"
+alt="Title slide with no formatting"
+width="100%" style="border:2px solid LightGray"/>
+]
+
+.pull-right[
+...into HTML (content) with style! `r emo::ji("sunglasses")`
+
+<img src="assets/img/01-title-slide.png"
+alt="Title slide with styling including a background image, cutom fonts, and content placement"
+width="100%"/>
+]
+
+???
+Remark helps us:
+- create a new kind of slide using Markdown syntax and slide properties
+- format slides (e.g. with content alignment)
+- present (using keyboard shortcuts)
+
+---
+class: header_background f6
+
+# Let's get started!
+
+Restart your R session  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F10</kbd>
+
+.mt4[
+Open `01-introduction/01-start.Rmd`
+]
+
+.mt4[
+Run `xaringan::infinite_moon_reader()` to preview the deck.
+]
+
+---
+# YAML
+
+```yaml
+---
+title: "01 - Setting the Stage"
+subtitle: "Professional, Polished, Presentable"
+author: "Dr. Avahi Cleesei"
+institute: "Bemaraha University, Madagascar"
+date: "2021-07-07"
+output:
+  xaringan::moon_reader:              # xaringan output
+    nature:
+      slideNumberFormat: "%current%"  # slide number format
+      highlightStyle: github          # highlighting syntax for code
+      highlightLines: true            # code line highlighting
+      ratio: 16:9                     # 4:3 for standard size
+      countIncrementalSlides: true    # incremental slide counting
+---
+```
+
+---
+# Setup chunk
+
+```r
+# suppresses the version number in the subdirectory name
+options(htmltools.dir.version = FALSE)
+
+# preset options
+knitr::opts_chunk$set(
+  fig.retina = 2,             # specifies scaling for retina displays
+  warning = FALSE,            # warning messages do not show
+  message = FALSE             # informational messages do not show
+)
+
+# loads packages
+library(fontawesome)          # FontAwesome icon package
+library(tidyverse)            # collection of data science packages        
+```
+
+---
+class: header_background, middle
+
+# Time for the xaringan scavenger hunt!
+
+## `r fa("theater-masks")` Check the [01-introduction activity](/materials/act-01/01-introduction/#activity)<br>for some guidance
