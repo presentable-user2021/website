@@ -17,7 +17,10 @@ This is an intermediate workshop designed for R learners already familiar with t
 
 ## Get the materials
 
-<i class="fas fa-tasks" pr2></i> **Reminder:** Check back the day before the workshop to download companion materials that will help you complete the exercises:
+<i class="fas fa-tasks" pr2></i>
+**Reminder:** Download [the companion materials](https://github.com/presentable-user2021/materials)
+that will help you complete the exercises.
+The easiest way is to use [`usethis::use_course()`](https://usethis.r-lib.org/reference/zip-utils.html):
 
 ```{r eval=FALSE}
 usethis::use_course(
@@ -25,6 +28,10 @@ usethis::use_course(
   destdir = "/file/path/on/your/local/machine"
 )
 ```
+
+If you're comfortable with git and GitHub,
+you can clone or fork the repo following 
+[the instructions there](https://github.com/presentable-user2021/materials#make-this-repo-your-own).
 
 ## Bring a style guide
 
