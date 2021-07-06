@@ -25,20 +25,6 @@ links:
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
-## Topic
-
-Use features from `xaringanExtra`, `xaringan`, and `rmarkdown` that strengthen clarity and accessibility of technical presentations.
-
--   Presenter notes
--   Separate code chunks and their output
-    -   `ref.label` trick for code and plots on different slides
-    -   `knitr::fig_chunk("<label>", "<ext>")`
--   xaringanExtra
-    -   Panelsets (segue from above)
-    -   Tile View
-    -   Editable and Scribble
-    -   extra css
-
 ## Activity
 
 <div class="activity-table">
@@ -52,8 +38,10 @@ Use features from `xaringanExtra`, `xaringan`, and `rmarkdown` that strengthen c
 
 ### Goal
 
-`start.Rmd` contains one slide with a plot and the code used to create it.
-Our goal is to present both the code and the plot.
+`03-start.Rmd` contains one slide with a plot and the code used to create it,
+but neither is presented well.
+Our goal for this activity is to present both the code and the plot
+in a way that helps the presenter and the audience.
 
 ### Two Slides
 
@@ -66,7 +54,7 @@ First present the code, followed by the plot on a new slide.
 
 <details>
 <summary>
-<code>knitr::fig\_chunk()</code>
+<code>knitr::fig_chunk()</code>
 </summary>
 
     ```{r lemur-weight, fig.show="hide"}
