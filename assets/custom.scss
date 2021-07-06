@@ -77,3 +77,14 @@ kbd {
 .pkg {
   @extend .dark-green, .bg-black-05, .code, .pv1, .ph1, .br2, .normal;
 }
+
+.checklist ul {
+	list-style: none;
+  padding-left: 1em;
+}
+.checklist ul li {
+  text-indent: 0;
+}
+.checklist ul li .fa {
+  display: inline;
+}

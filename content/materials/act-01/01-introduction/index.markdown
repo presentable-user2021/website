@@ -40,7 +40,7 @@ links:
 
 Open and preview this slide deck: `01-introduction/01-start.Rmd`
 
-Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML
+Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML.
 
 </div>
 
@@ -48,17 +48,22 @@ Restart your R session and run `xaringan::infinite_moon_reader()` to preview the
 
 xaringan scavenger hunt!
 
-Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct
-- lists (ordered and unordered)
-- quotes inserted with `>`
-- `.pull-left[]` and `.pull-right[]`
-- `.left-column[]` and `.right-column[]`
-- `.right[]`
-- `.footnote[]`
-- images inserted with `background-image:` or `![alt](url)`
-- slide classes like `inverse`, `middle`, `center`
-- horizontal bars using `---`
-- presenter notes using `???` (hint: press the letter <kbd>P</kbd>)
+Explore the HTML slide deck and see if you can identify the following classes and features built into xaringan, then check the Rmd file to see if you were correct.
+
+<div class="checklist">
+
+-   <input id="" type="checkbox"></input> lists (ordered and unordered)
+-   <input id="" type="checkbox"></input> quotes inserted with `>`
+-   <input id="" type="checkbox"></input> `.pull-left[]` and `.pull-right[]`
+-   <input id="" type="checkbox"></input> `.left-column[]` and `.right-column[]`
+-   <input id="" type="checkbox"></input> `.right[]`
+-   <input id="" type="checkbox"></input> `.footnote[]`
+-   <input id="" type="checkbox"></input> images inserted with `background-image:` or `![alt](url)`
+-   <input id="" type="checkbox"></input> slide classes like `inverse`, `middle`, `center`
+-   <input id="" type="checkbox"></input> horizontal bars using `---`
+-   <input id="" type="checkbox"></input> presenter notes using `???` (hint: press the letter <kbd>P</kbd>)
+
+</div>
 
 </div>
 
