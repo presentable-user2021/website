@@ -8,7 +8,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/05-accessible-design.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -25,30 +25,19 @@ xaringanExtra::use_clipboard()
 xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
 
-## Goal 
-
-Understand why accessibility is important and what to consider when designing slides
-- Structure text and graphical content to be cognitively and functionally accessible to the audience
-
-## Material
-
-- accessible products essential for some but useful for all
-- principles of inclusive design
-- inclusive & accessible design as pertaining to xaringan (alt-text, colors, markdown)
-
 ## Activity
 
 ::: activity-table
 |           |                                     |
 |:----------|:------------------------------------|
-| Time      | 10 minutes                          |
+| Time      | 15 minutes                          |
 | Materials | `05-accessible-design/start.Rmd`    |
 :::
 
 ::: activity-step
-Open and preview this slide deck: `05-accessible-design/start.Rmd`
+Open and preview this slide deck: `05-accessible-design/01-start.Rmd`
 
-Restart your R session and run `xaringan::inf_mr()` to preview the slides rendered in HTML
+Restart your R session and run `xaringan::infinite_moon_reader()` to preview the slides rendered in HTML
 :::
 
 ::: activity-step
@@ -99,7 +88,7 @@ Color contrast checking tools:
 
 - **Recommended:** [Contrast Checker by WebAIM](https://webaim.org/resources/contrastchecker/). We like this tool because the site itself is designed to be accessible and the tool gives you the ability to adjust the color lightness.
 
-- [Accessible Brand Colors by Use All Five](https://abc.useallfive.com/). This tool helps you check the color contrast of multiple colors at once and displays the color contrast ratio for each combination.
+- [A11y Rocks! Color Palette Tool by Matt Long](http://a11yrocks.com/colorPalette/). This tool helps you check the color contrast of multiple colors at once and displays the color contrast ratio for each combination.
 
 - [Accessible color palette builder by Atul Varma](https://toolness.github.io/accessible-color-matrix/). This tool also helps you check multiple color contrasts at once and its minimalist design emphasizes only the combinations that meet color contrast guidelines.
 
