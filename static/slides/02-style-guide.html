@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>From Style Guide to xaringan Theme</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Garrick Aden-Buie &amp; Silvia Canelón" />
+    <meta name="date" content="2021-07-07" />
+    <script src="assets/libs/header-attrs/header-attrs.js"></script>
+    <link href="assets/libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="assets/libs/tile-view/tile-view.js"></script>
+    <link href="assets/libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x5a8ab0f0f694026bfca96ffb32f2e88","expires":14}</script>
+    <script src="assets/libs/himalaya/himalaya.js"></script>
+    <script src="assets/libs/js-cookie/js.cookie.js"></script>
+    <link href="assets/libs/editable/editable.css" rel="stylesheet" />
+    <script src="assets/libs/editable/editable.js"></script>
+    <script src="assets/libs/clipboard/clipboard.min.js"></script>
+    <link href="assets/libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="assets/libs/shareon/shareon.min.js"></script>
+    <link href="assets/libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="assets/libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="assets/libs/js4shiny/css/_variables-fonts.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/_variables.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/css/code.css" rel="stylesheet" />
+    <link href="assets/libs/js4shiny/jsonview/jsonview.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny/jsonview/jsonview.min.js"></script>
+    <link href="assets/libs/js4shiny-redirectConsoleLog/jslog.css" rel="stylesheet" />
+    <script src="assets/libs/js4shiny-redirectConsoleLog/redirectConsoleLog.js"></script>
+    <meta name="description" content="Slides for &quot;From Style Guide to xaringan Theme&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:title" content="From Style Guide to xaringan Theme | Professional, Polished, Presentable"/>
+    <meta name="twitter:description" content="Slides for &quot;From Style Guide to xaringan Theme&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta name="twitter:url" content="https://presentable-user2021.netlify.app"/>
+    <meta name="twitter:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
+    <meta name="twitter:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@grrrck"/>
+    <meta name="twitter:site" content="@grrrck"/>
+    <meta property="og:title" content="From Style Guide to xaringan Theme | Professional, Polished, Presentable"/>
+    <meta property="og:description" content="Slides for &quot;From Style Guide to xaringan Theme&quot; from the &quot;Professional, Polished, Presentable&quot; tutorial at useR!2021"/>
+    <meta property="og:url" content="https://presentable-user2021.netlify.app"/>
+    <meta property="og:image" content="https://presentable-user2021.netlify.app/img/presentabe-social.png"/>
+    <meta property="og:image:alt" content="The eye of xaringan with the title of the tutorial: Professional, Polished, Presentable, Presentable: Making great xaringan slides. A tutorial at useR!2021 by Garrick Aden-Buie and Silvia Canelón."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Garrick Aden-Buie"/>
+    <meta property="article:author" content="Silvia Canelón"/>
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: title
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.blue--hover:hover, .blue--hover:focus {
+  color: var(--blue);
+}
+&lt;/style&gt;
+
+<div class="scene f2 absolute top-0 left-0 w-10 bg-red bg-blue">2</div>
+<h1>From Style Guide to xaringan Theme</h1>
+<h2>xaringanthemer</h2>
+<div class="conf-logo"></div>
+<div class="talk-meta">
+<p class="talk-author">Garrick Aden-Buie &amp; Silvia Canelón</p>
+<p class="talk-date">Professional, Polished, Presentable</p>
+</div>
+
+---
+class: header_background
+
+# Do you have your style guide?
+
+.flex.w-100.items-start.justify-center.mt4[
+
+&lt;div class="ba bw1 br3 b--silver w-80 pv2 silver f4 relative" style="padding-left:2.5em;"&gt;
+&lt;button class="absolute left-1 b--none silver pa0 ma0 blue--hover grow bg--white" id="fake-search"&gt;
+&lt;svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"&gt;&lt;path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/&gt;&lt;/svg&gt;
+&lt;/button&gt;
+&lt;div class="can-edit"&gt;airbnb branding guide&lt;/div&gt;
+&lt;/div&gt;
+
+]
+
+--
+
+&lt;div class="animated bounceInLeft" style="position:absolute; bottom: 80px;"&gt;
+&lt;img src="assets/img/02/airbnb-colors.png" 
+     height="200"
+     class="shadow-5"
+     style="transform: rotate(-13deg);"
+     fig.alt = "Screenshot of the colors in AirBnB's branding guide." 
+/&gt;
+&lt;/div&gt;
+
+&lt;div class="animated bounceInUp delay-1s" style="position: absolute; bottom: 60px; left: 280px;"&gt;
+&lt;img src="assets/img/02/airbnb-fonts.png" 
+     height="200"
+     class="shadow-5"
+     style="transform: rotate(5deg);"
+     fig.alt = "Screenshot of the fonts in AirBnB's branding guide." 
+/&gt;
+&lt;/div&gt;
+
+&lt;div class="animated bounceInUp delay-2s" style="position: absolute; bottom: 140px; right: 340px;"&gt;
+&lt;img src="assets/img/02/airbnb-logos.png" 
+     height="210"
+     class="shadow-5"
+     style="transform: rotate(-5deg);"
+     fig.alt = "Screenshot of AirBnB's logos from their branding guide." 
+/&gt;
+&lt;/div&gt;
+
+&lt;div class="animated bounceInRight delay-3s" style="position: absolute; bottom: 40px; right: 80px;"&gt;
+&lt;img src="assets/img/02/airbnb-examples.png" 
+     height="200"
+     class="shadow-5"
+     style="transform: rotate(1deg);"
+     fig.alt = "Screenshot of AirBnB's logos from their branding guide." 
+/&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById("fake-search").addEventListener("click", function() {
+  slideshow.gotoNextSlide()
+})
+&lt;/script&gt;
+
+---
+
+
+
+# Our favorite style guides
+
+- GOV.UK Design System
+<a href="https://design-system.service.gov.uk/"><svg aria-label="GOV.UK Design System" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GOV.UK Design System</title><path d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"/></svg></a>
+
+- Urban Institute Data Visualization Style Guide
+<a href="http://urbaninstitute.github.io/graphics-styleguide/"><svg aria-label="Urban Institute Data Visualization Style Guide" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Urban Institute Data Visualization Style Guide</title><path d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"/></svg></a>
+
+- U.S. Web Design System
+<a href="https://designsystem.digital.gov/"><svg aria-label="U.S. Web Design System" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>U.S. Web Design System</title><path d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"/></svg></a>
+
+- Adele: A Design System Repository
+<a href="https://adele.uxpin.com/"><svg aria-label="Adele: A Design System Repository" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Adele: A Design System Repository</title><path d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"/></svg></a>
+
+---
+class: break center middle
+
+&lt;img src="assets/img/02/xaringanthemer.png" alt="xaringanthemer hex logo" style="filter: drop-shadow(0.1rem 0.5rem 0.3rem rgba(255, 0, 0, 0.5));"&gt;
+
+---
+layout: true
+
+# xaringanthemer
+
+---
+
+![A side-by-side comparison of the default xaringan theme with the xaringanthemer theme.](assets/img/02/xaringan-plus-themer.jpg)
+
+---
+
+.pull-left[
+![Create a new R markdown document](assets/img/02/rstudio-new-rmarkdown.png)
+]
+
+--
+
+.pull-right[
+![Create a new R markdown document](assets/img/02/rstudio-new-xaringanthemer.png)
+]
+
+---
+
+````
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+````
+
+---
+
+````
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+
+*style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+*)
+```
+````
+
+.pull-left[
+&lt;h3 class="mv1 tc bb bw1"&gt;Monotone&lt;/h3&gt;
+
+- `style_mono_light()`
+- `style_mono_dark()`
+- `style_mono_accent()`
+- `style_mono_accent_inverse()`
+]
+
+.pull-right[
+&lt;h3 class="mv1 tc bb bw1"&gt;Duotone&lt;/h3&gt;
+
+- `style_duo()`
+- `style_duo_accent()`
+- `style_duo_accent_inverse()`
+]
+
+---
+class: header_background center middle
+
+# Activity Time
+
+.blue.f4[
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg>
+[materials/act-01/02-style-guide](/materials/act-01/02-style-guide/#activity)
+]
+
+Build your own complete .pkg[xaringan] theme with .pkg[xaringanthemer]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="assets/js/remark.0.14.1.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"highlightStyle": "docco",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script>
+(function (d) {
+  d.addEventListener('DOMContentLoaded', function () {
+    // find code chunks that get special colors
+    const langSpecial = ['r', 'js', 'yaml', 'json', 'bash', 'html', 'css']
+    const codeSpecial = d.querySelectorAll(langSpecial.map(l => 'pre code.' + l))
+
+    // find code chunks with highlighted lines
+    const hlines = d.querySelectorAll('.remark-code-line-highlighted')
+    const preHLParents = []
+
+    const findPreParent = function (line, p = 0) {
+      if (p > 1) return null // traverse up no further than grandparent
+      const el = line.parentElement
+      if (el.tagName === 'PRE') {
+        return el
+      } else {
+        return findPreParent(el, ++p)
+      }
+    }
+
+    // add the code language to the parent <pre> element
+    for (const code of codeSpecial) {
+      const pre = findPreParent(code)
+      const codeLang = code.className.split(' ').filter(c => langSpecial.includes(c))
+      pre.classList += ` ${codeLang}`
+    }
+
+    // add remark-code-has-line-highlighted to parent <pre> element
+    for (const line of hlines) {
+      const pre = findPreParent(line)
+      if (pre && !preHLParents.includes(pre)) preHLParents.push(pre)
+    }
+    preHLParents.forEach(p => p.classList += ' remark-code-has-line-highlighted')
+
+    slideshow.on('afterShowSlide', function (slide) {
+      replaceIframePlaceholders()
+    })
+
+    replaceIframePlaceholders()
+  })
+})(document)
+
+function replaceIframePlaceholders () {
+  document
+    .querySelectorAll('.remark-slides-area .remark-visible div[data-iframe]')
+    .forEach(el => replaceIframePlaceholder(el))
+}
+
+function replaceIframePlaceholder (el) {
+    const iframe = document.createElement('iframe')
+    if (el.childNodes) {
+      el.childNodes.forEach(e => iframe.appendChild(e))
+    }
+    iframe.src = el.dataset.src
+    iframe.classList = el.classList
+    el.parentElement.replaceChild(iframe, el)
+}
+</script>
+<style>
+  .remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+    opacity: 0.4;
+  }
+
+  .remark-code-line-highlighted {
+    background-color: inherit; /* Override highlight color */
+    /* font-weight: 500; */
+  }
+
+  /* Line Hover Indicator */
+  .remark-code-line:hover {
+    font-weight: bold;
+    opacity: 1 !important;
+  }
+
+  .remark-code-line:hover:before {
+    content: "\25B6";
+    color: #6d7e8a;
+    position: absolute;
+    transform: translateX(-1.2em);
+    animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translateX(-1.2em);
+    }
+    100% {
+      transform: translateX(-0.8em);
+    }
+  }
+</style>
+
+  </body>
+</html>
