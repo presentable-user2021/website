@@ -490,9 +490,11 @@ This content will show up in the **second panel**!
 ---
 
 ````markdown
+
 ```{r lemur-weight}`r ''`
 `r paste(knitr:::knit_code$get("lemur-weight")[-1:-4], collapse = "\n")`
 ```
+
 ````
 
 ---
@@ -531,7 +533,7 @@ class: header_background center middle
 
 .f4[
 .blue[`r fontawesome::fa("theater-masks")`]
-[materials/act-03/08-more-css](/materials/act-02/03-xaringan-extras/#activity)
+[materials/act-01/03-xaringan-extras](/materials/act-01/03-xaringan-extras/#activity)
 ]
 
 Practice controlling code output and using panelsets.
