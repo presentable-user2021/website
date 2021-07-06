@@ -38,8 +38,10 @@ links:
 
 ### Goal
 
-`03-start.Rmd` contains one slide with a plot and the code used to create it.
-Our goal is to present both the code and the plot.
+`03-start.Rmd` contains one slide with a plot and the code used to create it,
+but neither is presented well.
+Our goal for this activity is to present both the code and the plot
+in a way that helps the presenter and the audience.
 
 ### Two Slides
 
