@@ -191,6 +191,8 @@ library(xaringanthemer)
 ```
 ````
 
+--
+
 .pull-left[
 <h3 class="mv1 tc bb bw1">Monotone</h3>
 
@@ -199,6 +201,8 @@ library(xaringanthemer)
 - `style_mono_accent()`
 - `style_mono_accent_inverse()`
 ]
+
+--
 
 .pull-right[
 <h3 class="mv1 tc bb bw1">Duotone</h3>

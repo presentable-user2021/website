@@ -224,4 +224,4 @@ class: header_background f5
 
 1. A regular slide with a bit of text<br>&#x1F449; a sidebar image **slide template**
 
-&#x1F9D1;&#x200D;&#x1F4BB; [materials/act-03/09-design-components](https://presentable-user2021.netlify.app/materials/act-03/09-design-components/)
+.blue[`r fontawesome::fa("theater-masks")`] [materials/act-03/09-design-components](https://presentable-user2021.netlify.app/materials/act-03/09-design-components/)
