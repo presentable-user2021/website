@@ -8,7 +8,8 @@
     <script src="assets/libs/header-attrs/header-attrs.js"></script>
     <link href="assets/libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="assets/libs/tile-view/tile-view.js"></script>
-    <link href="assets/libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="assets/libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="assets/libs/panelset/panelset.js"></script>
     <script src="assets/libs/clipboard/clipboard.min.js"></script>
     <link href="assets/libs/shareon/shareon.min.css" rel="stylesheet" />
     <script src="assets/libs/shareon/shareon.min.js"></script>
@@ -19,6 +20,10 @@
     <script src="assets/libs/js-cookie/js.cookie.js"></script>
     <link href="assets/libs/editable/editable.css" rel="stylesheet" />
     <script src="assets/libs/editable/editable.js"></script>
+    <script src="assets/libs/fabric/fabric.min.js"></script>
+    <link href="assets/libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="assets/libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#d33f49"],"pen_size":4,"eraser_size":40,"palette":["#d33f49","#466683","#338d70","#c0af3f","#ff6300","#993d70"]}) })</script>
     <link href="assets/libs/js4shiny/css/_variables-fonts.css" rel="stylesheet" />
     <link href="assets/libs/js4shiny/css/_variables.css" rel="stylesheet" />
     <link href="assets/libs/js4shiny/css/code.css" rel="stylesheet" />
@@ -168,12 +173,472 @@ Press
 class: fullscreen
 
 &lt;video controls width="1210" height="681"&gt;
-
-    &lt;source src="assets/img/03-xaringan-extras/sharing-with-presenter-notes.mp4"
-            type="video/mp4"&gt;
-
-    Sorry, your browser doesn't support embedded videos.
+    &lt;source src="assets/img/03-xaringan-extras/sharing-with-presenter-notes.mp4" type="video/mp4"&gt;
+    &lt;source src="assets/img/03-xaringan-extras/sharing-with-presenter-notes.gif" type="video/gif"&gt;
+    &lt;img src="assets/img/03-xaringan-extras/sharing-with-presenter-notes.png"/&gt;
 &lt;/video&gt;
+
+---
+
+class: break break-shiny
+
+# Code + Plots
+
+.f-lato.f6.i[
+The greatest hard thing about xaringan.
+]
+
+---
+
+
+```r
+library(dplyr)
+library(ggplot2)
+lemurs &lt;- readRDS("lemurs.rds")
+
+lemurs %&gt;%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %&gt;%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+
+&lt;img src="assets/figure/03-xaringan-extras_lemur-weight-1.png" width="720" /&gt;
+
+--
+
+.absolute.right-1.top-0.bottom-0.w-35.blue.f3.tr[
+How can we&lt;br&gt;show the **code**&lt;br&gt;and the **plot**&lt;br&gt;separately?
+]
+
+---
+layout: true
+
+# Two Little Things to Control Output
+
+---
+
+````
+```{r lemur-weight}
+# any R code ...
+```
+````
+---
+
+````
+```{r lemur-weight, eval=FALSE}
+# any R code ...
+```
+````
+
+---
+
+````
+```{r lemur-weight, eval=FALSE}
+# any R code ...
+```
+
+---
+
+```{r ref.label="lemur-weight", echo=FALSE}
+
+```
+````
+
+---
+
+````
+```{r lemur-weight}
+# plotting R code ...
+```
+````
+
+---
+
+````
+```{r lemur-weight}
+# plotting R code ...
+```
+
+![](slide_files/figure-html/lemur-weight-1.png)
+````
+
+---
+
+````
+```{r lemur-weight, fig.show="hide"}
+# plotting R code ...
+```
+
+![](`r knitr::fig_chunk("lemur-weight", "png")`)
+````
+
+---
+
+````
+```{r lemur-weight, fig.show="hide"}
+# plotting R code ...
+```
+
+---
+
+![](`r knitr::fig_chunk("lemur-weight", "png")`)
+````
+
+---
+
+````
+```{r lemur-weight, fig.show="hide"}
+# plotting R code ...
+```
+
+---
+background-image: url(`r knitr::fig_chunk("lemur-weight", "png")`)
+background-size: cover
+
+````
+
+---
+
+.panelset[
+
+.panel[.panel-name[Code]
+
+```r
+lemurs %&gt;%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %&gt;%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+
+]
+
+.panel[.panel-name[Output]
+
+&lt;img src="assets/figure/03-xaringan-extras_lemur-weight-1-1.png" width="720" /&gt;
+
+]
+
+]
+
+---
+layout: false
+class: break break-xaringanextra center middle white
+
+&lt;style type="text/css"&gt;
+.break-xaringanextra {
+  background-color: rgb(153, 70, 132);
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: linear-gradient(45deg, rgba(58, 58, 197, 0.5) 0%, rgba(58, 58, 197, 0.5) 16.667%, rgba(94, 66, 189, 0.5) 16.667%, rgba(94, 66, 189, 0.5) 33.334%, rgba(130, 74, 181, 0.5) 33.334%, rgba(130, 74, 181, 0.5) 50.001%, rgba(167, 82, 173, 0.5) 50.001%, rgba(167, 82, 173, 0.5) 66.668%, rgba(203, 90, 165, 0.5) 66.668%, rgba(203, 90, 165, 0.5) 83.335%, rgba(239, 98, 157, 0.5) 83.335%, rgba(239, 98, 157, 0.5) 100.002%), linear-gradient(135deg, rgb(124, 22, 73) 0%, rgb(124, 22, 73) 16.667%, rgb(149, 30, 78) 16.667%, rgb(149, 30, 78) 33.334%, rgb(174, 38, 83) 33.334%, rgb(174, 38, 83) 50.001%, rgb(200, 45, 88) 50.001%, rgb(200, 45, 88) 66.668%, rgb(225, 53, 93) 66.668%, rgb(225, 53, 93) 83.335%, rgb(250, 61, 98) 83.335%, rgb(250, 61, 98) 100.002%);
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+}
+.link-purple a {
+  color: var(--purple);
+  text-decoration: underline;
+}
+.highlight-last-item &gt; ul &gt; li, 
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+/* small fixes for scribble interacting with tachyons */
+.xe-scribble__button {
+  padding: 0 3px;
+  height: 32px;
+  line-height: 1;
+}
+:root {
+  --primary: #4d8dc9;
+  --secondary: #44bc96;
+}
+&lt;/style&gt;
+
+# .f-lato.normal[xaringanExtra]
+
+---
+layout: true
+class: link-purple
+
+# What can xaringanExtra do?
+
+---
+
+-   Add an overview of your presentation with [tile view](https://pkg.garrickadenbuie.com/xaringanExtra/#/tile-view)
+-   Make your slides [editable](https://pkg.garrickadenbuie.com/xaringanExtra/#/editable)
+-   Share your slides in style with [share again](https://pkg.garrickadenbuie.com/xaringanExtra/#/share-again)
+-   Broadcast your slides in real time to viewers with [broadcast](https://pkg.garrickadenbuie.com/xaringanExtra/#/broadcast)
+-   Scribble on your slides during your presentation with [scribble](https://pkg.garrickadenbuie.com/xaringanExtra/#/scribble)
+-   Announce slide changes with a [subtle tone](https://pkg.garrickadenbuie.com/xaringanExtra/#/slide-tone)
+-   Animate slide transitions with [animate.css](https://pkg.garrickadenbuie.com/xaringanExtra/#/animate-css)
+-   Add tabbed panels to slides with [panelset](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
+-   Add a logo to all of your slides with [logo](https://pkg.garrickadenbuie.com/xaringanExtra/#/logo)
+-   Add a search box to search through your slides with [search](https://pkg.garrickadenbuie.com/xaringanExtra/#/search)
+-   Use the [Tachyons CSS utility toolkit](https://pkg.garrickadenbuie.com/xaringanExtra/#/tachyons)
+-   Add a live video feed of your [webcam](https://pkg.garrickadenbuie.com/xaringanExtra/#/webcam)
+-   Add one-click code copying with [clipboard](https://pkg.garrickadenbuie.com/xaringanExtra/#/clipboard)
+-   Always play gifs from the start with [freezeframe](https://pkg.garrickadenbuie.com/xaringanExtra/#/freezeframe)
+-   Fit your slides to [fill the browser window](https://pkg.garrickadenbuie.com/xaringanExtra/#/fit-to-screen)
+-   Add [extra CSS styles](https://pkg.garrickadenbuie.com/xaringanExtra/#/extra-styles)
+
+---
+layout: true
+class: link-purple highlight-last-item
+
+# **Some things** xaringanExtra can do
+
+---
+
+-   Add tabbed panels to slides with [panelset](https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset)
+
+--
+
+-   Add an overview of your presentation with [tile view](https://pkg.garrickadenbuie.com/xaringanExtra/#/tile-view)
+
+--
+
+-   .can-edit[Make your slides [editable](https://pkg.garrickadenbuie.com/xaringanExtra/#/editable)]
+
+--
+
+-   Scribble on your slides during your presentation with [scribble](https://pkg.garrickadenbuie.com/xaringanExtra/#/scribble)
+
+--
+
+-   Share your slides in style with [share again](https://pkg.garrickadenbuie.com/xaringanExtra/#/share-again)
+
+---
+layout: false
+
+# **How to use** xaringanExtra?
+
+```r
+library(remotes)
+install_github("gadenbuie/xaringanExtra")
+```
+
+--
+
+````markdown
+```{r xaringanExtra, echo=FALSE}
+library(xaringanExtra)
+use_xaringan_extra(
+  c("tile_view", "panelset", "share_again", "editable")
+)
+use_scribble(
+  pen_color = "#d33f49", 
+  pen_size = 4,
+  palette = c("#d33f49", "#466683", "#338d70", "#c0af3f", "#ff6300")
+)
+```
+````
+
+---
+layout: true
+
+# How to use **panelsets**
+
+---
+
+````markdown
+*.panelset[
+
+
+
+*]
+````
+
+---
+
+````markdown
+.panelset[
+*.panel[
+
+*]
+]
+````
+
+---
+
+````markdown
+.panelset[
+.panel[
+*This content will show up in panel 1!
+]
+]
+````
+
+---
+
+````markdown
+.panelset[
+*.panel[.panel-name[First panel]
+
+This content will show up in panel 1!
+]
+]
+````
+
+---
+
+````markdown
+.panelset[
+.panel[.panel-name[First panel]
+
+This content will show up in panel 1!
+]
+
+*.panel[.panel-name[Second panel]
+*
+*This content will show up in the **second panel**!
+*]
+]
+````
+
+---
+
+.panelset[
+.panel[.panel-name[First panel]
+
+This content will show up in panel 1!
+]
+
+.panel[.panel-name[Second panel]
+
+This content will show up in the **second panel**!
+]
+]
+
+---
+
+````markdown
+```{r lemur-weight}
+lemurs %&gt;%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %&gt;%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+````
+
+---
+
+````markdown
+*.panelset[
+```{r lemur-weight}
+lemurs %&gt;%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %&gt;%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+*]
+````
+
+---
+
+````markdown
+.panelset[
+*```{r lemur-weight, panelset = TRUE}
+lemurs %&gt;%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %&gt;%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+]
+````
+
+---
+
+.panelset[
+
+.panel[.panel-name[Code]
+
+```r
+lemurs %&gt;%
+  filter(
+    common_name == "Ring-Tailed Lemur",
+    between(age_at_wt_y, 1, 5)
+  ) %&gt;%
+  ggplot() +
+  aes(x = age_at_wt_y, y = weight) +
+  geom_point() +
+  labs(
+    x = "Age at Weight",
+    y = "Weight (g)",
+    title = "Weight Gain of Young Ring-Tailed Lemurs"
+  )
+```
+
+]
+
+.panel[.panel-name[Output]
+
+&lt;img src="assets/figure/03-xaringan-extras_lemur-weight-2-1.png" width="720" /&gt;
+
+]
+
+]
+
+---
+class: header_background center middle
+
+# Activity Time
+
+.f4[
+.blue[<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg>]
+[materials/act-03/08-more-css](/materials/act-02/03-xaringan-extras/#activity)
+]
+
+Practice controlling code output and using panelsets.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="assets/js/remark.0.14.1.min.js"></script>
