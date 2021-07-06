@@ -25,6 +25,10 @@ xaringanExtra::use_clipboard()
 xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
 
+## Topic
+
+We will review some of the built-in features of the [xaringan]{.pkg} and use `xaringan::infinite_moon_reader()` to render a live preview of the slides for quick iterations.
+
 ## Activity
 
 ::: activity-table
