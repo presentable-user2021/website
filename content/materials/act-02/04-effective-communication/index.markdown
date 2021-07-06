@@ -1,13 +1,14 @@
 ---
 title: "04: Effective Communication"
 weight: 1
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/04-effective-communication.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -20,28 +21,24 @@ links:
 <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="/slides/03-why-r.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="/slides/04-effective-communication.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
-## Goal
-
-Understand how to organize content to help focus your audience’s attention
-
-## Material
-
--   using content classes
--   writing descriptive titles (i.e. give your audience the answer)
--   add presenter notes
--   use incremental reveals (a11y caveat here)
--   declutter
--   if it’s not critical don’t include it (use backup slides)
--   present graph & html table versions (with backup slides, but panelsets could also be good for this)
-
 ## Activity
 
-Time: ⏱ 10 minutes
+<div class="activity-table">
 
-Open and preview this slide deck: materials/act-02/04-effective-communication.Rmd
+|      |            |
+|:-----|:-----------|
+| Time | 15 minutes |
 
--   identify and talk through all of the different ways an ineffective slide could be made better. what xaringan tools do you already have that you could use?
+</div>
+
+<div class="activity-step">
+
+In this activity, we’ll be working together
+
+Follow allow with us in the slides linked above as we learn about different ways we can leverage `xaringan` and thoughtful design principles to build more effective presentations.
+
+</div>

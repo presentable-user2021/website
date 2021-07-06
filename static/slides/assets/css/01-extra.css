@@ -3,8 +3,27 @@
   color: #FFFFFF;
 }
 
+.inverse a,
 .inverse h1,
 .inverse h2,
 .inverse h3 {
   color: #FFFFFF;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
+.pull-right+* {
+  clear: both;
 }
