@@ -418,10 +418,13 @@ knitr::kable(
 .footnote[[.gray.underline[Colors from coolors]](https://coolors.co/fb5607-ff006e-8338ec-38a88e-87826e)]
 
 ---
-class: center middle
+class: center middle header_background
 
 # Activity Time
 
 .f4[
+.blue[`r fontawesome::fa("theater-masks")`]
 [materials/act-03/08-more-css](/materials/act-03/08-more-css/#activity)
+
+Practice using CSS variables and selectors.
 ]

@@ -1,0 +1,156 @@
+---
+scene: 3
+title: "xaringan Extras"
+subtitle: "xaringanExtra"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: title
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+`r title_slide()`
+
+---
+
+# That little bit &#x2728; .green[extra] &#x2728;
+
+Using .pkg[xaringan] or .pkg[rmarkdown]
+
+1. Presenter notes
+1. Separate code chunks and their output
+
+Using .pkg[xaringanExtra]
+
+---
+class: break center middle
+
+# .f-marker[Presenter<br/>Notes]
+
+---
+class: f5
+
+```md
+---
+
+## Popular Cultural References to Lemurs
+
+1. Madagascar, the movie
+```
+
+---
+class: f5
+
+```md
+---
+
+## Popular Cultural References to Lemurs
+
+1. Madagascar, the movie
+
+???
+
+Popular cultural references to lemurs include the Disney movie Madagascar. Really, it's all anyone knows about lemurs.
+```
+
+---
+
+## Popular Cultural References to Lemurs
+
+1. Madagascar, the movie
+
+.absolute.bottom-1.left-2.f5[
+Press <kbd>P</kbd> to toggle **presenter mode**
+]
+
+???
+
+Popular cultural references to lemurs
+include the Disney movie Madagascar.
+Really, it's all anyone knows about lemurs.
+
+---
+
+## Presenter Mode Tips
+
+- The notes don't have to be just for you!
+
+- If they are for you...
+
+???
+
+The notes in presenter mode aren't just to remind you of your script,
+they can also be very helpful to others who find your slides online!
+
+How can you view the presenter notes and share your screen at the same time?
+
+--
+
+### Presenting in video
+
+1. .relative[Present from the private browser window .orange[without moon reader] <img src="assets/img/rstudio-viewer-popout.png" alt="RStudio Viewer Popout Button" class="v-btm" style="height: 52px;position: absolute;top: -10px;">]
+
+2. Clone the slides into a new window with <kbd>C</kbd>
+
+3. Pick the full browser or the cloned window to share
+
+4. Press <kbd>P</kbd> in the other window
+
+???
+
+Don't try to present from inside RStudio.
+Instead, use a **private** browser window,
+either from the slides shared online
+or using the **knit** button.
+
+Clone the slides into a new window and then choose either the small window or the full browser to share.
+If you want people to only see the slides, share the cloned window.
+If you want to share browser tabs, use the full browser.
+Press 
+
+---
+class: fullscreen
+
+<video controls width="1210" height="681">
+
+    <source src="assets/img/03-xaringan-extras/sharing-with-presenter-notes.mp4"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</video>
