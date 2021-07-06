@@ -25,6 +25,10 @@ links:
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 
+## Topic
+
+We will review some of the built-in features of the <span class="pkg">xaringan</span> and use `xaringan::infinite_moon_reader()` to render a live preview of the slides for quick iterations.
+
 ## Activity
 
 <div class="activity-table">
