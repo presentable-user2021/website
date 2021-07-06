@@ -302,3 +302,37 @@ live_coding <- function(
   )
   knitr::asis_output(x)
 }
+
+#' Create Slide Source Panels
+#'
+#' Make sure that the slide to be included has a `name: ` property,
+#' that's how the slide will be found. It also can't be a slide created with a
+#' layout.
+slide_source_panels <- function(slide_name, slide_panel = "Slide", source_panel = "Source") {
+  htmltools::tagList(
+    htmltools::withTags(
+      div(
+        class = "panel",
+        span(class = "panel-name", slide_panel),
+        div(`data-slide-name` = slide_name, `data-type` = "slide")
+      )
+    ),
+    if (!is.null(source_panel)) {
+      htmltools::withTags(
+        div(
+          class = "panel",
+          span(class = "panel-name", source_panel),
+          div(`data-slide-name` = slide_name, `data-type` = "source")
+        )
+      )
+    },
+    htmltools::htmlDependency(
+      name = "slide-source-panels",
+      version = "0.0.1",
+      src = here::here("static", "slides", "assets", "slide-source-panels"),
+      script = "slide-source-panels.js",
+      stylesheet = "slide-source-panels.css",
+      all_files = FALSE
+    )
+  )
+}

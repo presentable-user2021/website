@@ -1,0 +1,188 @@
+---
+scene: 0
+title: "Demo Slides"
+subtitle: "A work in progress!"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: title
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "panelset", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+`r title_slide()`
+
+---
+name: first-demo
+class: fullscreen
+
+.panelset.sideways.pl2.h-100[
+
+```{r echo=FALSE}
+# this function was added to components.R
+# it creates two panels, one with a copy of the slide (found by name)
+# and another panel with the markdown source for the slide (as seen by remark)
+# (If the slide source is complicated, you can set source_panel = NULL and 
+# manually add the source code in a panel.)
+slide_source_panels("fonts")
+```
+
+]
+
+---
+class: fullscreen
+
+.panelset.sideways.pl2.h-100[
+
+```{r echo=FALSE}
+slide_source_panels("html-resources")
+```
+
+.panel[.panel-name[Notes]
+
+## Good?
+
+## Bad?
+
+## What do you think?
+
+The slides are actually in the deck in a later section.
+I put them at the end in an "Appendix".
+
+The source is pulled from the compiled source, so you can't see R Markdown bits.
+
+]
+
+]
+
+---
+class: fullscreen
+
+.panelset.sideways.pl2.h-100[
+
+```{r echo=FALSE}
+slide_source_panels("break-javascript")
+```
+
+.panel[.panel-name[Notes]
+
+This slide doesn't look _perfect_ so somethings that rely on absolute positioning may be a little bit weird. Most basic xaringan stuff will probably look okay, though.
+
+]
+
+]
+
+---
+class: fullscreen
+
+.panelset.sideways.pl2.h-100[
+
+```{r echo=FALSE}
+slide_source_panels("first-demo", source_panel = NULL)
+```
+
+.panel[.panel-name[Source]
+
+This is where it gets **meta**.
+We're looking at a slide we saw earlier in the deck!
+
+This is the code I used to create that slide.
+
+````markdown
+---
+name: first-demo
+class: fullscreen
+
+.panelset.sideways.pl2.h-100[
+
+```{r echo=FALSE}`r ''`
+slide_source_panels("fonts")
+```
+
+]
+````
+
+I had to manually make this **Source** panel because it includes an Rmd chunk.
+
+]
+
+]
+---
+class: center middle
+
+# Appendix
+
+---
+class: break break-javascript
+name: break-javascript
+
+# JavaScript inspired break
+
+.absolute.top-1.left-1[break break-javascript]
+
+---
+name: fonts
+
+# Fonts
+
+.mh-auto.w-80.f5.mt4[
+.f-lato[Lato (body)] .fr.code[.f-lato]
+
+.f-nunito[Nunito Sans] .fr.code[.f-nunito]
+
+.f-marker[Marker] .fr.code[.f-marker]
+
+.f-source-code[Source Code Pro] .fr.code[.f-source-code]
+]
+
+---
+name: html-resources
+
+# HTML Resources
+
+* Mastering Shiny: Advanced UI<br>
+  https://mastering-shiny.org/advanced-ui.html
+
+* FrontEnd Masters Handbook<br>
+  https://frontendmasters.com/books/front-end-handbook/2019/
+
+* Interneting is Hard<br>
+  https://internetingishard.com/
+
+* HTML Semantics Cheat Sheet<br>
+  https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/
