@@ -17,7 +17,7 @@ cascade:
 
 +  Structure text and graphical content to be cognitively and functionally accessible to the audience
 +  Identify differences between ineffective and effective communication
-+  Use features from xaringanExtra, xaringan, and rmarkdown that strengthen clarity and accessibility of technical presentations
++  Use features from xaringan and rmarkdown that strengthen clarity and accessibility of technical presentations
 
 ## Materials
 

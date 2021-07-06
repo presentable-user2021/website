@@ -1,13 +1,14 @@
 ---
 title: "04: Effective Communication"
 weight: 1
-draft: yes
+show_post_date: false
+publishDate: 2021-07-06
 excerpt: ""
 links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "/slides/01-why-online.html"
+  url: "/slides/04-effective-communication.html"
 - icon: theater-masks
   icon_pack: fas
   name: activity
@@ -21,27 +22,21 @@ xaringanExtra::use_clipboard()
 ```
 
 ```{r embed-xaringan, echo=FALSE, eval=TRUE}
-xaringanExtra::embed_xaringan(url = "/slides/03-why-r.html", ratio = "16:9")
+xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = "16:9")
 ```
-
-## Goal
-
-Understand how to organize content to help focus your audience's attention
-
-## Material
-
-- using content classes
-- writing descriptive titles (i.e. give your audience the answer)
-- add presenter notes
-- use incremental reveals (a11y caveat here) 
-- declutter
-- if it's not critical don't include it (use backup slides)
-- present graph & html table versions (with backup slides, but panelsets could also be good for this)
 
 ## Activity
 
-Time: `r emo::ji("stopwatch")` 10 minutes
+::: activity-table
+|           |                                         |
+|:----------|:----------------------------------------|
+| Time      | 15 minutes                              |
+:::
 
-Open and preview this slide deck: materials/act-02/04-effective-communication.Rmd
+::: activity-step
+In this activity, we'll be working together
 
-- identify and talk through all of the different ways an ineffective slide could be made better. what xaringan tools do you already have that you could use?
+
+Follow allow with us in the slides linked above as we learn about different ways we can leverage `xaringan` and thoughtful design principles to build more effective presentations.
+
+:::
