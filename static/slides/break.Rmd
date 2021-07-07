@@ -48,6 +48,12 @@ xaringanExtra::use_editable(id = rmarkdown::metadata$title)
 js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
 ```
 
+```{css echo=FALSE}
+.activity a {
+  text-decoration: none;
+}
+```
+
 .pr6.pl3[
 <div class="f2 red mb1 f-galada">Intermission</div>
 <div class="f3">Professional,<br>Polished,<br>Presentable</div>
@@ -71,7 +77,7 @@ Professional, Polished, Presentable
 
 ---
 
-.f4[
+.f4.activity[
 `r fontawesome::fa("theater-masks")` .code[[act-01/01-introduction](https://presentable-user2021.netlify.app/materials/act-01/01-introduction/#activity)]
 ]
 
@@ -81,7 +87,7 @@ Professional, Polished, Presentable
 
 ---
 
-.f4[
+.f4.activity[
 `r fontawesome::fa("theater-masks")` .code[[act-01/02-style-guide](https://presentable-user2021.netlify.app/materials/act-01/02-style-guide/#activity)]
 ]
 
@@ -91,7 +97,7 @@ Professional, Polished, Presentable
 
 ---
 
-.f4[
+.f4.activity[
 `r fontawesome::fa("theater-masks")` .code[[act-01/03-xaringan-extras](https://presentable-user2021.netlify.app/materials/act-01/03-xaringan-extras/#activity)]
 ]
 
@@ -101,7 +107,7 @@ Professional, Polished, Presentable
 
 ---
 
-.f4[
+.f4.activity[
 `r fontawesome::fa("theater-masks")` .code[[act-03/08-more-css](https://presentable-user2021.netlify.app/materials/act-03/08-more-css/#activity)]
 ]
 
@@ -111,7 +117,7 @@ Professional, Polished, Presentable
 
 ---
 
-.f4[
+.f4.activity[
 `r fontawesome::fa("theater-masks")` .code[[act-03/09-design-components](https://presentable-user2021.netlify.app/materials/act-03/09-design-components/#activity)]
 ]
 
