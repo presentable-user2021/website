@@ -708,10 +708,10 @@ Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
 
 Add a screen-readable description of the slide’s background image.
 
-Add a `<div>` with `role="img"` and an `aria-label` attribute describing the image.
+Add a `<span>` with `role="img"` and an `aria-label` attribute describing the image.
 Start the description with *Slide background shows:* and then write a complete sentence describing the image.
 
-Put this `<div>` at the top of the slide content,
+Put this `<span>` at the top of the slide content,
 just after the slide properties,
 to ensure that it’s read out loud when entering the slide.
 
@@ -721,7 +721,7 @@ Checkpoint
 </summary>
 
 ``` html
-<div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
+<span role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></span>
 ```
 
 </details>
@@ -852,7 +852,7 @@ Checkpoint
     background-size: 400px 681px
     background-position: right
 
-    <div role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></div>
+    <span role="img" aria-label="Slide background shows: A lemur standing on a tree stump, looking directly at the camera."></span>
 
     .attribution[
     Photo by [Zdeněk Macháček](https://unsplash.com/@zmachacek)
@@ -980,7 +980,7 @@ Create a slide variable for the photo description.
 Checkpoint
 </summary>
 
-    <div role="img" aria-label="Slide background shows: {{photo_alt}}"></div>
+    <span role="img" aria-label="Slide background shows: {{photo_alt}}"></span>
 
     ---
     background-image: url(https://source.unsplash.com/83gB_koMuvA/400x681)
@@ -999,7 +999,7 @@ Repeat the task above for `photographer` and `photographer_url`.
 Checkpoint
 </summary>
 
-    <div role="img" aria-label="Slide background shows: {{photo_alt}}"></div>
+    <span role="img" aria-label="Slide background shows: {{photo_alt}}"></span>
 
     .attribution[
     Photo by [{{photographer}}]({{photographer_url}})
