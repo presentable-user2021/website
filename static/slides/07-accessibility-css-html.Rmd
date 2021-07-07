@@ -369,8 +369,10 @@ A .b[screen reader] will skip an icon with the basic HTML readily available on t
 .mt4[We could add [accessibility attributes](#special-attributes) like `role` and<br> `aria-label` to make icon to be accessible on its own]
 
 ---
-class: header_background, middle
+class: header_background, middle, center, f6
 
 # We are finished with this scene!
 
-## `r fa("theater-masks")` We can meet back at the<br> [07-accessibility-css-html activity](/materials/act-03/07-accessibility-css-html/#activity)
+## `r fa("theater-masks")` [materials/act-03/07-accessibility-css-html](/materials/act-03/07-accessibility-css-html/#activity)
+
+Leverage CSS and HTML to help make<br>slide customizations more accessible

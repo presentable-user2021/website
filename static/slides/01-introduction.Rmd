@@ -56,27 +56,27 @@ class: inverse, middle, center
 
 # Welcome!
 
-## Today we will learn how to make<br> .b[great] slides with xaringan (and friends)
+## Let's learn how to make great slides<br> with xaringan (and friends)
 
 ### Let's review a few things
 
 ---
+
 #  xaringan
 
-.pull-left[
+.f7.pull-left[
 .center[
-<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png" alt="xaringan package" width="150px">
+<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png" alt="" width="150px">
 
-.b[xaringan] is a package that introduces<br>`remark.js` to R Markdown
+.pkg[xaringan] introduces <br>.b[remark.js] to .pkg[rmarkdown]
 
-<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" alt="rmarkdown package" width="150px">
+<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" alt="" width="150px">
 
 ]]
-.pull-right[
-```{r}
-knitr::include_url("https://slides.yihui.org/xaringan")
-```
-[xaringan documentation](https://slides.yihui.org/xaringan)
+.mt4.pull-right[
+
+<a href="https://slides.yihui.org/xaringan"><img src="assets/img/01/docs-xaringan.png" alt="">xaringan documentation</a>
+
 ]
 
 ---
@@ -87,7 +87,7 @@ knitr::include_url("https://slides.yihui.org/xaringan")
 .center[
 ### `r fa("js-square", height="3em", a11y="deco")` <br>JavaScript
 
-### .b[and]
+.f6.b[and]
 
 ### `r fa("markdown", height="3em", a11y="deco")`<br>Markdown
 ]
@@ -95,17 +95,18 @@ knitr::include_url("https://slides.yihui.org/xaringan")
 
 .pull-right[
 "A simple, in-browser, Markdown-driven slideshow tool targeted at people who know their way around HTML and CSS."
-```{r}
-knitr::include_url("https://remarkjs.com", height = "375px")
-```
-[remarkjs documentation](https://remarkjs.com)
+
+<a href="https://remarkjs.com"><img src="assets/img/01/docs-remarkjs.png" alt="">remarkjs documentation</a>
+
 ]
 
 
 ---
+class: f7
+
 ## CSS
 
-.mb4[
+.f6.mb4[
 **CSS** stands for **C**ascading **S**tyle **S**heet, and turns...
 ]
 
@@ -118,7 +119,7 @@ width="100%" style="border:2px solid LightGray"/>
 ]
 
 .pull-right[
-...into HTML (content) with style! `r emo::ji("sunglasses")`
+...into HTML (content) with style! `r emo::ji("sunglasses")`<br><br>
 
 <img src="assets/img/01-title-slide.png"
 alt="Title slide with styling including a background image, cutom fonts, and content placement"
@@ -143,7 +144,7 @@ Open `01-introduction/01-start.Rmd`
 ]
 
 .mt4[
-Run `xaringan::infinite_moon_reader()` to preview the deck.
+Run `xaringan::infinite_moon_reader()` to preview the slides
 ]
 
 ---
@@ -187,8 +188,10 @@ library(tidyverse)            # collection of data science packages
 ```
 
 ---
-class: header_background, middle
+class: header_background, middle, center, f6
 
-# Time for the xaringan scavenger hunt!
+# Activity Time
 
-## `r fa("theater-masks")` Check the [01-introduction activity](/materials/act-01/01-introduction/#activity)<br>for some guidance
+## `r fa("theater-masks")` [materials/act-01/01-introduction](/materials/act-01/01-introduction/#activity)
+
+Time for the .pkg[xaringan] scavenger hunt!

@@ -67,17 +67,17 @@ class: header_background
 # How does xaringan already help us build effective presentations?
 
 .f7.mt4.mh4[
-`r fa("far fa-check-square", a11y="sem")` Use the right markup for your presentation’s structure
+`r fa("far fa-check-square", a11y="sem")` &emsp;Use the right markup for your presentation’s structure
 
-`r fa("far fa-check-square", a11y="sem")` Stick to widely used & open file formats
+`r fa("far fa-check-square", a11y="sem")` &emsp;Stick to widely used & open file formats
 
-`r fa("far fa-square")` Make "accessible" your default mindset 
+`r fa("far fa-square")` &emsp;Make "accessible" your default mindset 
 
-`r fa("far fa-square")` Design for the mode of delivery
+`r fa("far fa-square")` &emsp;Design for the mode of delivery
 
-`r fa("far fa-square")` Use clear and simple figures and graphics
+`r fa("far fa-square")` &emsp;Use clear and simple figures and graphics
 
-`r fa("far fa-square")` Write clearly
+`r fa("far fa-square")` &emsp;Write clearly
 ]
 
 .footnote[Guidelines from [Making Scientific Content More Accessible<br>by Goring, Stack Whitney, Jacob, Bruna, and Poisot](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible)]
@@ -335,25 +335,25 @@ From [The A11Y Project]()
 ## Let's [check the readability](https://www.webfx.com/tools/read-able/check.php) of our [lemur content](#focus-better)!]
 
 ---
-class: header_background middle
+class: header_background, middle
 
 # We are finished with this scene!
 
 .f7.mt4.mh4[
-`r fa("far fa-check-square")` Use the right markup for your presentation’s structure
+`r fa("far fa-check-square")` &emsp;Use the right markup for your presentation’s structure
 
-`r fa("far fa-check-square")` Stick to widely used & open file formats
+`r fa("far fa-check-square")` &emsp;Stick to widely used & open file formats
 
-`r fa("far fa-check-square")` Make "accessible" your default mindset 
+`r fa("far fa-check-square")` &emsp;Make "accessible" your default mindset 
 
-`r fa("far fa-check-square")` Design for the mode of delivery
+`r fa("far fa-check-square")` &emsp;Design for the mode of delivery
 
-`r fa("far fa-check-square")` Use clear and simple figures and graphics
+`r fa("far fa-check-square")` &emsp;Use clear and simple figures and graphics
 
-`r fa("far fa-check-square")` Write clearly
+`r fa("far fa-check-square")` &emsp;Write clearly
 ]
 
-## `r fa("theater-masks")` We can meet back at the [04 scene activity](/materials/act-02/04-effective-communication#activity)
+## `r fa("theater-masks")` [materials/act-02/04-effective-communication](/materials/act-02/04-effective-communication#activity)
 
 ---
 class: inverse middle

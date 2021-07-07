@@ -84,13 +84,13 @@ class: header_background
 
 .f7.mt5.mh4[
 
-`r fa("far fa-square")` .b[Make "accessible" your default mindset]
+`r fa("far fa-square")` &emsp;.b[Make "accessible" your default mindset]
 
-`r fa("far fa-square")` Support images with text 
+`r fa("far fa-square")` &emsp;Support images with text 
 
-`r fa("far fa-square")` Make sure hyperlinks are clear & unambiguous
+`r fa("far fa-square")` &emsp;Make sure hyperlinks are clear & unambiguous
 
-`r fa("far fa-square")` Choose colors carefully
+`r fa("far fa-square")` &emsp;Choose colors carefully
 
 ]
 
@@ -332,13 +332,13 @@ class: header_background
 # We are finished with the scene!
 
 .f7.mt4.mb4.mh4[
-`r fa("far fa-check-square")` .b[Make "accessible" your default mindset]
+`r fa("far fa-check-square")` &emsp;Make "accessible" your default mindset
 
-`r fa("far fa-check-square")` Support images with text 
+`r fa("far fa-check-square")` &emsp;Support images with text 
 
-`r fa("far fa-check-square")` Make sure hyperlinks are clear & unambiguous
+`r fa("far fa-check-square")` &emsp;Make sure hyperlinks are clear & unambiguous
 
-`r fa("far fa-check-square")` Choose colors carefully
+`r fa("far fa-check-square")` &emsp;Choose colors carefully
 ]
 
-## `r fa("theater-masks")` We can meet back at the<br>  [05-accessible-design activity](/materials/act-02/05-accessible-design/#activity)
+## `r fa("theater-masks")` [materials/act-02/05-accessible-design](/materials/act-02/05-accessible-design/#activity)
