@@ -49,6 +49,17 @@ js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
 `r title_slide()`
 
 ---
+class: center middle
+
+<img
+ class="w-80 shadow-5"
+ src="assets/img/06/ijeamaka_a-learn-css.png"
+ alt="Tweet from @ijeamaka_a on April 17, 2021: 'lol I can't believe that a desire to customize shiny apps and my xaringan slides scammed me into finally getting a baseline knowledge of css + HTML.' 179 likes."
+/>
+
+.footnote[[.blue[&commat;ijeamaka_a on April 17, 2021]](https://twitter.com/ijeamaka_a/status/1383504100470362116)]
+
+---
 class: header_background f6
 
 # Let's do this together!
