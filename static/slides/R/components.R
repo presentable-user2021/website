@@ -34,7 +34,7 @@ title_slide <- function(
         metathis::meta_social(
           title = glue::glue("{title} | Professional, Polished, Presentable"),
           url = "https://presentable-user2021.netlify.app",
-          image = "https://presentable-user2021.netlify.app/img/presentabe-social.png",
+          image = "https://presentable-user2021.netlify.app/img/presentable-social.png",
           image_alt = paste(
             "The eye of xaringan with the title of the tutorial: Professional,",
             "Polished, Presentable, Presentable: Making great xaringan slides.",
