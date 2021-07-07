@@ -1,0 +1,25 @@
+---
+title: "Slides"
+description: Slide Listing
+draft: false
+# layout options are standard (default) or wide-body
+layout: standard
+show_title_as_headline: true
+---
+
+Please see each set of slides in context in the [Materials page](/materials).
+
+```{r echo=FALSE}
+slides <- fs::dir_ls(here::here("static/slides"), regexp = "Rmd$")
+slides <- slides[!grepl("demo", slides)]
+slides <- sort(slides)
+
+htmltools::tags$ul(
+  purrr::map(slides, function(path) {
+    fs::path_ext(path) <- "html"
+    htmltools::tags$li(
+      htmltools::tags$a(href = fs::path_rel(path, here::here("static", "slides")), fs::path_ext_remove(fs::path_file(path)))
+    )
+  })
+)
+```
