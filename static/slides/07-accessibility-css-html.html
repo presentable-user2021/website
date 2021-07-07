@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="assets/css/js4shiny-xaringan-base.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/js4shiny-xaringan-extra.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/07-extra.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/01-extra.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -72,7 +72,7 @@ class: header_background f6
 
 # Let's do this together!
 
-Restart your R session  &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F10&lt;/kbd&gt;
+Restart your R session &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F10&lt;/kbd&gt;
 
 .mt4[
 Open `07-accessibility-css-html/07-start.Rmd`
@@ -86,11 +86,8 @@ Run `xaringan::infinite_moon_reader()` to preview your slides
 
 # Adding alt-text with HTML
 
-.pull-left[
-Sometimes we want to add images using raw HTML
-
-We can add alt-text to an `&lt;img&gt;` tag using HTML by using the `alt` attribute
-
+.f6[
+We can add alt-text to an `&lt;img&gt;` tag using raw HTML&lt;br&gt;by using the `alt` attribute
 
 ```html
 &lt;img 
@@ -98,49 +95,74 @@ src="common-black-lemur.jpg"
 alt="Common black lemur with a millipede in one hand and flies hovering overhead"
 /&gt;
 ```
+]
 
 .footnote[Resource: [Alternative text basics by WebAIM](https://webaim.org/techniques/alttext/#basics)]
+
+---
+class: f6 middle
+
+## <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg> Fun fact
+
+.pull-left[
+
+Common black lemurs will coax toxic millipedes to release toxins 🐛...
+
+...and then will use these toxins as insect repellant&lt;br&gt;by rubbing the millipedes all over their fur!
 
 ]
 
 .pull-right[
-
-.b[Fun fact:] Common black lemurs will coax toxic millipedes to release toxins and then will use these toxins as insect repellant by rubbing the millipedes all over their fur!
-
 &lt;img 
 src="assets/img/common-black-lemur.jpg" 
 alt="Common black lemur with a millipede in one hand and flies hovering overhead"
 width="400px"
 /&gt;
-
 ]
 
 ---
-class: header_background
+class: header_background f6
 
 # Replace the alt-text in slide 3
 
-In the slide titled "Common black lemurs are sexually dichromatic," .b[replace]:
+.pull-left[
+.mt4[
+In the slide titled "Common black lemurs are sexually dichromatic," .b[replace]:]
 
 &lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
 ```html
 alt = "Common black lemur with a millipede in one hand and flies hovering overhead"
 ```
+]
 
-.b[With this alternative] that better matches the information being conveyed:
+.pull-right[
+.mt4[
+.b[With this alternative] that better matches the information being conveyed:]
 
 &lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
 ```html
 alt = "Female common black lemur with brown-orange fur and white ear tufts"
 ```
+]
 
 ---
+class: f6
+name: special-attributes
 
 # Adding alt text to background images
 
-Sometimes we want to convey important information with an image that covers the slide
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/></svg> What if we need to add alt-text to background images?
 
-We can add alt-text to these images using the `&lt;span&gt;` tag and some special attributes
+We can use the `&lt;span&gt;` tag and some special attributes like `role` and `aria-label`
+
+```html
+&lt;span role="img" aria-label="Male common black lemur with rich black fur covering their entire body, and black ear tufts"&gt;&lt;/span&gt;
+```
+
+---
+class: f7
+
+## <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> In practice:
 
 &lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
 ```
@@ -166,6 +188,7 @@ background-size: cover
 
 
 ---
+class: f6
 
 # Styling links so that color&lt;br&gt;is not the only indicator
 
@@ -175,24 +198,19 @@ background-size: cover
 }
 &lt;/style&gt;
 
-.pull-left[
-Links on your slides contain important information (like references!) and should be easy to differentiate from non-link content
-
-The link styling most familiar to users is .ul[text underlining]
-]
+Links should be easy to identify among non-link content,&lt;br&gt;like with .ul[text underlining]
  
-.pull-right[
-We can apply this styling using the [`text-decoration` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) to the `a` (anchor) element.
+We can use the [text-decoration CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) to &lt;br&gt;style the `a` (anchor) element.
 
 ```css
 a {
   text-decoration: underline;
 }
 ```
-]
+
 
 ---
-class: header_background
+class: header_background f6
 
 # Apply underlining to your link text
 
@@ -207,20 +225,16 @@ a {
 }
 ```
 
-If you prefer to style your links with color, there are two [additional considerations for link appearance](https://webaim.org/techniques/hypertext/link_text#appearance) you need to consider: One involves color contrast and the other involves mouse hover and keyboard focus states.
-
 ---
+class: f6
 
 # Transforming text to uppercase
 
-.pull-left[
-Sometimes we want to style text with .upper[UPPERCASE] for emphasis or aesthetics.
+We can style text with .b.upper[UPPERCASE] for emphasis or aesthetics.
 
-It can be tempting to use the &lt;kbd&gt;Shift&lt;/kbd&gt; or &lt;kbd&gt;Caps Lock&lt;/kbd&gt; key to insert letters individually, but this can mean [screen readers read each letter individually](https://webaim.org/techniques/screenreader/#how), like an acronym.
-]
+Typing capitalized letters individually can cause&lt;br&gt; [screen readers to read each letter individually](https://webaim.org/techniques/screenreader/#how), like an acronym.
 
-.pull-right[
-We can apply .upper[UPPERCASE] styling using the [`text-transform` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+We can apply .upper[UPPERCASE] styling using the&lt;br&gt; [text-transform CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
 
 ```css
 .upper {
@@ -228,17 +242,26 @@ We can apply .upper[UPPERCASE] styling using the [`text-transform` CSS property]
 }
 ```
 
-Using the `.upper[]` class produces .upper[Capitalized Words] that still read like case-sensitive text to a screen reader
+---
+class: f6 middle
+
+The `.upper[]` class produces .upper[Capitalized Words]&lt;br&gt; that still read like case-sensitive text to a screen reader
+```css
+.upper {
+  text-transform: uppercase;
+}
+```
+
 
 .b[Behind the scenes:]
 ```html
 &lt;span class="upper"&gt;
 Capitalized Words&lt;/span&gt;
 ```
-]
+
 
 ---
-class: header_background
+class: header_background f6
 
 # Apply an uppercase transformation
 
@@ -246,40 +269,53 @@ class: header_background
 
 2\. .b[Paste the following rule into `extra.css`] and save to update
 
-.pull-left[
 &lt;div class="mt4 pre-name"&gt;extra.css&lt;/div&gt;
 ```css
 .upper {
   text-transform: uppercase;
 }
 ```
-]
 
-.pull-right[
+---
+class: f6
+
+## <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> In practice:
+
+.pull-left[
 &lt;div class="mt4 pre-name"&gt;07-start.Rmd&lt;/div&gt;
-```
+```md
 Hello there, I'm transforming .upper[this text] to uppercase
 ```
 ]
 
-.b[Note:] It is best to [apply uppercase text judiciously](https://www.456bereastreet.com/archive/201012/use_uppercase_capitalised_text_judiciously/) because it can reduce legibility of the text.
+.mt5.f6[
+.pull-right[
+Hello there, I'm transforming .upper[this text] to uppercase
+]
+]
+
+.footnote[.b[Tip:] [Apply uppercase text judiciously](https://www.456bereastreet.com/archive/201012/use_uppercase_capitalised_text_judiciously/) because it can reduce legibility]
 
 ---
+class: f6
 
 # Using icons like <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg> with context in mind
 
-### fontawesome::fa("wikipedia-w", a11y = "sem") <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg>
+.code.b[fontawesome::fa("wikipedia-w", a11y="sem") <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg>]
 
-.pull-left[
-"sem" is short for "semantic" 
+"sem" is short for "semantic"
 
 A .b[screen reader] will read the icon title text, like "Wikipedia W"
 
-]
+```r
+fontawesome::fa("wikipedia-w", a11y="sem")
+```
 
-.pull-right[
+---
+class: f6
 
-.b[Code:]
+.b[R code:]
+
 ```r
 fontawesome::fa("wikipedia-w", a11y="sem")
 ```
@@ -294,24 +330,30 @@ img="role"
   &lt;title&gt;Wikipedia W&lt;/title&gt;
 &lt;/svg&gt;
 ```
-]
 
 ---
+class: f6
 
 # Using icons like <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg> with context in mind
 
-### fontawesome::fa("wikipedia-w", a11y = "deco") <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg>
+.code.b[fontawesome::fa("wikipedia-w", a11y="deco") <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg>]
 
-.pull-left[
-"deco" is short for "decorative" and the argument `a11y = "deco"` is the default
+"deco" is short for "decorative" and the argument&lt;br&gt;`a11y = "deco"` is the default
 
 A .b[screen reader] will skip over a decorative icon
 
-A decorative icon (or image) is appropriate only when it is .b[not] the only element conveying necessary information
-]
+```r
+fontawesome::fa("wikipedia-w", a11y="deco")
+```
 
-.pull-right[
-.b[Code:]
+.footnote[.b[Tip:] A decorative icon (or image) is appropriate only when it is .b[not] the only element conveying necessary information]
+
+
+---
+class: f6
+
+.b[R code:]
+
 ```r
 fontawesome::fa("wikipedia-w", a11y="deco")
 ```
@@ -325,41 +367,31 @@ img="role"
 ...more SVG properties...&gt;
 &lt;/svg&gt;
 ```
-]
 
 ---
+class: f6
+
 # Using icons like <svg aria-label="Wikipedia W" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Wikipedia W</title><path d="M640 51.2l-.3 12.2c-28.1.8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3.3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4.2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5.3v13.1c-19.4.6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4.3-3.6 0-10.3.3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5.8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1.2.5z"/></svg> with context in mind
 
-### Raw &lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt; HTML `&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;`
+### Raw &lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt; HTML .code.b[`&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;`]
 &lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
 
-.pull-left[
-A .b[screen reader] will also skip an icon formatted with the basic HTML readily available on the [FontAwesome website](https://fontawesome.com/v5.15/icons/wikipedia-w?style=brands)
+A .b[screen reader] will skip an icon with the basic HTML readily available on the [FontAwesome website](https://fontawesome.com/v5.15/icons/wikipedia-w?style=brands)
 
-This approach might be accessible only if the icon is .b[not] the only element conveying necessary information
-
-The HTML input would need to be supplemented with accessibility attributes like `aria-label` and `role` for the icon to be accessible on its own
-]
-
-.pull-right[
-.b[Code:]
-```html
-&lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
-```
-
-.b[Behind the scenes:]
-
+.mt4[
 ```html
 &lt;i class="fab fa-wikipedia-w"&gt;&lt;/i&gt;
 ```
 ]
+
+.mt4[We could add [accessibility attributes](#special-attributes) like `role` and&lt;br&gt; `aria-label` to make icon to be accessible on its own]
 
 ---
 class: header_background, middle
 
 # We are finished with this scene!
 
-## <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg> We can meet back at the [07-accessibility-css-html activity](/materials/act-03/07-accessibility-css-html/#activity) when you finish
+## <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg> We can meet back at the&lt;br&gt; [07-accessibility-css-html activity](/materials/act-03/07-accessibility-css-html/#activity)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="assets/js/remark.0.14.1.min.js"></script>

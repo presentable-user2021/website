@@ -27,3 +27,7 @@ a {
 .pull-right+* {
   clear: both;
 }
+
+.upper {
+  text-transform: uppercase;
+}
