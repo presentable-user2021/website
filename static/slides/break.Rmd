@@ -1,0 +1,120 @@
+---
+scene: -1
+title: "Professional, Polished, Presentable"
+subtitle: "Is Now on Break"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+class: fullscreen left bottom break
+background-image: url(assets/img/Rachel-Hudson-fat-tailed-dwarf-lemur.jpg)
+background-size: contain
+background-position: 600px 0
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+.pr6.pl3[
+<div class="f2 red mb1 f-galada">Intermission</div>
+<div class="f3">Professional,<br>Polished,<br>Presentable</div>
+<div class="mv3 serif i">We'll be back at the top of the hour</div>
+]
+
+<div class="absolute bottom-0 right-1 mb1 serif smaller">Illustration: Rachel Hudson</div>
+
+---
+layout: true
+class: center middle hide-count
+background-image: url(assets/img/Rachel-Hudson-sibrees-dwarf-lemur.jpg)
+background-position: top left
+background-size: 250px
+
+# Activity Time!
+
+.gray.absolute.bottom-0.left-1[
+Professional, Polished, Presentable
+]
+
+---
+
+.f4[
+`r fontawesome::fa("theater-masks")` .code[[act-01/01-introduction](https://presentable-user2021.netlify.app/materials/act-01/01-introduction/#activity)]
+]
+
+.bg-white[
+`r countdown::countdown(10, id = "scene-1", class="mh-auto f2", style = "position: relative; width: max-content")`
+]
+
+---
+
+.f4[
+`r fontawesome::fa("theater-masks")` .code[[act-01/02-style-guide](https://presentable-user2021.netlify.app/materials/act-01/02-style-guide/#activity)]
+]
+
+.bg-white[
+`r countdown::countdown(10, id = "scene-2", class="mh-auto f2", style = "position: relative; width: max-content")`
+]
+
+---
+
+.f4[
+`r fontawesome::fa("theater-masks")` .code[[act-01/03-xaringan-extras](https://presentable-user2021.netlify.app/materials/act-01/03-xaringan-extras/#activity)]
+]
+
+.bg-white[
+`r countdown::countdown(6, id = "scene-3", class="mh-auto f2", style = "position: relative; width: max-content")`
+]
+
+---
+
+.f4[
+`r fontawesome::fa("theater-masks")` .code[[act-03/08-more-css](https://presentable-user2021.netlify.app/materials/act-03/08-more-css/#activity)]
+]
+
+.bg-white[
+`r countdown::countdown(5, id = "scene-8", class="mh-auto f2", style = "position: relative; width: max-content")`
+]
+
+---
+
+.f4[
+`r fontawesome::fa("theater-masks")` .code[[act-03/09-design-components](https://presentable-user2021.netlify.app/materials/act-03/09-design-components/#activity)]
+]
+
+.bg-white[
+`r countdown::countdown(10, id = "scene-9", class="mh-auto f2", style = "position: relative; width: max-content")`
+]

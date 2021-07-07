@@ -128,10 +128,15 @@ enableEmoji = true
     url = "/license/"
     weight = 1
   [[menu.footer]]
+    name = "Code of Conduct"
+    title = "Code of Conduct"
+    url = "/code-of-conduct/"
+    weight = 2
+  [[menu.footer]]
     name = "useR!2021"
     title = "useR!2021"
     url = "https://user2021.r-project.org/"
-    weight = 2
+    weight = 3
 
 
 # see https://gohugo.io/about/hugo-and-gdpr/
