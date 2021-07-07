@@ -29,10 +29,11 @@ links:
 
 <div class="activity-table">
 
-|           |                            |
-|-----------|----------------------------|
-| Time      | 4 minutes                  |
-| Materials | `08-more-css/08-start.Rmd` |
+|               |                                       |
+|---------------|---------------------------------------|
+| Time          | 5 minutes                             |
+| Materials     | `08-more-css/08-start.Rmd`            |
+| Activity Mode | Break out room & work with your group |
 
 </div>
 

@@ -28,10 +28,11 @@ xaringanExtra::embed_xaringan(url = rmarkdown::metadata$links[[1]]$url, ratio = 
 ## Activity
 
 ::: activity-table
-|           |                            |
-|-----------|----------------------------|
-| Time      | 4 minutes                  |
-| Materials | `08-more-css/08-start.Rmd` |
+|               |                                       |
+|---------------|-------------------------------------- |
+| Time          | 5 minutes                             |
+| Materials     | `08-more-css/08-start.Rmd`            |
+| Activity Mode | Break out room & work with your group |
 :::
 
 In this short activity, we'll practice using CSS variables and CSS selectors to give a slide some extra style.

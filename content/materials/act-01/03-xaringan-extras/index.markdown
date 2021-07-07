@@ -29,10 +29,11 @@ links:
 
 <div class="activity-table">
 
-|           |                                   |
-|:----------|:----------------------------------|
-| Time      | 6 minutes                         |
-| Materials | `03-xaringan-extras/03-start.Rmd` |
+|               |                                       |
+|:--------------|:--------------------------------------|
+| Time          | 6 minutes                             |
+| Materials     | `03-xaringan-extras/03-start.Rmd`     |
+| Activity Mode | Break out room & work with your group |
 
 </div>
 
@@ -54,7 +55,7 @@ First present the code, followed by the plot on a new slide.
 
 <details>
 <summary>
-<code>knitr::fig_chunk()</code>
+<code>knitr::fig\_chunk()</code>
 </summary>
 
     ```{r lemur-weight, fig.show="hide"}

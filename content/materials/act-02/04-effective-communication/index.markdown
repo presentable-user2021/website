@@ -37,10 +37,11 @@ We will follow recommendations adapted from the Guidelines for Accessibility in 
 
 <div class="activity-table">
 
-|           |            |
-|:----------|:-----------|
-| Time      | 15 minutes |
-| Materials | None       |
+|               |              |
+|:--------------|:-------------|
+| Time          | 15 minutes   |
+| Materials     | None         |
+| Activity Mode | Follow along |
 
 </div>
 
