@@ -18,7 +18,9 @@ a {
   color: #FFFFFF;
 }
 
-a {
+a,
+a>code {
+  color: #2F8369;
   text-decoration: underline;
 }
 

@@ -53,22 +53,23 @@ js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
 ---
 class: f6 inverse middle
 
+.mh5[
 # Effective communication<br>has the power to:
 
 - capture the attention of your audience
 - convince others of your findings
 - help you teach more effectively
-- reach a broader audience
+- reach a broader audience]
 
 ---
 class: header_background
 
 # How does xaringan already help us build effective presentations?
 
-.f7.mt4[
-`r fa("far fa-check-square")` Use the right markup for your presentation’s structure
+.f7.mt4.mh4[
+`r fa("far fa-check-square", a11y="sem")` Use the right markup for your presentation’s structure
 
-`r fa("far fa-check-square")` Stick to widely used & open file formats
+`r fa("far fa-check-square", a11y="sem")` Stick to widely used & open file formats
 
 `r fa("far fa-square")` Make "accessible" your default mindset 
 
@@ -88,11 +89,9 @@ background-position: right
 
 # Make "accessible"<br>your default mindset
 
-.pull-left[
+.f7[.pull-left[
 
-We communicate effectively when we communicate to as many people as possible
-
-This means making our work .b[open] and .b[accessible] to a broad audience
+We communicate effectively when we make our work .b[open] and .b[accessible] to a broad audience
 
 Principles of [inclusive design](https://www.microsoft.com/design/inclusive/)
 - Recognize exclusion
@@ -101,9 +100,10 @@ Principles of [inclusive design](https://www.microsoft.com/design/inclusive/)
 
 <span role="img" aria-label="Something designed for a person who has one arm could be used just as effectively by a person with a temporary wrist injury or a new parent holding an infant"></span>
 
-]
+]]
+
 .footnote[
-[2.1 Make “accessible” your default mindset |<br> Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-accessible-your-default-mindset)<br>
+[2.1 Make “accessible” your default mindset](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-accessible-your-default-mindset)<br>
 Figure from the Inclusive Design 101 Toolkit by Microsoft
 ]
 
@@ -115,20 +115,19 @@ By designing for someone with a permanent disability, someone with a situational
 By putting people at the center of our design process we learn from diverse perspectives and experiences
 
 ---
-class: 
+class:
 
 # Design for the mode of delivery
 
-.pull-left[
+.f7.mt4[.pull-left[
 
-Oral presentations require different design considerations than papers or posters
+Slide presentations require .b[different design considerations] than papers or posters
 
-- Visual cues for figures
-- Clear audio when speaking
+Design content with .b[fewer and more focused details]
 
-Effectively communicating using a slide deck also requires .b[designing content with fewer and more focused details]
+We don't have to format a<br>slide presentation like a paper
 
-]
+]]
 
 .pull-right[
 .bg-washed-yellow.b--yellow.ba.bw0.br0.shadow-5.pa2[
@@ -142,7 +141,7 @@ Effectively communicating using a slide deck also requires .b[designing content 
 ]
 
 .footnote[
-[2.2 Design for the mode of delivery | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-design-for-the-mode-of-delivery)<br>
+[2.2 Design for the mode of delivery](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-design-for-the-mode-of-delivery)<br>
 [Better Presentations: A Guide for Scholars, Researchers, and Wonks](https://policyviz.com/books/better-presentations/book-materials/) by Jonathan Schwabish]
 
 ---
@@ -153,21 +152,36 @@ name: visual
 .panelset[
 .panel[.panel-name[Not Good]
 
-[Example slide: not good](#visual-not-good)<img src="assets/img/04/visual-not-good.png" alt="Slide containing only plain text provided in paragraph form and going across the entire slide" width="75%" style="float: right;"/>
+[Ex. slide: not good](#visual-not-good)<img src="assets/img/04/visual-not-good.png" alt="Slide containing only plain text provided in paragraph form and going across the entire slide" width="75%" style="float: right;"/>
 
 ] <!--end of panel-->
 
 .panel[.panel-name[Good]
 
-[Example slide: good](#visual-good)<img src="assets/img/04/visual-good.png" alt="Text has been moved to the left of the slide and an image has been inserted next to it on the right side" width="75%" style="float: right;"/>
+[Ex. slide: good](#visual-good)<img src="assets/img/04/visual-good.png" alt="Text has been moved to the left of the slide and an image has been inserted next to it on the right side" width="75%" style="float: right;"/>
 
 ] <!--end of panel-->
 
 .panel[.panel-name[Better]
 
-[Example slide: better](#visual-better)<img src="assets/img/04/visual-better.png" alt="Text remains on the left of the slide but now the image is a background image taking up the right side of the slide fully and without interfering with the text" width="75%" style="float: right;"/>
+[Ex. slide: better](#visual-better)<img src="assets/img/04/visual-better.png" alt="Text remains on the left of the slide but now the image is a background image taking up the right side of the slide fully and without interfering with the text" width="75%" style="float: right;"/>
 
 ] <!--end of panel-->
+
+.panel[.panel-name[Summary]
+
+.f6[
+- Avoid writing a "wall of text," break up the content
+
+- Add a visual aid if it will help carry the message
+
+- Turn your visual into a larger background image
+
+- If your text overlaps with the background image, consider using CSS styling to give your text a background for contrast
+
+]
+] <!--end of panel-->
+
 ] <!--end of panelset-->
 
 ---
@@ -178,19 +192,19 @@ name: focus
 .panelset[
 .panel[.panel-name[Ok]
 
-[Example slide: ok](#focus-ok)<img src="assets/img/04/focus-ok.png" alt="Paragraph text on the left of the slide and a background image on the right" width="75%" style="float: right;"/>
+[Ex. slide: ok](#focus-ok)<img src="assets/img/04/focus-ok.png" alt="Paragraph text on the left of the slide and a background image on the right" width="75%" style="float: right;"/>
 
 ] <!--end of panel-->
 
 .panel[.panel-name[Good]
 
-[Example slide: good](#focus-good)<img src="assets/img/04/focus-good.png" alt="Paragraph text has been removed of unnecessary wording and organized into bullet points. Background image remains on the right." width="75%" style="float: right;"/>
+[Ex. slide: good](#focus-good)<img src="assets/img/04/focus-good.png" alt="Paragraph text has been removed of unnecessary wording and organized into bullet points. Background image remains on the right." width="75%" style="float: right;"/>
 
 ] <!--end of panel-->
 
 .panel[.panel-name[Better]
 
-[Example slide: good](#focus-better)<img src="assets/img/04/focus-better.png" alt="The bullet point list of text now has some words highlighted with a bold blue font face for emphasis, Background image remains on the right." width="75%" style="float: right;"/>
+[Ex. slide: better](#focus-better)<img src="assets/img/04/focus-better.png" alt="The bullet point list of text now has some words highlighted with a bold blue font face for emphasis, Background image remains on the right." width="75%" style="float: right;"/>
 
 ] <!--end of panel-->
 
@@ -206,15 +220,32 @@ name: focus
 
 ] <!--end of panel-->
 
+.panel[.panel-name[Summary]
+
+.f6[
+
+- Structure your text into smaller pieces and eliminate extra text
+
+- Emphasize important words or phrases with text formatting
+
+- Use incremental reveals to control the timing of content
+
+  - .b[Note:] Provide a version of your slides without<br>incremental reveals for screen readers users
+
+]
+
+] <!--end of panel-->
+
 ] <!--end of panelset-->
 
 ---
 class: f7
 ## `r fa("tasks")` In practice: Unifying your content
 
+.mt4[
 .pull-left[
 
-### Layout
+### `r fa("th-large")` Layout
 
 - Be consistent in your use of content classes
 
@@ -225,28 +256,42 @@ class: f7
 
 .pull-right[
 
-### Structure
+### `r fa("th-list")` Structure
 - Use headings and lists to provide hierarchy and organization
 
 - Use color, font size, and<br> font type consistently
 
 - Use a similar style or theme of images or photographs
 ]
+]
 
 ---
 # Use clear and simple figures & graphics
 
-## Complex images and figures can be difficult for
+.mt4[
+.pull-left[
+.b.f6[Complex images and figures can be difficult for:]
 
-.f6[
-- your audience to process and understand during<br>your presentation
+.f7[
+
+- your audience to process during your presentation
 
 - you to describe out loud as you are presenting
 
 - you to describe with alternative text (alt-text)
-]
+]]
 
-.footnote[[2.4 Use clear and simple figures and graphics | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-use-clear-and-simple-figures-and-graphics)]
+
+.pull-right[
+.center[
+`r fa("chart-line", width="6em", fill="#75aadb")`&emsp;&emsp;
+`r fa("chart-pie", width="6em", fill="#75aadb")`<br><br>
+
+`r fa("chart-area", width="6em", fill="#75aadb")`&emsp;&emsp;
+`r fa("chart-bar", width="6em", fill="#75aadb")`
+]]]
+
+.footnote[[2.4 Use clear and simple figures and graphics](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-use-clear-and-simple-figures-and-graphics)]
 
 ???
 - complex images can direct the audience attention away from your main message
@@ -265,38 +310,36 @@ class: f7
 
 - Introduce and define abbreviations
 
-- Introduce packages and functions
+- Define field-specific terminology
 
-- Define field-specific terminology or jargon
-
-- Write to an audience outside of disciplinary silos<br>and even outside of academia
+- Write to an audience outside of disciplinary<br> silos and even outside of academia
 ]
 
-.footnote[[2.7 Write clearly | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-write-clearly)]
+.footnote[[2.7 Write clearly](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-write-clearly)]
 
 ---
-class: f7
+class: f6
 
 ## `r fa("tasks")` In practice: Writing clearly
 
-From [Web Accessibility in Mind](https://webaim.org/techniques/writing/#intelligent)
+.mt4[From [Web Accessibility in Mind](https://webaim.org/techniques/writing/#intelligent)
 
 - 8th grade reading level if targeting a broad audience
-
-- 12th grade reading level for an educated or specialized audience
+- 12th grade level for an educated or specialized audience
 
 From [The A11Y Project]()
 
-- Audience between the ages of 12 and 15 years old
+- Audience between the ages of 12 and 15 years old<br><br>]
 
-### Let's [check the readability](https://www.webfx.com/tools/read-able/check.php) of our [lemur content](#focus-better)!
+.b.f6[
+## Let's [check the readability](https://www.webfx.com/tools/read-able/check.php) of our [lemur content](#focus-better)!]
 
 ---
 class: header_background middle
 
-# We finished the scene!
+# We are finished with this scene!
 
-.f7.mt4[
+.f7.mt4.mh4[
 `r fa("far fa-check-square")` Use the right markup for your presentation’s structure
 
 `r fa("far fa-check-square")` Stick to widely used & open file formats
@@ -310,14 +353,14 @@ class: header_background middle
 `r fa("far fa-check-square")` Write clearly
 ]
 
-## `r fa("theater-masks")` Meet back at the  [course site](/materials/act-02/04-effective-communication#activity)
+## `r fa("theater-masks")` We can meet back at the [04 scene activity](/materials/act-02/04-effective-communication#activity)
 
 ---
 class: inverse middle
 
 # Example slides start here
 
-### All use example text from the [Duke Lemur Center site](https://lemur.duke.edu/100-lemurs/)
+### All slides use example text from the [Duke Lemur Center site](https://lemur.duke.edu/100-lemurs/)
 
 ---
 name: visual-not-good
@@ -333,7 +376,26 @@ Hailing from the tropical subhumid forests of northwestern Madagascar, these rar
 .footnote[Travel back to the [Using visual aids slide](#visual)]
 
 ???
-- no use of slide or content classes
+No use of slide or content classes
+
+### Demo
+
+Use of `name: visual-not-good`
+
+```
+---
+name: visual-not-good
+
+<slide content>
+
+---
+```
+
+The `name` can then be used for internal linking like in the slide that brought us to this one
+
+```
+[Example slide: not good](#visual-not-good)
+```
 
 ---
 name: visual-good
@@ -390,7 +452,9 @@ Hailing from the tropical subhumid forests of northwestern Madagascar, these rar
 - image inserted using:
 
  - `background-image:` url(<url>)
+ 
  - `background-position:` right
+ 
  - `background-size:` contain
 
 ---
@@ -410,7 +474,7 @@ Blue-eyed black lemurs are the most distinctively sexually dichromatic of all th
 Hailing from the tropical subhumid forests of northwestern Madagascar, these rare lemurs are among the most threatened primates on Earth.
 ]
 
-.footnote[Travel back to the [Using visual aids slide](#visual)]
+.footnote[Travel back to the [Focusing attention slide](#focus)]
 
 ???
 - `.pull-left[]` and `.pull-right[]` classes
@@ -418,7 +482,9 @@ Hailing from the tropical subhumid forests of northwestern Madagascar, these rar
 - image inserted using:
 
  - `background-image:` url(<url>)
+ 
  - `background-position:` right
+ 
  - `background-size:` contain
 
 ---
@@ -448,7 +514,9 @@ Blue-eyed black lemurs are:
 - image inserted using:
 
  - `background-image:` url(<url>)
+ 
  - `background-position:` right
+ 
  - `background-size:` contain
  
 - use of an unordered list with dashes `-`
@@ -480,7 +548,9 @@ Blue-eyed black lemurs are:
 - image inserted using:
 
  - `background-image:` url(<url>)
+ 
  - `background-position:` right
+ 
  - `background-size:` contain
  
 - use of an unordered list with dashes `-`
@@ -512,6 +582,7 @@ name: focus-good-alt
 
 ???
 - use of an unordered list with dashes `-`
+
 - incremental list items with `--` separator
 
 ---

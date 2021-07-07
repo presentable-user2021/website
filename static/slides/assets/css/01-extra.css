@@ -10,7 +10,9 @@
   color: #FFFFFF;
 }
 
-a {
+a,
+a>code {
+  color: #2F8369;
   text-decoration: underline;
 }
 
@@ -30,4 +32,11 @@ a {
 
 .upper {
   text-transform: uppercase;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  opacity: 0.8; /*0.66*/
 }
