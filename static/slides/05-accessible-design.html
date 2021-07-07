@@ -104,7 +104,7 @@ class: header_background
 
 # How do we design&lt;br&gt;accessible presentations?
 
-.f7.mt5[
+.f7.mt5.mh4[
 
 <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V86c0-3.3 2.7-6 6-6h340c3.3 0 6 2.7 6 6v340c0 3.3-2.7 6-6 6z"/></svg> .b[Make "accessible" your default mindset]
 
@@ -125,11 +125,9 @@ background-position: right
 
 # Make "accessible"&lt;br&gt;your default mindset
 
-.pull-left[
+.f7[.pull-left[
 
-We communicate effectively when we communicate to as many people as possible
-
-This means making our work .b[open] and .b[accessible] to a broad audience
+We communicate effectively when we make our work .b[open] and .b[accessible] to a broad audience
 
 Principles of [inclusive design](https://www.microsoft.com/design/inclusive/)
 - Recognize exclusion
@@ -138,9 +136,10 @@ Principles of [inclusive design](https://www.microsoft.com/design/inclusive/)
 
 &lt;span role="img" aria-label="Something designed for a person who has one arm could be used just as effectively by a person with a temporary wrist injury or a new parent holding an infant"&gt;&lt;/span&gt;
 
-]
+]]
+
 .footnote[
-[2.1 Make “accessible” your default mindset |&lt;br&gt; Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-accessible-your-default-mindset)&lt;br&gt;
+[2.1 Make “accessible” your default mindset](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-accessible-your-default-mindset)&lt;br&gt;
 Figure from the Inclusive Design 101 Toolkit by Microsoft
 ]
 
@@ -161,11 +160,10 @@ We are returning to this core idea after covering it in the section on effective
 
 .pull-left[
 
-- .b[Caption:] Brief description of what is being shown in the image
+.f7[
+.b[Alt-text] allows the reader to understand an image without seeing it
 
-- .b[Alt-text:] Full description that allows the reader to understand the figure without seeing it
-
-Screen readers provide voice or braille access to computer text, including alt-text
+.b[Screen readers] provide voice or braille access to computer text, including alt-text]
 
 ]
 
@@ -181,7 +179,7 @@ Screen readers provide voice or braille access to computer text, including alt-t
 ]
 
 .footnote[
-[2.6 Support images with text | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-imagetext)]
+[2.6 Support images with text](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-imagetext)]
 
 ???
 Screen readers like VoiceOver for MacOS or NVDA for Windows are used by blind people as well as people with low vision, cognitive disabilities, deafness or hard-of-hearing, motor disabilities, and others. 
@@ -243,12 +241,12 @@ knitr::include_graphics("ring-tailed-lemur.jpg")
 
 ---
 
-## <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/></svg> Can I use the same alt-text for all images&lt;br&gt; that are identical?
+## <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/></svg> Is it a good idea to use the same alt-text for all images that are identical?
 
 .pull-left[
 ### Not necessarily!
 
-.f6[
+.f7[
 To write effective alt-text we need to .b[consider the context]
 
 What, if any, important information is the image supposed to communicate?
@@ -256,29 +254,46 @@ What, if any, important information is the image supposed to communicate?
 ]
 
 .pull-right[
-### Resources
+.bg-washed-yellow.b--yellow.ba.bw0.br0.shadow-5.pa2[
+.b[Resources]
 
 - [Context is the most critical aspect of alt-text everyone seems to miss](https://uxdesign.cc/context-is-the-most-critical-aspect-of-alt-text-everyone-seems-to-miss-e18803a79212) by Sheri Byrne-Haber
 
 - [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) WAI Web Accessibility Tutorials
 
-- [Images Concepts Tutorial](https://www.w3.org/WAI/tutorials/images/) by WAI Web Accessibility Tutorials
+- [Images Concepts Tutorial](https://www.w3.org/WAI/tutorials/images/) by WAI Web Accessibility Tutorials]
+
 ]
 
 ---
 # Make sure hyperlinks are&lt;br&gt;clear &amp; unambiguous
 
-.f6[
+.f7[
+.pull-left[
+- .b[Embed hyperlinks] in slides with xaringan
+
 - Links are most useful when they .b[make sense out of context]
 
-- xaringan makes it possible to .b[embed hyperlinks] in our slides
-
 - Links should be .b[clearly labeled]
-
-- .b[Avoid ambiguous link text] like: &lt;br&gt;"click here," "here," "more," "read more," "info"
+]
 ]
 
-.footnote[[2.9 Make sure hyperlinks are clear &amp; unambiguous | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-sure-hyperlinks-are-clear-unambiguous)&lt;br&gt;
+.pull-right[
+.bg-washed-red.b--red.ba.bw0.br0.shadow-5.pa2[
+.b[Avoid ambiguous links:]
+
+- Here
+- Click here
+- Info
+- More
+- Read more
+- Link
+
+]
+]
+
+
+.footnote[[2.9 Make sure hyperlinks are clear &amp; unambiguous](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-sure-hyperlinks-are-clear-unambiguous)&lt;br&gt;
 [Link Text and Appearance](https://webaim.org/techniques/hypertext/link_text#uninformative) by Web Accessibility in Mind]
 
 ---
@@ -294,7 +309,7 @@ The Duke Lemur Center provides more information [here](https://lemur.duke.edu/ac
 ````
 
 ---
-background-image: url(assets/img/05/paint-rollers.jpg)
+background-image: url(assets/img/05/dwarf-lemur.jpg)
 background-position: right
 background-size: contain
 
@@ -303,7 +318,7 @@ background-size: contain
 .pull-left[
 .f7[
 
-- Avoid using color as the .b[only] indicator of priority, importance, or an interactive element
+- Avoid using color as the .b[only] way to indicate priority or importance
 
 - Check for .b[color independence] early and often by [simulating a grayscale display](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector/Simulation)
 
@@ -311,7 +326,7 @@ background-size: contain
 
 ]]
 
-.footnote[[2.5 Choose colors carefully | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-choose-colors-carefully)&lt;br&gt;
+.footnote[[2.5 Choose colors carefully](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-choose-colors-carefully)&lt;br&gt;
 [Color and accessibility](https://designsystem.digital.gov/design-tokens/color/overview/#color-and-accessibility) by U.S. Web Design System
 ]
 
@@ -324,11 +339,11 @@ class: header_background f7
 
   - [Contrast Checker](https://webaim.org/resources/contrastchecker/) by WebAIM (recommended)
   
-  - [A11y Color Palette](https://a11yrocks.com/colorPalette/) by Matt Long
+  - [A11Y Rocks Color Palette](https://a11yrocks.com/colorPalette/) by Matt Long
   
   - [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/) by Atul Varma
 
-- For an extensive gallery of accessible color combinations&lt;br&gt; see the [Tachyons documentation for Theme Skins](https://tachyons.io/docs/themes/skins/)
+- For an extensive gallery of color color combinations with adequate contrast, see the [Tachyons documentation for Theme Skins](https://tachyons.io/docs/themes/skins/)
 
 
 ## Let's check color independence and &lt;br&gt;color contrast together!
@@ -336,9 +351,9 @@ class: header_background f7
 ---
 class: header_background
 
-# We finished the scene!
+# We are finished with the scene!
 
-.f7.mt4.mb4[
+.f7.mt4.mb4.mh4[
 <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm0 400H48V80h352v352zm-35.864-241.724L191.547 361.48c-4.705 4.667-12.303 4.637-16.97-.068l-90.781-91.516c-4.667-4.705-4.637-12.303.069-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l59.792 60.277 141.352-140.216c4.705-4.667 12.303-4.637 16.97.068l22.536 22.718c4.667 4.706 4.637 12.304-.068 16.971z"/></svg> .b[Make "accessible" your default mindset]
 
 <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm0 400H48V80h352v352zm-35.864-241.724L191.547 361.48c-4.705 4.667-12.303 4.637-16.97-.068l-90.781-91.516c-4.667-4.705-4.637-12.303.069-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l59.792 60.277 141.352-140.216c4.705-4.667 12.303-4.637 16.97.068l22.536 22.718c4.667 4.706 4.637 12.304-.068 16.971z"/></svg> Support images with text 
@@ -348,7 +363,7 @@ class: header_background
 <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm0 400H48V80h352v352zm-35.864-241.724L191.547 361.48c-4.705 4.667-12.303 4.637-16.97-.068l-90.781-91.516c-4.667-4.705-4.637-12.303.069-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l59.792 60.277 141.352-140.216c4.705-4.667 12.303-4.637 16.97.068l22.536 22.718c4.667 4.706 4.637 12.304-.068 16.971z"/></svg> Choose colors carefully
 ]
 
-## <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg> Let's meet back at the&lt;br&gt;  [05-accessible-design activity](/materials/act-02/05-accessible-design#activity)
+## <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.86 245.15c-35.88 10.45-59.95 41.2-57.53 74.1 11.4-12.72 28.81-23.7 49.9-30.92l7.63-43.18zM95.81 295L64.08 115.49c-.29-1.62.28-2.62.24-2.65 57.76-32.06 123.12-49.01 189.01-49.01 1.61 0 3.23.17 4.85.19 13.95-13.47 31.73-22.83 51.59-26 18.89-3.02 38.05-4.55 57.18-5.32-9.99-13.95-24.48-24.23-41.77-27C301.27 1.89 277.24 0 253.32 0 176.66 0 101.02 19.42 33.2 57.06 9.03 70.48-3.92 98.48 1.05 126.58l31.73 179.51c14.23 80.52 136.33 142.08 204.45 142.08 3.59 0 6.75-.46 10.01-.8-13.52-17.08-28.94-40.48-39.5-67.58-47.61-12.98-106.06-51.62-111.93-84.79zm97.55-137.46c-.73-4.12-2.23-7.87-4.07-11.4-8.25 8.91-20.67 15.75-35.32 18.32-14.65 2.58-28.67.4-39.48-5.17-.52 3.94-.64 7.98.09 12.1 3.84 21.7 24.58 36.19 46.34 32.37 21.75-3.82 36.28-24.52 32.44-46.22zM606.8 120.9c-88.98-49.38-191.43-67.41-291.98-51.35-27.31 4.36-49.08 26.26-54.04 54.36l-31.73 179.51c-15.39 87.05 95.28 196.27 158.31 207.35 63.03 11.09 204.47-53.79 219.86-140.84l31.73-179.51c4.97-28.11-7.98-56.11-32.15-69.52zm-273.24 96.8c3.84-21.7 24.58-36.19 46.34-32.36 21.76 3.83 36.28 24.52 32.45 46.22-.73 4.12-2.23 7.87-4.07 11.4-8.25-8.91-20.67-15.75-35.32-18.32-14.65-2.58-28.67-.4-39.48 5.17-.53-3.95-.65-7.99.08-12.11zm70.47 198.76c-55.68-9.79-93.52-59.27-89.04-112.9 20.6 25.54 56.21 46.17 99.49 53.78 43.28 7.61 83.82.37 111.93-16.6-14.18 51.94-66.71 85.51-122.38 75.72zm130.3-151.34c-8.25-8.91-20.68-15.75-35.33-18.32-14.65-2.58-28.67-.4-39.48 5.17-.52-3.94-.64-7.98.09-12.1 3.84-21.7 24.58-36.19 46.34-32.37 21.75 3.83 36.28 24.52 32.45 46.22-.73 4.13-2.23 7.88-4.07 11.4z"/></svg> We can meet back at the&lt;br&gt;  [05-accessible-design activity](/materials/act-02/05-accessible-design/#activity)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="assets/js/remark.0.14.1.min.js"></script>
