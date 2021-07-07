@@ -36,11 +36,11 @@ cascade:
       |                 | [01: Setting the stage](act-01/01-introduction/)                      |
       |                 | [02: From style guide to xaringan theme](act-01/02-style-guide)       |
       |                 | [03: xaringan extras](act-01/03-xaringan-extras)                      |
-      | 04:50           | Break                                                                 |
+      | 04:50           | Intermission                                                                 |
       | 05:00 Act II    | [04: Effective communication](act-02/04-effective-communication)      |
       |                 | [05: Accessible design](act-02/05-accessible-design)                  |
       |                 | [06: Introduction to CSS](act-02/06-css-intro)                        |
-      | 05:50           | Break                                                                 |
+      | 05:50           | Intermission                                                                 |
       | 06:00 Act III   | [07: Accessibility with CSS & HTML](act-03/07-accessibility-css-html) |
       |                 | [08: More CSS](act-03/08-more-css)                                    |
       |                 | [09: Design components](act-03/09-design-components)                  |

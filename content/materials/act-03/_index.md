@@ -25,4 +25,4 @@ Use the left sidebar menu to explore the materials for today.
 
 ---
 
-Lemur illustration by [Rachel Hudson](https://lemur.duke.edu/100-lemurs/)
+<i class="fas fa-palette"></i> All lemur illustrations featured on this site and in the materials were created by [Rachel Hudson](https://lemur.duke.edu/100-lemurs/)
