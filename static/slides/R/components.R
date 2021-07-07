@@ -42,7 +42,7 @@ title_slide <- function(
           ),
           og_type = "website",
           og_author = c("Garrick Aden-Buie", "Silvia Canelón"),
-          twitter_card_type = "summary",
+          twitter_card_type = "summary_large_image",
           twitter_creator = "@grrrck"
         ) %>%
         metathis::include_meta()
