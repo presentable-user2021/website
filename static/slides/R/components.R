@@ -17,7 +17,15 @@ title_slide <- function(
     htmltools::div(
       class = "talk-meta",
       htmltools::p(class = "talk-author", author),
-      htmltools::p(class = "talk-date", "Professional, Polished, Presentable"),
+      htmltools::p(
+        class = "talk-date",
+        htmltools::tags$a(
+          "Professional, Polished, Presentable",
+          href = "https://presentable-user2021.netlify.app",
+          class = "underline f-lato",
+          style = "color: var(--text-light); text-underline-offset: 7px;"
+        )
+      ),
       metathis::meta() %>%
         metathis::meta_description(glue::glue(
           'Slides for "{title}" from the "Professional, Polished, Presentable" ',
