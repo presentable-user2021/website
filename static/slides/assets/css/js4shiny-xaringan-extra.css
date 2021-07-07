@@ -1,3 +1,21 @@
+:root {
+  --dark-green: #2F8369;
+}
+
+.inverse a,
+.inverse h1,
+.inverse h2,
+.inverse h3 {
+  background-color: var(--blue);
+  color: #FFFFFF;
+}
+
+a,
+a>code {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
 .hljs {
   background-color: transparent !important;
 }

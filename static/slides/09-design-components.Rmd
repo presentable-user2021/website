@@ -51,7 +51,7 @@ js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
 background-image: url(https://source.unsplash.com/aWXVxy8BSzc)
 background-size: cover
 
-<span role="img" aria-label="Slide background shows: An outdoor concert at a festival, from behind a large audience of fans all with their hands in the air.">/span>
+<span role="img" aria-label="Slide background shows: An outdoor concert at a festival, from behind a large audience of fans all with their hands in the air."</span>
 
 .footnote.white[Photo by [Hanny Naibaho](https://unsplash.com/@hannynaibaho)]
 
@@ -66,7 +66,7 @@ When you hear the chorus?
 background-image: url(https://source.unsplash.com/_r0mZJ5QjXU)
 background-size: cover
 
-<span role="img" aria-label="Slide background shows: A busy, pedestrian-only street in Dublin; on the left a man stands on the sidewalk playing an acoustic guitar and singing into a microphone.">/span>
+<span role="img" aria-label="Slide background shows: A busy, pedestrian-only street in Dublin; on the left a man stands on the sidewalk playing an acoustic guitar and singing into a microphone."</span>
 
 .footnote.white[Photo by [.white[Alejandro Lopez]](https://unsplash.com/@lopify)]
 
@@ -79,7 +79,7 @@ What would it take to recognize it on a crowded street?
 background-image: url(https://source.unsplash.com/tq7RtEvezSY)
 background-size: cover
 
-<span role="img" aria-label="Slide background shows: the hands of a child playing piano in soft focus.">/span>
+<span role="img" aria-label="Slide background shows: the hands of a child playing piano in soft focus."</span>
 
 .footnote.white[Photo by [.white[Clark Young]](https://unsplash.com/@cbyoung)]
 
@@ -256,7 +256,7 @@ layout: false
 background-image: url(https://source.unsplash.com/FWA4Zk1hFls/1600x900)
 background-size: cover
 
-<span role="img" aria-label="Slide background shows: A group of ring-tailed lemurs huddled together in a wooden enclosure, looking directly at the camera.">/span>
+<span role="img" aria-label="Slide background shows: A group of ring-tailed lemurs huddled together in a wooden enclosure, looking directly at the camera."</span>
 
 .bg-black-70.white.absolute.top-0.left-0.code.pl2.animated.slideInDown.delay-2s[
 background-image: url(https:&#x200B;//source.unsplash.com/.pink[FWA4Zk1hFls]/.green[1600x900])

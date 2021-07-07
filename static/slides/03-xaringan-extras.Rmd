@@ -55,7 +55,7 @@ js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
 
 ---
 
-# That little bit &#x2728; .green[extra] &#x2728;
+# That little bit &#x2728; .dark-green[extra] &#x2728;
 
 Using .pkg[xaringan] or .pkg[rmarkdown]
 
@@ -130,7 +130,7 @@ How can you view the presenter notes and share your screen at the same time?
 
 ### Presenting in video
 
-1. .relative[Present from the private browser window .orange[without moon reader] <img src="assets/img/rstudio-viewer-popout.png" alt="RStudio Viewer Popout Button" class="v-btm" style="height: 52px;position: absolute;top: -10px;">]
+1. .relative[Present from the private browser window .dark-red[without moon reader] <img src="assets/img/rstudio-viewer-popout.png" alt="RStudio Viewer Popout Button" class="v-btm" style="height: 52px;position: absolute;top: -10px;">]
 
 2. Clone the slides into a new window with <kbd>C</kbd>
 
@@ -308,10 +308,15 @@ class: break break-xaringanextra center middle white
   background-origin: padding-box;
   background-clip: border-box;
 }
+
+/* -- silvia: commenting out in favor of green #2F8369 used in js4shiny-xaringan-base.css -- */
+/*
 .link-purple a {
   color: var(--purple);
   text-decoration: underline;
 }
+*/
+
 .highlight-last-item > ul > li, 
 .highlight-last-item > ol > li {
   opacity: 0.5;
