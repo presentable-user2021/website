@@ -1,0 +1,106 @@
+---
+scene: 0
+title: "Thank You"
+subtitle: "A work in progress!"
+author: "Garrick Aden-Buie & Silvia Canelón"
+date: '2021-07-07'
+output:
+  xaringan::moon_reader:
+    lib_dir: "assets/libs"
+    css:
+      - assets/css/js4shiny-xaringan-base.css
+      - assets/css/tachyons.min.css
+      - assets/css/js4shiny-xaringan-extra.css
+    includes:
+      after_body: assets/html/js4shiny-includes.html
+    seal: false
+    chakra: assets/js/remark.0.14.1.min.js
+    mathjax: NULL
+    nature:
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+      highlightStyle: docco
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 10,
+  fig.height = 6,
+  fig.retina = 2,
+  warning = FALSE,
+  message = FALSE
+)
+source(here::here("static", "slides", "R", "components.R"))
+# use_placeholders(TRUE, TRUE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "share_again"))
+xaringanExtra::use_editable(id = rmarkdown::metadata$title)
+```
+
+```{r js4shiny, echo=FALSE}
+js4shiny::html_setup(stylize = c("fonts", "variables", "code"))
+```
+
+background-image: url(https://source.unsplash.com/t48eHCSCnds/1600x900)
+background-size: cover
+
+<span role="img" aria-label="Slide background shows: Wooden tiles that spell out 'Thank You' with a yellow heart between the two words."></span>
+
+---
+
+# Thank you to our awesome TAs
+
+.flex[
+.w-50.tc.f5[
+<img class="w-50" src="https://presentable-user2021.netlify.app/people/patricia/featured.png" />
+
+Patricia Loto  
+[&commat;patriloto](https://twitter.com/patriloto)
+]
+.w-50.tc.f5[
+<img class="w-50" src="https://presentable-user2021.netlify.app/people/shannon/featured.png" />
+
+Shannon Pileggi  
+[&commat;PipingHotData](https://twitter.com/PipingHotData)
+]
+]
+
+---
+
+# Thank you! 
+
+- useR!2021 and the conference organizers
+
+- David Yanbar  
+  .silver[Technical support]
+
+- Liz Hare  
+  .silver[Sharing experience navigating xaringan slides with a screen reader]
+  
+- Duke Lemur Center  
+  .silver[Data and many interesting lemur facts]
+  
+- Rachel Hudson  
+  .silver[Lemur illustrations]
+  
+
+---
+
+# Stay in touch! .red[\#tut_xaringan]
+
+.flex[
+.w-50.tc.f5[
+<img class="w-50" style="border-radius:50%" src="https://presentable-user2021.netlify.app/people/garrick/featured.jpg" />
+
+Garrick Aden-Buie  
+[&commat;grrrck](https://twitter.com/grrrck)
+]
+.w-50.tc.f5[
+<img class="w-50" style="border-radius:50%" src="https://presentable-user2021.netlify.app/people/silvia/featured.jpg" />
+
+Silvia Canelón  
+[&commat;spcanelon](https://twitter.com/spcanelon)
+] 
+]
