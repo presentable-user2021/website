@@ -33,10 +33,11 @@ We will review some of the built-in features of the <span class="pkg">xaringan</
 
 <div class="activity-table">
 
-|           |                                |
-|:----------|:-------------------------------|
-| Time      | 10 minutes                     |
-| Materials | `01-introduction/01-start.Rmd` |
+|               |                                       |
+|:--------------|:--------------------------------------|
+| Time          | 10 minutes                            |
+| Materials     | `01-introduction/01-start.Rmd`        |
+| Activity Mode | Break out room & work with your group |
 
 </div>
 

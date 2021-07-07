@@ -29,10 +29,11 @@ links:
 
 <div class="activity-table">
 
-|           |                               |
-|-----------|-------------------------------|
-| Time      | 10 minutes                    |
-| Materials | `02-style-guide/02-start.Rmd` |
+|               |                                   |
+|---------------|-----------------------------------|
+| Time          | 10 minutes                        |
+| Materials     | `02-style-guide/02-start.Rmd`     |
+| Activity Mode | Break out room & work on your own |
 
 </div>
 

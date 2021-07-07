@@ -33,10 +33,11 @@ We will leverage CSS and HTML to help make slide customizations more accessible.
 
 <div class="activity-table">
 
-|           |                                          |
-|:----------|:-----------------------------------------|
-| Time      | 15 minutes                               |
-| Materials | `07-accessibility-css-html/07-start.Rmd` |
+|               |                                          |
+|:--------------|:-----------------------------------------|
+| Time          | 15 minutes                               |
+| Materials     | `07-accessibility-css-html/07-start.Rmd` |
+| Activity Mode | Follow along                             |
 
 </div>
 

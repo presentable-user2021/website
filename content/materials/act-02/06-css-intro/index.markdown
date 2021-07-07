@@ -34,10 +34,11 @@ of putting things exactly where you want them to be.
 
 <div class="activity-table">
 
-|           |                             |
-|:----------|:----------------------------|
-| Time      | 15 minutes                  |
-| Materials | `06-intro-css/06-start.Rmd` |
+|               |                             |
+|:--------------|:----------------------------|
+| Time          | 15 minutes                  |
+| Materials     | `06-intro-css/06-start.Rmd` |
+| Activity Mode | Follow along                |
 
 </div>
 

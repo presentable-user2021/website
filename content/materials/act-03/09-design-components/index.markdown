@@ -40,6 +40,7 @@ that make it easier to establish consistency with your own design language.
 | Time                                | 10 minutes                                            |
 | [Quote Slide](#quote-slide)         | `09-design-components/quote/09-quote-start.Rmd`       |
 | [Slide Templates](#slide-templates) | `09-design-components/template/09-template-start.Rmd` |
+| Activity Mode                       | Break out room & work on your own                     |
 
 </div>
 
