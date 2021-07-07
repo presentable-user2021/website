@@ -82,7 +82,7 @@ class: header_background
 
 # How do we design<br>accessible presentations?
 
-.f7.mt5[
+.f7.mt5.mh4[
 
 `r fa("far fa-square")` .b[Make "accessible" your default mindset]
 
@@ -103,11 +103,9 @@ background-position: right
 
 # Make "accessible"<br>your default mindset
 
-.pull-left[
+.f7[.pull-left[
 
-We communicate effectively when we communicate to as many people as possible
-
-This means making our work .b[open] and .b[accessible] to a broad audience
+We communicate effectively when we make our work .b[open] and .b[accessible] to a broad audience
 
 Principles of [inclusive design](https://www.microsoft.com/design/inclusive/)
 - Recognize exclusion
@@ -116,9 +114,10 @@ Principles of [inclusive design](https://www.microsoft.com/design/inclusive/)
 
 <span role="img" aria-label="Something designed for a person who has one arm could be used just as effectively by a person with a temporary wrist injury or a new parent holding an infant"></span>
 
-]
+]]
+
 .footnote[
-[2.1 Make “accessible” your default mindset |<br> Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-accessible-your-default-mindset)<br>
+[2.1 Make “accessible” your default mindset](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-accessible-your-default-mindset)<br>
 Figure from the Inclusive Design 101 Toolkit by Microsoft
 ]
 
@@ -139,11 +138,10 @@ We are returning to this core idea after covering it in the section on effective
 
 .pull-left[
 
-- .b[Caption:] Brief description of what is being shown in the image
+.f7[
+.b[Alt-text] allows the reader to understand an image without seeing it
 
-- .b[Alt-text:] Full description that allows the reader to understand the figure without seeing it
-
-Screen readers provide voice or braille access to computer text, including alt-text
+.b[Screen readers] provide voice or braille access to computer text, including alt-text]
 
 ]
 
@@ -159,7 +157,7 @@ Screen readers provide voice or braille access to computer text, including alt-t
 ]
 
 .footnote[
-[2.6 Support images with text | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-imagetext)]
+[2.6 Support images with text](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-imagetext)]
 
 ???
 Screen readers like VoiceOver for MacOS or NVDA for Windows are used by blind people as well as people with low vision, cognitive disabilities, deafness or hard-of-hearing, motor disabilities, and others. 
@@ -221,12 +219,12 @@ knitr::include_graphics("ring-tailed-lemur.jpg")
 
 ---
 
-## `r fa("question-circle")` Can I use the same alt-text for all images<br> that are identical?
+## `r fa("question-circle")` Is it a good idea to use the same alt-text for all images that are identical?
 
 .pull-left[
 ### Not necessarily!
 
-.f6[
+.f7[
 To write effective alt-text we need to .b[consider the context]
 
 What, if any, important information is the image supposed to communicate?
@@ -234,29 +232,46 @@ What, if any, important information is the image supposed to communicate?
 ]
 
 .pull-right[
-### Resources
+.bg-washed-yellow.b--yellow.ba.bw0.br0.shadow-5.pa2[
+.b[Resources]
 
 - [Context is the most critical aspect of alt-text everyone seems to miss](https://uxdesign.cc/context-is-the-most-critical-aspect-of-alt-text-everyone-seems-to-miss-e18803a79212) by Sheri Byrne-Haber
 
 - [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) WAI Web Accessibility Tutorials
 
-- [Images Concepts Tutorial](https://www.w3.org/WAI/tutorials/images/) by WAI Web Accessibility Tutorials
+- [Images Concepts Tutorial](https://www.w3.org/WAI/tutorials/images/) by WAI Web Accessibility Tutorials]
+
 ]
 
 ---
 # Make sure hyperlinks are<br>clear & unambiguous
 
-.f6[
+.f7[
+.pull-left[
+- .b[Embed hyperlinks] in slides with xaringan
+
 - Links are most useful when they .b[make sense out of context]
 
-- xaringan makes it possible to .b[embed hyperlinks] in our slides
-
 - Links should be .b[clearly labeled]
-
-- .b[Avoid ambiguous link text] like: <br>"click here," "here," "more," "read more," "info"
+]
 ]
 
-.footnote[[2.9 Make sure hyperlinks are clear & unambiguous | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-sure-hyperlinks-are-clear-unambiguous)<br>
+.pull-right[
+.bg-washed-red.b--red.ba.bw0.br0.shadow-5.pa2[
+.b[Avoid ambiguous links:]
+
+- Here
+- Click here
+- Info
+- More
+- Read more
+- Link
+
+]
+]
+
+
+.footnote[[2.9 Make sure hyperlinks are clear & unambiguous](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-make-sure-hyperlinks-are-clear-unambiguous)<br>
 [Link Text and Appearance](https://webaim.org/techniques/hypertext/link_text#uninformative) by Web Accessibility in Mind]
 
 ---
@@ -272,7 +287,7 @@ The Duke Lemur Center provides more information [here](https://lemur.duke.edu/ac
 ````
 
 ---
-background-image: url(assets/img/05/paint-rollers.jpg)
+background-image: url(assets/img/05/dwarf-lemur.jpg)
 background-position: right
 background-size: contain
 
@@ -281,7 +296,7 @@ background-size: contain
 .pull-left[
 .f7[
 
-- Avoid using color as the .b[only] indicator of priority, importance, or an interactive element
+- Avoid using color as the .b[only] way to indicate priority or importance
 
 - Check for .b[color independence] early and often by [simulating a grayscale display](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector/Simulation)
 
@@ -289,7 +304,7 @@ background-size: contain
 
 ]]
 
-.footnote[[2.5 Choose colors carefully | Making Scientific Content More Accessible](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-choose-colors-carefully)<br>
+.footnote[[2.5 Choose colors carefully](https://www.authorea.com/users/152134/articles/206076-making-scientific-content-more-accessible/#author-label-choose-colors-carefully)<br>
 [Color and accessibility](https://designsystem.digital.gov/design-tokens/color/overview/#color-and-accessibility) by U.S. Web Design System
 ]
 
@@ -302,11 +317,11 @@ class: header_background f7
 
   - [Contrast Checker](https://webaim.org/resources/contrastchecker/) by WebAIM (recommended)
   
-  - [A11y Color Palette](https://a11yrocks.com/colorPalette/) by Matt Long
+  - [A11Y Rocks Color Palette](https://a11yrocks.com/colorPalette/) by Matt Long
   
   - [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/) by Atul Varma
 
-- For an extensive gallery of accessible color combinations<br> see the [Tachyons documentation for Theme Skins](https://tachyons.io/docs/themes/skins/)
+- For an extensive gallery of color color combinations with adequate contrast, see the [Tachyons documentation for Theme Skins](https://tachyons.io/docs/themes/skins/)
 
 
 ## Let's check color independence and <br>color contrast together!
@@ -314,9 +329,9 @@ class: header_background f7
 ---
 class: header_background
 
-# We finished the scene!
+# We are finished with the scene!
 
-.f7.mt4.mb4[
+.f7.mt4.mb4.mh4[
 `r fa("far fa-check-square")` .b[Make "accessible" your default mindset]
 
 `r fa("far fa-check-square")` Support images with text 
@@ -326,4 +341,4 @@ class: header_background
 `r fa("far fa-check-square")` Choose colors carefully
 ]
 
-## `r fa("theater-masks")` Let's meet back at the<br>  [05-accessible-design activity](/materials/act-02/05-accessible-design#activity)
+## `r fa("theater-masks")` We can meet back at the<br>  [05-accessible-design activity](/materials/act-02/05-accessible-design/#activity)
