@@ -1,0 +1,10 @@
+[data-slide-name] .remark-slide-content {
+  --scale: 0.8;
+	position: absolute;
+	width: 1210px;
+	height: 681px;
+	transform: scale(var(--scale));
+	transform-origin: top left;
+	border: 2px solid #ddd;
+	top: calc((681px - (681px * var(--scale))) / 2);
+}
